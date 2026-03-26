@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semiconductor Learning Platform</title>
+    <meta
+      name="description"
+      content="반도체 입문부터 8대 공정, 장비, 재료, 산업 구조, 직무, 면접 대비까지 단계적으로 학습할 수 있는 웹 기반 반도체 학습 플랫폼"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <div class="equipment-layer" aria-hidden="true">
+      <div class="equipment wafer-rig">
+        <span class="wafer-ring wafer-ring-outer"></span>
+        <span class="wafer-ring wafer-ring-inner"></span>
+        <span class="wafer-grid"></span>
+      </div>
+      <div class="equipment chip-array">
+        <span class="chip-core"></span>
+        <span class="chip-pin chip-pin-top"></span>
+        <span class="chip-pin chip-pin-right"></span>
+        <span class="chip-pin chip-pin-bottom"></span>
+        <span class="chip-pin chip-pin-left"></span>
+      </div>
+      <div class="equipment process-arm">
+        <span class="arm-column"></span>
+        <span class="arm-beam"></span>
+        <span class="arm-head"></span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="#hero">Semiconductor</a>
+        <div class="nav-links">
+          <a href="#introduction">입문</a>
+          <a href="#process">8대 공정</a>
+          <a href="#equipment">장비</a>
+          <a href="#materials">재료/부품</a>
+          <a href="#industry">산업/기업</a>
+          <a href="#career">직무/취업</a>
+          <a href="#interview">면접/시험</a>
+          <a href="#glossary">용어/검색</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero shell" id="hero" data-track-section="hero" data-section-label="시작 안내">
+        <div class="hero-copy">
+          <p class="eyebrow">Semiconductor Learning Platform</p>
+          <h1>
+            <span>반도체 전공 학습과</span>
+            <span>취업 준비를 한 흐름으로 연결한</span>
+            <span>웹 기반 학습 플랫폼</span>
+          </h1>
+          <p class="hero-text">
+            <span>처음 배우는 학생은 개념을 단계적으로 이해하고, 취업 준비생은 공정, 장비, 산업 구조와</span>
+            <span>직무 포인트까지 연결해서 학습할 수 있도록 설계했습니다.</span>
+          </p>
+          <div class="hero-tags">
+            <span>Structured Learning</span>
+            <span>Process to Career</span>
+            <span>Glossary + Search</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#introduction">입문부터 시작</a>
+            <a class="button secondary" href="#career">취업 준비 보기</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel card">
+          <div class="panel-topline">
+            <span class="status-dot"></span>
+            <span>Structured Path</span>
+          </div>
+          <ul class="metric-list">
+            <li>
+              <strong>8</strong>
+              <span>학습 섹션</span>
+            </li>
+            <li>
+              <strong>1</strong>
+              <span>통합 검색</span>
+            </li>
+            <li>
+              <strong>Quiz</strong>
+              <span>즉시 확인</span>
+            </li>
+          </ul>
+          <div class="signal-card">
+            <p>추천 학습 흐름</p>
+            <h2>입문 → 8대 공정 → 장비/재료 → 산업 구조 → 직무 → 면접 대비</h2>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section shell compact-top" id="progress">
+        <div class="card progress-overview">
+          <div class="progress-copy">
+            <p class="eyebrow">Learning Progress</p>
+            <h2>학습 진도 대시보드</h2>
+            <p>각 섹션을 학습한 뒤 완료 표시를 누르면 현재 브라우저에 진도가 저장됩니다.</p>
+            <div class="learner-profile">
+              <label class="search-label" for="learner-name">학습자 프로필</label>
+              <div class="learner-controls">
+                <input
+                  id="learner-name"
+                  class="search-input learner-input"
+                  type="text"
+                  placeholder="이름 또는 별칭 입력"
+                  list="learner-list"
+                />
+                <datalist id="learner-list"></datalist>
+                <button class="button secondary small-button" type="button" id="save-learner">프로필 적용</button>
+              </div>
+              <p class="search-meta" id="learner-status">기본 프로필로 진도를 저장합니다.</p>
+            </div>
+          </div>
+          <div class="progress-status">
+            <div class="progress-ring-wrap">
+              <div class="progress-ring" id="progress-ring">
+                <span id="progress-percent">0%</span>
+              </div>
+            </div>
+            <div class="progress-metrics">
+              <p class="progress-profile-label" id="progress-profile-label">현재 학습자: 기본</p>
+              <p><strong id="progress-count">0/7</strong> 섹션 완료</p>
+              <p id="progress-next">다음 추천: 반도체 입문</p>
+              <button class="button secondary small-button" type="button" id="reset-progress">진도 초기화</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="introduction" data-track-section="introduction" data-section-label="반도체 입문">
+        <div class="section-heading">
+          <p class="eyebrow">Introduction</p>
+          <h2>반도체 입문</h2>
+          <p>처음 배우는 사람도 개념이 이어지도록 텍스트 설명 중심으로 구성했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="introduction">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="content-grid intro-grid">
+          <article class="card learning-card text-heavy">
+            <h3>반도체란 무엇인가</h3>
+            <p>
+              반도체는 전기가 매우 잘 흐르는 도체와 거의 흐르지 않는 부도체의
+              중간 성질을 갖는 물질입니다. 외부 조건이나 불순물 첨가에 따라
+              전기적 특성을 조절할 수 있기 때문에 스위치와 메모리의 핵심 재료가
+              됩니다.
+            </p>
+            <div class="topic-list">
+              <div>
+                <strong>Conductor</strong>
+                <p>전자 이동이 쉬워 전류가 잘 흐릅니다.</p>
+              </div>
+              <div>
+                <strong>Insulator</strong>
+                <p>전자 이동이 매우 어려워 전류가 거의 흐르지 않습니다.</p>
+              </div>
+              <div>
+                <strong>Semiconductor</strong>
+                <p>도핑, 전압, 온도에 따라 전기 특성을 정밀하게 제어할 수 있습니다.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card learning-card">
+            <h3>Silicon의 역할</h3>
+            <p>
+              실리콘은 자연계에 풍부하고 산화막 형성이 안정적이며 가공성이 좋아
+              가장 대표적인 반도체 재료입니다. 실리콘 산화막은 MOS 구조에서 매우
+              중요한 절연층으로 활용됩니다.
+            </p>
+            <p>
+              이 특성 덕분에 집적도 향상, 공정 안정성, 대량 생산 측면에서 큰
+              장점을 가집니다.
+            </p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>Doping, P-type, N-type</h3>
+            <p>
+              순수 실리콘에 특정 원소를 소량 첨가해 전하 운반자를 늘리는 과정을
+              도핑이라고 합니다. 인(P), 비소(As) 같은 5가 원소를 넣으면
+              전자가 많아지는 N-type이 되고, 붕소(B) 같은 3가 원소를 넣으면 정공이
+              많아지는 P-type이 됩니다.
+            </p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>Carrier Movement</h3>
+            <p>
+              반도체 내부에서 전류는 전자와 정공의 이동으로 형성됩니다. 농도 차이에
+              의한 확산(diffusion)과 전기장에 의한 drift가 핵심 이동 메커니즘입니다.
+            </p>
+            <p>
+              이후 PN junction과 MOSFET을 이해할 때 이 개념이 그대로 연결됩니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="diagram-grid">
+          <article class="card diagram-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Clickable Diagram</p>
+                <h3>PN Junction</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="pn-detail">상세 설명 보기</button>
+            </div>
+            <div class="pn-diagram">
+              <div class="pn-side p-side">P-type<br /><span>Hole 다수</span></div>
+              <div class="pn-barrier">Depletion Region</div>
+              <div class="pn-side n-side">N-type<br /><span>Electron 다수</span></div>
+            </div>
+            <div class="expand-panel" id="pn-detail" hidden>
+              <p>
+                P형과 N형이 만나면 전자와 정공이 서로 확산하면서 접합부 근처에
+                공핍층이 형성됩니다. 이 공핍층은 전하 운반자가 부족한 구간이며,
+                내부 전기장을 만들어 추가 확산을 막습니다.
+              </p>
+              <p>
+                순방향 바이어스를 걸면 장벽이 낮아져 전류가 흐르고, 역방향 바이어스에서는
+                장벽이 높아져 전류가 거의 흐르지 않습니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="card diagram-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Clickable Diagram</p>
+                <h3>MOSFET 기초 구조</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="mosfet-detail">상세 설명 보기</button>
+            </div>
+            <div class="mosfet-diagram">
+              <div class="mos-gate">Gate</div>
+              <div class="mos-oxide">Oxide</div>
+              <div class="mos-channel">Channel</div>
+              <div class="mos-terminals">
+                <span>Source</span>
+                <span>Drain</span>
+              </div>
+              <div class="mos-substrate">P-type Substrate</div>
+            </div>
+            <div class="expand-panel" id="mosfet-detail" hidden>
+              <p>
+                MOSFET은 Gate 전압으로 채널 형성을 제어해 Source와 Drain 사이 전류를
+                켜고 끄는 소자입니다. 디지털 회로에서는 스위치 역할을 하며,
+                반도체 집적 회로의 핵심 기본 단위입니다.
+              </p>
+              <p>
+                Gate, Oxide, Channel, Source/Drain 구조를 먼저 이해하면 이후
+                공정과 소자 엔지니어링 학습이 훨씬 쉬워집니다.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#process">다음 단계: 8대 공정</a>
+            <a href="#glossary">관련 용어: PN Junction / MOSFET</a>
+            <a href="#career">연결 직무: Process Engineer</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="process" data-track-section="process" data-section-label="8대 공정">
+        <div class="section-heading">
+          <p class="eyebrow">Semiconductor Process</p>
+          <h2>반도체 8대 공정</h2>
+          <p>전체 흐름을 먼저 보고, 각 공정은 카드 클릭으로 상세 내용을 펼쳐볼 수 있습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="process">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="card process-flow-card">
+          <div class="process-flow">
+            <span>Oxidation</span>
+            <span>Lithography</span>
+            <span>Etching</span>
+            <span>Deposition</span>
+            <span>Ion Implantation</span>
+            <span>CMP</span>
+            <span>Metallization</span>
+            <span>Test & Packaging</span>
+          </div>
+        </div>
+
+        <div class="content-grid process-grid">
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-oxidation">
+              <span>산화 (Oxidation)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="proc-oxidation" hidden>
+              <p><strong>목적:</strong> 절연막 형성과 표면 보호.</p>
+              <p><strong>원리:</strong> 실리콘 표면을 산소 또는 수증기와 반응시켜 SiO2를 성장시킵니다.</p>
+              <p><strong>주요 장비:</strong> Furnace, oxidation tube.</p>
+              <p><strong>주요 재료:</strong> O2, H2O, 실리콘 웨이퍼.</p>
+              <p><strong>대표 defect:</strong> 박막 두께 불균일, particle, pinhole.</p>
+              <p><strong>중요 포인트:</strong> 막질 균일성과 산화 온도 제어가 핵심입니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-lithography">
+              <span>포토 (Lithography)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="process-mini-diagram">
+              <span>Coat</span>
+              <span>Expose</span>
+              <span>Develop</span>
+            </div>
+            <div class="expand-panel" id="proc-lithography" hidden>
+              <p><strong>목적:</strong> 회로 패턴을 웨이퍼 위에 전사합니다.</p>
+              <p><strong>원리:</strong> 포토레지스트 도포 후 노광과 현상을 통해 원하는 패턴만 남깁니다.</p>
+              <p><strong>주요 장비:</strong> Track, Scanner, Coater/Developer.</p>
+              <p><strong>주요 재료:</strong> Photoresist, developer, mask/reticle.</p>
+              <p><strong>대표 defect:</strong> misalignment, footing, scum, collapse.</p>
+              <p><strong>중요 포인트:</strong> CD, overlay, focus, dose 관리가 현업에서 매우 중요합니다.</p>
+              <div class="step-detail">
+                <strong>Step-by-step</strong>
+                <p>1. 포토레지스트 도포 → 2. Soft bake → 3. 노광 → 4. 현상 → 5. 후속 공정 연결</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-etching">
+              <span>식각 (Etching)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="process-mini-diagram">
+              <span>Mask</span>
+              <span>Plasma</span>
+              <span>Remove</span>
+            </div>
+            <div class="expand-panel" id="proc-etching" hidden>
+              <p><strong>목적:</strong> 필요한 부분만 선택적으로 제거해 패턴을 형성합니다.</p>
+              <p><strong>원리:</strong> 플라즈마 또는 화학 용액 반응을 이용해 막을 제거합니다.</p>
+              <p><strong>주요 장비:</strong> Dry etcher, wet bench.</p>
+              <p><strong>주요 재료:</strong> CF4, Cl2, BCl3, 세정액.</p>
+              <p><strong>대표 defect:</strong> over-etch, residue, profile imbalance, damage.</p>
+              <p><strong>중요 포인트:</strong> 선택비, 이방성, profile control이 핵심입니다.</p>
+              <div class="step-detail">
+                <strong>Step-by-step</strong>
+                <p>1. Mask 준비 → 2. Plasma 형성 → 3. 반응종 충돌/제거 → 4. endpoint 확인 → 5. residue 세정</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-deposition">
+              <span>증착 (Deposition)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="process-mini-diagram">
+              <span>Gas In</span>
+              <span>Reaction</span>
+              <span>Film</span>
+            </div>
+            <div class="expand-panel" id="proc-deposition" hidden>
+              <p><strong>목적:</strong> 절연막, 도전막, barrier막 등을 웨이퍼 위에 형성합니다.</p>
+              <p><strong>원리:</strong> 기상 반응 또는 물리적 전달로 박막을 쌓습니다.</p>
+              <p><strong>주요 장비:</strong> CVD, ALD, PVD 장비.</p>
+              <p><strong>주요 재료:</strong> SiH4, NH3, TEOS, TiN, W, Cu.</p>
+              <p><strong>대표 defect:</strong> 막질 불균일, particle, poor step coverage.</p>
+              <p><strong>중요 포인트:</strong> 두께, 균일도, 막질, conformality가 중요합니다.</p>
+              <div class="step-detail">
+                <strong>Step-by-step</strong>
+                <p>1. 가스 공급 → 2. 반응 생성 → 3. 표면 흡착 및 성장 → 4. purge → 5. 두께 검증</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-implantation">
+              <span>이온주입 (Ion Implantation)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="proc-implantation" hidden>
+              <p><strong>목적:</strong> 원하는 영역에 도핑 농도를 정밀하게 부여합니다.</p>
+              <p><strong>원리:</strong> 이온을 가속해 웨이퍼 표면에 주입합니다.</p>
+              <p><strong>주요 장비:</strong> Ion implanter.</p>
+              <p><strong>주요 재료:</strong> B, P, As source gas.</p>
+              <p><strong>대표 defect:</strong> channeling, dose 불균일, damage.</p>
+              <p><strong>중요 포인트:</strong> dose, energy, tilt, anneal 조건이 중요합니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-cmp">
+              <span>CMP</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="proc-cmp" hidden>
+              <p><strong>목적:</strong> 표면 평탄화를 통해 다음 공정 정밀도를 확보합니다.</p>
+              <p><strong>원리:</strong> 슬러리와 패드를 이용한 화학적/기계적 연마를 수행합니다.</p>
+              <p><strong>주요 장비:</strong> CMP tool, pad conditioner.</p>
+              <p><strong>주요 재료:</strong> Slurry, pad, DI water.</p>
+              <p><strong>대표 defect:</strong> dishing, erosion, scratch.</p>
+              <p><strong>중요 포인트:</strong> removal rate와 균일도, 표면 손상 관리가 핵심입니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-metallization">
+              <span>금속배선 (Metallization)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="proc-metallization" hidden>
+              <p><strong>목적:</strong> 소자와 소자를 전기적으로 연결합니다.</p>
+              <p><strong>원리:</strong> 금속 박막 형성과 패터닝을 통해 배선을 구축합니다.</p>
+              <p><strong>주요 장비:</strong> PVD, electroplating, CVD, anneal 장비.</p>
+              <p><strong>주요 재료:</strong> Al, Cu, barrier metal.</p>
+              <p><strong>대표 defect:</strong> void, hillock, electromigration issue.</p>
+              <p><strong>중요 포인트:</strong> 저항, 신뢰성, contact integrity가 중요합니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card">
+            <button class="accordion-trigger" type="button" data-target="proc-packaging">
+              <span>테스트/패키징 (Test & Packaging)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="proc-packaging" hidden>
+              <p><strong>목적:</strong> 칩의 동작을 검증하고 최종 제품 형태로 보호합니다.</p>
+              <p><strong>원리:</strong> 웨이퍼 테스트, 다이싱, 패키징, 최종 테스트를 수행합니다.</p>
+              <p><strong>주요 장비:</strong> Probe station, tester, bonder, molding 장비.</p>
+              <p><strong>주요 재료:</strong> substrate, solder ball, mold compound.</p>
+              <p><strong>대표 defect:</strong> fail bin, crack, delamination, open/short.</p>
+              <p><strong>중요 포인트:</strong> 수율, 열 관리, 신호 무결성, 품질 신뢰성이 핵심입니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#equipment">관련 장비 보기</a>
+            <a href="#materials">관련 재료 보기</a>
+            <a href="#glossary">관련 용어: Lithography / Etch / CMP</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="equipment" data-track-section="equipment" data-section-label="반도체 장비">
+        <div class="section-heading">
+          <p class="eyebrow">Equipment</p>
+          <h2>반도체 장비</h2>
+          <p>공정별 핵심 장비와 구조 요소, 유지보수 관점을 함께 정리했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="equipment">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="content-grid equipment-grid">
+          <article class="card diagram-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>CVD / PVD</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-cvd">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>Gas Supply</span>
+              <span>Chamber</span>
+              <span>Vacuum</span>
+              <span>Heater / RF</span>
+            </div>
+            <div class="expand-panel" id="eq-cvd" hidden>
+              <p><strong>역할:</strong> 웨이퍼 표면에 박막을 형성합니다.</p>
+              <p><strong>구성:</strong> chamber, gas line, MFC, vacuum pump, heater, sensor.</p>
+              <p><strong>원리:</strong> CVD는 화학 반응, PVD는 물리적 증발/스퍼터링을 사용합니다.</p>
+              <p><strong>현업 포인트:</strong> 막질, 두께 균일도, chamber condition 관리가 중요합니다.</p>
+            </div>
+          </article>
+
+          <article class="card diagram-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>Etcher</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-etch">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>RF Power</span>
+              <span>Plasma</span>
+              <span>ESC</span>
+              <span>Exhaust</span>
+            </div>
+            <div class="expand-panel" id="eq-etch" hidden>
+              <p><strong>역할:</strong> 플라즈마를 이용해 막을 선택적으로 제거합니다.</p>
+              <p><strong>구성:</strong> chamber, ESC, RF generator, gas showerhead, exhaust.</p>
+              <p><strong>원리:</strong> 반응성 이온과 중성종이 표면에 작용해 식각을 진행합니다.</p>
+              <p><strong>현업 포인트:</strong> endpoint, residue, chamber seasoning이 중요합니다.</p>
+            </div>
+          </article>
+
+          <article class="card diagram-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>Track / Scanner</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-litho">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>Coat</span>
+              <span>Bake</span>
+              <span>Align</span>
+              <span>Expose</span>
+            </div>
+            <div class="expand-panel" id="eq-litho" hidden>
+              <p><strong>역할:</strong> 포토레지스트 도포와 노광 공정을 수행합니다.</p>
+              <p><strong>구성:</strong> coater, developer, aligner, optics, stage.</p>
+              <p><strong>원리:</strong> 회로 마스크 이미지를 웨이퍼에 정밀하게 투영합니다.</p>
+              <p><strong>현업 포인트:</strong> focus, dose, overlay, contamination control이 핵심입니다.</p>
+            </div>
+          </article>
+
+          <article class="card diagram-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>Ion Implanter</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-implant">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>Ion Source</span>
+              <span>Mass Filter</span>
+              <span>Beamline</span>
+              <span>End Station</span>
+            </div>
+            <div class="expand-panel" id="eq-implant" hidden>
+              <p><strong>역할:</strong> 도핑 이온을 원하는 에너지와 양으로 주입합니다.</p>
+              <p><strong>구성:</strong> ion source, analyzer magnet, accelerator, beam scanner, end station.</p>
+              <p><strong>원리:</strong> 이온을 생성하고 질량 분리 후 가속해 웨이퍼에 주입합니다.</p>
+              <p><strong>현업 포인트:</strong> dose accuracy, contamination, beam stability 관리가 중요합니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card">
+            <h3>Maintenance / PM</h3>
+            <p>
+              장비 엔지니어는 정기 PM을 통해 chamber cleaning, 부품 교체, sensor calibration,
+              leak check 등을 수행합니다. 예방 정비는 수율과 장비 uptime에 직접 연결됩니다.
+            </p>
+          </article>
+          <article class="card learning-card">
+            <h3>Troubleshooting</h3>
+            <p>
+              이상 징후가 발생하면 particle 증가, 진공 이상, RF mismatch, 가스 유량 이상,
+              temperature drift 등 원인을 데이터와 로그로 추적합니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#process">연결 공정 보기</a>
+            <a href="#career">연결 직무: Equipment Engineer</a>
+            <a href="#glossary">관련 용어: Vacuum / RF Power / ESC</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="materials" data-track-section="materials" data-section-label="재료와 부품">
+        <div class="section-heading">
+          <p class="eyebrow">Materials & Components</p>
+          <h2>재료/부품</h2>
+          <p>왜 중요한지와 어디에 쓰이는지 중심으로 빠르게 이해할 수 있게 구성했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="materials">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="content-grid materials-grid">
+          <article class="card learning-card">
+            <h3>Wafer</h3>
+            <p>반도체 소자가 만들어지는 기반 기판입니다. 평탄도와 결함 밀도, 결정 품질이 매우 중요합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Photoresist</h3>
+            <p>포토 공정에서 빛에 반응해 패턴 형성을 돕는 재료입니다. 해상도와 감도, 공정 호환성이 중요합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Gas</h3>
+            <p>증착, 식각, 이온주입 등 거의 모든 공정에 쓰입니다. 순도와 안정적 공급이 제품 품질을 좌우합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Slurry</h3>
+            <p>CMP에서 평탄화를 담당합니다. removal rate와 scratch 억제가 핵심입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Thin Film Materials</h3>
+            <p>SiO2, SiN, TiN, W 같은 박막 재료는 절연, barrier, 도전층 역할을 합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Metal / Interconnect</h3>
+            <p>Al, Cu 등은 배선 재료로 쓰이며 저항과 신뢰성, electromigration이 중요합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Mask / Reticle</h3>
+            <p>회로 패턴의 원본 역할을 하며 포토 공정 정밀도를 좌우합니다.</p>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#process">재료가 쓰이는 공정 보기</a>
+            <a href="#equipment">재료와 연결되는 장비 보기</a>
+            <a href="#glossary">관련 용어: Photoresist / Wafer / Mask</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="industry" data-track-section="industry" data-section-label="산업과 기업 구조">
+        <div class="section-heading">
+          <p class="eyebrow">Industry & Companies</p>
+          <h2>산업/기업 구조</h2>
+          <p>산업 구조를 먼저 이해한 뒤, 주요 기업이 어느 위치에 있는지 카드로 연결했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="industry">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="content-grid industry-structure-grid">
+          <article class="card learning-card">
+            <h3>IDM</h3>
+            <p>설계부터 생산, 판매까지 내부에서 수행하는 구조입니다. Intel, Samsung Electronics 일부 영역이 대표적입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Fabless</h3>
+            <p>설계 중심 기업으로 생산은 Foundry에 맡깁니다. 제품 기획과 IP, 설계 경쟁력이 핵심이며 Qualcomm, NVIDIA, AMD, MediaTek, Broadcom 같은 기업이 대표적입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Foundry</h3>
+            <p>외부 설계를 받아 웨이퍼 생산을 담당합니다. 공정 기술력과 고객 대응력이 중요하며 TSMC, Samsung Foundry, UMC, GlobalFoundries, SMIC 등이 대표적입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>OSAT</h3>
+            <p>후공정 전문 기업으로 패키징과 테스트를 수행합니다. ASE, Amkor, JCET 같은 기업이 대표적입니다.</p>
+          </article>
+        </div>
+
+        <div class="content-grid company-grid">
+          <article class="card accordion-card searchable" data-search="samsung electronics samsung memory foundry idm">
+            <button class="accordion-trigger" type="button" data-target="company-samsung">
+              <span>Samsung Electronics</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-samsung" hidden>
+              <p><strong>역할:</strong> 한국 기업으로 메모리, 파운드리, 시스템 반도체 등 폭넓은 사업 구조를 가집니다.</p>
+              <p><strong>관련 공정/장비:</strong> 메모리 제조, 첨단 공정, 대규모 팹 운영.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 메모리 강자이자 주요 파운드리 플레이어입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="sk hynix memory dram nand">
+            <button class="accordion-trigger" type="button" data-target="company-sk">
+              <span>SK hynix</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-sk" hidden>
+              <p><strong>역할:</strong> 한국 기업으로 DRAM, NAND 등 메모리 중심 사업 구조를 가집니다.</p>
+              <p><strong>관련 공정/장비:</strong> 메모리 셀 구조와 미세공정, 패키징 기술.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 메모리 산업 핵심 기업입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="tsmc foundry fabless customer advanced process">
+            <button class="accordion-trigger" type="button" data-target="company-tsmc">
+              <span>TSMC</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-tsmc" hidden>
+              <p><strong>역할:</strong> 대만 기업으로 세계 최대 파운드리 사업을 수행합니다.</p>
+              <p><strong>관련 공정/장비:</strong> 첨단 로직 공정, EUV 기반 생산.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 팹리스 생태계의 핵심 생산 파트너입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="intel idm cpu advanced packaging">
+            <button class="accordion-trigger" type="button" data-target="company-intel">
+              <span>Intel</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-intel" hidden>
+              <p><strong>역할:</strong> 미국 기업으로 전통적인 IDM 대표 사례이며 CPU와 첨단 패키징 기술이 강점입니다.</p>
+              <p><strong>관련 공정/장비:</strong> 로직 공정, 패키징, 테스트.</p>
+              <p><strong>산업 내 위치:</strong> 설계와 제조를 동시에 수행하는 대표 사례입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="asml lithography euv scanner">
+            <button class="accordion-trigger" type="button" data-target="company-asml">
+              <span>ASML</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-asml" hidden>
+              <p><strong>역할:</strong> 네덜란드 기업으로 노광 장비, 특히 EUV scanner 분야의 핵심 기업입니다.</p>
+              <p><strong>관련 공정/장비:</strong> Lithography.</p>
+              <p><strong>산업 내 위치:</strong> 첨단 노광 공정에서 매우 중요한 독보적 위치를 가집니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="applied materials deposition cmp inspection equipment">
+            <button class="accordion-trigger" type="button" data-target="company-amat">
+              <span>Applied Materials</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-amat" hidden>
+              <p><strong>역할:</strong> 미국 기업으로 증착, CMP, 검사 등 다양한 장비 포트폴리오를 보유합니다.</p>
+              <p><strong>관련 공정/장비:</strong> Deposition, CMP, inspection.</p>
+              <p><strong>산업 내 위치:</strong> 종합 장비 기업으로 영향력이 큽니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="lam research etch deposition plasma equipment">
+            <button class="accordion-trigger" type="button" data-target="company-lam">
+              <span>Lam Research</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-lam" hidden>
+              <p><strong>역할:</strong> 미국 기업으로 식각과 일부 증착 장비 분야의 핵심 기업입니다.</p>
+              <p><strong>관련 공정/장비:</strong> Etching, deposition.</p>
+              <p><strong>산업 내 위치:</strong> 플라즈마 기반 식각 분야에서 강한 존재감을 가집니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search="tokyo electron tel coater developer etch deposition">
+            <button class="accordion-trigger" type="button" data-target="company-tel">
+              <span>Tokyo Electron</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-tel" hidden>
+              <p><strong>역할:</strong> 일본 기업으로 Coater/Developer, Etch, Deposition 등 다양한 장비를 제공합니다.</p>
+              <p><strong>관련 공정/장비:</strong> Lithography 보조 장비, Etch, Deposition.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 장비 시장에서 매우 중요한 플레이어입니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#career">직무와 기업 연결 보기</a>
+            <a href="#glossary">기업 통합 검색 사용</a>
+            <a href="#process">공정 관점으로 다시 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="career" data-track-section="career" data-section-label="직무와 취업">
+        <div class="section-heading">
+          <p class="eyebrow">Career & Jobs</p>
+          <h2>직무/취업</h2>
+          <p>직무 이해와 학습 순서를 함께 보여줘서 실제 준비 흐름이 보이도록 구성했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="career">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="card roadmap-visual-card">
+          <div class="roadmap-visual">
+            <div>기초 물성</div>
+            <div>8대 공정</div>
+            <div>장비/재료</div>
+            <div>산업 구조</div>
+            <div>직무별 심화</div>
+            <div>면접/시험</div>
+          </div>
+        </div>
+
+        <div class="content-grid jobs-grid">
+          <article class="card learning-card">
+            <h3>Process Engineer</h3>
+            <p><strong>하는 일:</strong> 공정 조건 최적화, defect 개선, 수율 향상.</p>
+            <p><strong>필요 지식:</strong> 8대 공정, defect, 통계, data interpretation.</p>
+            <p><strong>중요 키워드:</strong> CD, uniformity, SPC, yield.</p>
+            <p><strong>면접 포인트:</strong> 공정 간 연계와 문제 해결 관점 설명.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Equipment Engineer</h3>
+            <p><strong>하는 일:</strong> 장비 안정화, PM, trouble shooting, uptime 관리.</p>
+            <p><strong>필요 지식:</strong> vacuum, plasma, RF, sensor, mechanical system.</p>
+            <p><strong>중요 키워드:</strong> PM, chamber, calibration, MTBF.</p>
+            <p><strong>면접 포인트:</strong> 장비 구조와 이상 원인 추적 방식.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Yield Engineer</h3>
+            <p><strong>하는 일:</strong> 수율 분석, 불량 원인 분류, data 기반 개선.</p>
+            <p><strong>필요 지식:</strong> defect analysis, 통계, 공정 흐름 이해.</p>
+            <p><strong>중요 키워드:</strong> fail bit, defect density, pareto.</p>
+            <p><strong>면접 포인트:</strong> 데이터에서 원인을 좁혀 가는 사고 방식.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Test Engineer</h3>
+            <p><strong>하는 일:</strong> 테스트 조건 설계, 양불 판정, 패키지 이후 검증.</p>
+            <p><strong>필요 지식:</strong> 회로 기초, tester, 신호, 품질 개념.</p>
+            <p><strong>중요 키워드:</strong> probe, binning, coverage, reliability.</p>
+            <p><strong>면접 포인트:</strong> 테스트 목적과 생산 품질의 연결.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>Automation / Software Engineer</h3>
+            <p><strong>하는 일:</strong> 장비 자동화, 데이터 수집, 공정 시스템 연계.</p>
+            <p><strong>필요 지식:</strong> Python, C/C++, PLC/SECS-GEM, 데이터 처리.</p>
+            <p><strong>중요 키워드:</strong> MES, automation, log, integration.</p>
+            <p><strong>면접 포인트:</strong> 소프트웨어가 생산성과 품질에 미치는 영향.</p>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#industry">목표 기업 구조 다시 보기</a>
+            <a href="#interview">면접/시험 대비 바로가기</a>
+            <a href="#glossary">직무 키워드 검색하기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="interview" data-track-section="interview" data-section-label="면접과 시험 대비">
+        <div class="section-heading">
+          <p class="eyebrow">Interview & Test Prep</p>
+          <h2>면접/시험 대비</h2>
+          <p>빈출 질문과 개념 확인 퀴즈를 함께 넣어 즉시 복습할 수 있게 했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="interview">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="content-grid interview-grid">
+          <article class="card learning-card">
+            <h3>자주 나오는 질문</h3>
+            <div class="qa-list">
+              <div class="qa-item">
+              <p><strong>Q.</strong> PN junction에서 공핍층은 왜 형성되나요?</p>
+              <p><strong>A.</strong> 전자와 정공의 확산으로 접합부 근처 자유 운반자가 줄어들기 때문입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> Lithography에서 overlay가 중요한 이유는 무엇인가요?</p>
+              <p><strong>A.</strong> 이전 층과 현재 패턴이 정확히 맞아야 회로 연결 오류를 줄일 수 있기 때문입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> Etching에서 선택비란 무엇인가요?</p>
+              <p><strong>A.</strong> 목표 막과 다른 막 사이의 식각 속도 비율입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> Silicon이 대표적인 반도체 재료가 된 이유는 무엇인가요?</p>
+              <p><strong>A.</strong> 풍부한 자원성, 안정적인 산화막 형성, 성숙한 웨이퍼 제조 기술 덕분입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> N-type과 P-type의 차이는 무엇인가요?</p>
+              <p><strong>A.</strong> N-type은 전자가, P-type은 정공이 다수 운반자인 반도체입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> MOSFET에서 Gate의 역할은 무엇인가요?</p>
+              <p><strong>A.</strong> Gate 전압으로 채널 형성을 제어해 Source와 Drain 사이 전류를 켜고 끕니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> CVD와 PVD의 차이를 간단히 설명해보세요.</p>
+              <p><strong>A.</strong> CVD는 화학 반응으로 박막을 성장시키고, PVD는 물리적 전달로 막을 형성합니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> CMP 공정이 필요한 이유는 무엇인가요?</p>
+              <p><strong>A.</strong> 표면을 평탄하게 만들어 다음 공정의 정렬과 패턴 정밀도를 확보하기 위해서입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> Yield가 낮아지는 대표 원인은 무엇인가요?</p>
+              <p><strong>A.</strong> Particle, 공정 편차, 장비 이상, 설계/배선 문제 등 다양한 defect 요인이 원인이 됩니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> Foundry와 Fabless의 차이는 무엇인가요?</p>
+              <p><strong>A.</strong> Fabless는 설계를 중심으로 하고, Foundry는 외부 고객 설계를 받아 생산을 담당합니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> Equipment Engineer에게 vacuum과 RF 개념이 중요한 이유는?</p>
+              <p><strong>A.</strong> 식각과 증착 장비의 핵심 동작 환경과 플라즈마 형성 제어에 직접 연결되기 때문입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> WAT와 Final Test의 차이는 무엇인가요?</p>
+              <p><strong>A.</strong> WAT는 웨이퍼 단계 전기 특성 확인이고, Final Test는 패키지 이후 최종 제품 상태 검사입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> HBM이 주목받는 이유는 무엇인가요?</p>
+              <p><strong>A.</strong> AI와 고성능 컴퓨팅에서 필요한 대역폭을 높이기 위해 적층 메모리 구조가 중요해졌기 때문입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> EUV가 중요한 이유는 무엇인가요?</p>
+              <p><strong>A.</strong> 더 미세한 패턴을 구현해 첨단 공정의 집적도 향상에 직접 기여하기 때문입니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> 공정 엔지니어 면접에서 자주 보는 역량은 무엇인가요?</p>
+              <p><strong>A.</strong> 공정 흐름 이해, 문제 원인 분석, 수율 개선 관점, 데이터 해석 능력이 중요합니다.</p>
+              </div>
+              <div class="qa-item">
+              <p><strong>Q.</strong> OSAT 기업은 왜 중요한가요?</p>
+              <p><strong>A.</strong> 패키징과 테스트는 최종 제품 품질, 신뢰성, 성능 구현에 직접 연결되기 때문입니다.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card quiz-card">
+            <h3>Quick Quiz</h3>
+            <div class="quiz-item" data-answer="b">
+              <p class="quiz-question">1. N-type 반도체에서 다수 운반자는 무엇인가요?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">정공</button>
+                <button type="button" data-choice="b">전자</button>
+                <button type="button" data-choice="c">광자</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 전자입니다. N-type은 donor 도핑으로 전자가 많아집니다.</p>
+            </div>
+            <div class="quiz-item" data-answer="o">
+              <p class="quiz-question">2. CMP의 주된 목적은 표면 평탄화이다.</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="o">O</button>
+                <button type="button" data-choice="x">X</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 O입니다. CMP는 다음 공정 정밀도를 위해 평탄화를 수행합니다.</p>
+            </div>
+            <div class="quiz-item" data-answer="c">
+              <p class="quiz-question">3. EUV scanner와 가장 직접적으로 연결되는 공정은?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">CMP</button>
+                <button type="button" data-choice="b">Ion Implantation</button>
+                <button type="button" data-choice="c">Lithography</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 Lithography입니다. EUV scanner는 노광 장비입니다.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="b">
+              <p class="quiz-question">4. Etching에서 선택비(selectivity)가 중요한 이유로 가장 적절한 것은?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">웨이퍼 두께를 늘리기 위해</button>
+                <button type="button" data-choice="b">목표 막만 잘 제거하고 다른 막 손상을 줄이기 위해</button>
+                <button type="button" data-choice="c">포토레지스트 감도를 높이기 위해</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 b입니다. 선택비는 원하는 막과 보호해야 하는 막의 식각 속도 비율과 직접 연결됩니다.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="a">
+              <p class="quiz-question">5. Equipment Engineer와 가장 직접적으로 연결되는 키워드는?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">PM, chamber, calibration</button>
+                <button type="button" data-choice="b">자소서 문장력, 마케팅</button>
+                <button type="button" data-choice="c">회계 결산, 세무</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 a입니다. 장비 엔지니어는 장비 구조 이해와 정비, 안정화, 이상 원인 분석 역량이 중요합니다.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="c">
+              <p class="quiz-question">6. Foundry 기업의 설명으로 가장 적절한 것은?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">패키징만 수행하는 기업</button>
+                <button type="button" data-choice="b">오직 장비만 공급하는 기업</button>
+                <button type="button" data-choice="c">외부 고객 설계를 받아 웨이퍼 생산을 담당하는 기업</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 c입니다. Foundry는 팹리스 등 외부 고객의 설계를 받아 생산을 수행합니다.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="b">
+              <p class="quiz-question">7. HBM이 특히 많이 연결되는 응용 분야는?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">기계식 가공 장비</button>
+                <button type="button" data-choice="b">AI 및 고대역폭 데이터 처리</button>
+                <button type="button" data-choice="c">종이 인쇄 공정</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 b입니다. HBM은 대용량 데이터를 빠르게 처리해야 하는 AI와 고성능 컴퓨팅 환경에서 중요합니다.</p>
+            </div>
+
+            <div class="quiz-item" data-answer="a">
+              <p class="quiz-question">8. WAT의 목적에 가장 가까운 것은?</p>
+              <div class="quiz-options">
+                <button type="button" data-choice="a">웨이퍼 단계에서 전기적 파라미터를 측정해 공정 상태를 확인</button>
+                <button type="button" data-choice="b">패키지 외관만 검사</button>
+                <button type="button" data-choice="c">직무 면접 문항을 생성</button>
+              </div>
+              <p class="quiz-feedback" hidden>정답은 a입니다. WAT는 웨이퍼 단계에서 공정 상태를 전기적 특성으로 확인하는 중요한 테스트입니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="content-grid interview-grid extra-quiz-grid">
+          <article class="card learning-card">
+            <h3>공정 면접 체크포인트</h3>
+            <p>공정 순서 암기가 끝이 아니라 각 공정의 목적과 전후 공정 연결까지 설명할 수 있어야 합니다.</p>
+            <p>특히 Lithography, Etching, Deposition, CMP는 defect와 control point를 함께 말할 수 있으면 좋습니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>직무 면접 체크포인트</h3>
+            <p>지원 직무의 역할, 필요한 지식, 현업에서 중요한 지표를 연결해서 말하는 연습이 필요합니다.</p>
+            <p>예를 들어 equipment 직무라면 vacuum, RF, PM, uptime, trouble shooting을 한 흐름으로 설명할 수 있어야 합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="glossary">
+        <div class="section-heading">
+          <p class="eyebrow">Glossary & Search</p>
+          <h2>용어사전 및 검색 기능</h2>
+          <p>용어와 기업 이름을 함께 검색할 수 있도록 통합 검색 구조로 만들었습니다.</p>
+        </div>
+
+        <div class="card search-card">
+          <label class="search-label" for="search-input">통합 검색</label>
+          <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            placeholder="예: Lithography, CVD, Yield, Samsung, TSMC, NVIDIA"
+          />
+          <p class="search-hint">기본 핵심 10개는 항상 먼저 보이고, 추가 용어와 기업은 펼쳐서 보거나 검색으로 바로 찾을 수 있습니다.</p>
+          <p class="search-meta" id="search-meta" aria-live="polite">현재 핵심 용어와 확장 용어/기업을 함께 탐색할 수 있습니다.</p>
+        </div>
+
+        <div class="content-grid glossary-grid glossary-grid-primary">
+          <article class="card glossary-item searchable" data-search="silicon silicon wafer material semiconductor">
+            <h3>Silicon</h3>
+            <p>가장 대표적인 반도체 재료로 웨이퍼와 MOS 구조의 기반이 됩니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="doping dopant p-type n-type donor acceptor">
+            <h3>Doping</h3>
+            <p>불순물을 소량 첨가해 반도체의 전기적 특성을 제어하는 과정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="pn junction depletion diffusion drift diode">
+            <h3>PN Junction</h3>
+            <p>P형과 N형이 만나는 접합 구조로 다이오드와 트랜지스터 이해의 출발점입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mosfet transistor gate source drain channel oxide">
+            <h3>MOSFET</h3>
+            <p>Gate 전압으로 채널을 제어해 전류를 스위칭하는 핵심 반도체 소자입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="lithography photo exposure overlay cd">
+            <h3>Lithography</h3>
+            <p>회로 패턴을 웨이퍼 위에 전사하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="etch etching plasma residue selectivity">
+            <h3>Etch</h3>
+            <p>원하는 부분만 제거해 패턴을 만드는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="deposition cvd pvd ald thin film">
+            <h3>Deposition</h3>
+            <p>절연막과 금속막 같은 박막을 웨이퍼 위에 형성하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="yield defect fail pareto">
+            <h3>Yield</h3>
+            <p>전체 생산 중 정상 동작하는 양품 비율을 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="defect particle scratch residue void">
+            <h3>Defect</h3>
+            <p>제품 성능이나 수율에 영향을 주는 공정상 결함입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="overlay lithography alignment">
+            <h3>Overlay</h3>
+            <p>현재 패턴이 이전 층과 얼마나 정확히 맞는지를 나타내는 지표입니다.</p>
+          </article>
+        </div>
+
+        <div class="glossary-toggle-wrap">
+          <button class="toggle-button glossary-toggle" type="button" data-target="glossary-more" aria-expanded="false">
+            <span>추가 용어/기업 펼치기</span>
+            <span class="toggle-arrow" aria-hidden="true">▾</span>
+          </button>
+        </div>
+
+        <div class="content-grid glossary-grid collapsible-panel" id="glossary-more">
+          <article class="card glossary-item searchable" data-search="cvd chemical vapor deposition deposition">
+            <h3>CVD</h3>
+            <p>기상 화학 반응으로 박막을 형성하는 증착 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="pvd physical vapor deposition sputter">
+            <h3>PVD</h3>
+            <p>물리적 전달로 박막을 형성하는 방식으로 스퍼터링이 대표적입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ald atomic layer deposition conformality">
+            <h3>ALD</h3>
+            <p>원자층 단위로 막을 형성해 높은 균일도와 우수한 단차 피복성을 얻는 증착 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="oxidation sio2 oxide furnace">
+            <h3>Oxidation</h3>
+            <p>실리콘 표면에 산화막을 형성해 절연층이나 보호막을 만드는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ion implantation implant dose energy dopant">
+            <h3>Ion Implantation</h3>
+            <p>도펀트 이온을 가속해 웨이퍼에 주입하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cmp chemical mechanical planarization slurry pad">
+            <h3>CMP</h3>
+            <p>화학적·기계적 연마로 표면을 평탄화하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="metallization copper aluminum interconnect">
+            <h3>Metallization</h3>
+            <p>금속 배선을 형성해 소자와 소자를 전기적으로 연결하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="anneal annealing thermal activation damage recovery">
+            <h3>Annealing</h3>
+            <p>이온주입 이후 손상 회복과 도펀트 활성화를 위해 열처리하는 과정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="photoresist resist pr">
+            <h3>Photoresist</h3>
+            <p>빛에 반응해 패턴 형성을 돕는 감광성 재료입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="wafer substrate silicon wafer">
+            <h3>Wafer</h3>
+            <p>반도체 소자가 형성되는 얇은 기판입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="reticle mask photomask">
+            <h3>Mask / Reticle</h3>
+            <p>포토 공정에서 회로 패턴 원본 역할을 하는 광학 마스크입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="critical dimension cd lithography line width">
+            <h3>CD</h3>
+            <p>패턴의 핵심 선폭 또는 구조 치수를 뜻하는 지표입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="uniformity thickness uniformity process control">
+            <h3>Uniformity</h3>
+            <p>막 두께나 공정 결과가 웨이퍼 전체에 얼마나 균일한지를 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="selectivity etch selectivity material ratio">
+            <h3>Selectivity</h3>
+            <p>목표 막과 다른 막 사이의 식각 속도 비율입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="plasma ion radical dry etch rf">
+            <h3>Plasma</h3>
+            <p>이온, 전자, 라디칼이 공존하는 활성 상태로 식각과 증착 장비에서 핵심입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="vacuum chamber pump pressure">
+            <h3>Vacuum</h3>
+            <p>공정 chamber 내부 압력을 낮춰 오염을 줄이고 반응을 제어하는 환경입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="rf power radio frequency plasma equipment">
+            <h3>RF Power</h3>
+            <p>플라즈마를 형성하거나 유지하기 위해 사용하는 고주파 전력입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mfc mass flow controller gas supply">
+            <h3>MFC</h3>
+            <p>가스 유량을 정밀하게 제어하는 장치입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="esc electrostatic chuck wafer holding">
+            <h3>ESC</h3>
+            <p>정전기력으로 웨이퍼를 고정하는 chuck입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="endpoint end point etch detection">
+            <h3>Endpoint</h3>
+            <p>식각이 목표 층에 도달했는지 판단하는 종료 지점입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="particle contamination defect cleanroom">
+            <h3>Particle</h3>
+            <p>미세 오염 입자로 수율 저하의 대표 원인입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="step coverage conformality deposition">
+            <h3>Step Coverage</h3>
+            <p>단차가 있는 구조를 박막이 얼마나 잘 따라 덮는지를 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="electromigration metal reliability interconnect">
+            <h3>Electromigration</h3>
+            <p>금속 배선에 전류가 지속되며 원자가 이동해 신뢰성이 저하되는 현상입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="leakage current off current device">
+            <h3>Leakage</h3>
+            <p>원하지 않는 경로로 흐르는 전류로 저전력 소자에서 매우 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="reliability lifetime breakdown degradation">
+            <h3>Reliability</h3>
+            <p>소자가 오랜 시간 안정적으로 동작하는 능력입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="dram memory cell capacitor">
+            <h3>DRAM</h3>
+            <p>커패시터에 전하를 저장하는 휘발성 메모리입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="nand flash memory storage">
+            <h3>NAND</h3>
+            <p>전하 저장 구조를 활용하는 비휘발성 메모리입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="hbm high bandwidth memory ai">
+            <h3>HBM</h3>
+            <p>고대역폭 데이터 처리를 위해 적층 구조를 활용하는 메모리입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="euv extreme ultraviolet lithography">
+            <h3>EUV</h3>
+            <p>초미세 패턴 형성을 위해 사용하는 극자외선 노광 기술입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cleanroom contamination control fab">
+            <h3>Cleanroom</h3>
+            <p>오염 제어를 위해 미세 입자를 엄격하게 관리하는 생산 환경입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="spc statistical process control quality">
+            <h3>SPC</h3>
+            <p>통계 기반으로 공정 이상을 감시하고 관리하는 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="fdc fault detection classification equipment">
+            <h3>FDC</h3>
+            <p>장비 센서 데이터를 이용해 이상 상태를 감지하고 분류하는 시스템입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cpk process capability index">
+            <h3>Cpk</h3>
+            <p>공정이 규격 내에서 얼마나 안정적으로 유지되는지 보여주는 지표입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="idm integrated device manufacturer">
+            <h3>IDM</h3>
+            <p>설계, 제조, 판매를 내부에서 함께 수행하는 기업 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="fabless design only semiconductor company">
+            <h3>Fabless</h3>
+            <p>제조 설비 없이 설계와 제품 기획에 집중하는 기업 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="foundry wafer manufacturing service">
+            <h3>Foundry</h3>
+            <p>외부 고객의 설계를 받아 웨이퍼 생산을 담당하는 기업 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="osat packaging test outsourced semiconductor assembly and test">
+            <h3>OSAT</h3>
+            <p>반도체 패키징과 테스트를 전문으로 수행하는 후공정 기업군입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="finfet fin field effect transistor 3d transistor">
+            <h3>FinFET</h3>
+            <p>채널을 핀 형태로 세워 게이트 제어력을 높인 3차원 트랜지스터 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="gaa gate all around nanosheet transistor">
+            <h3>GAA</h3>
+            <p>게이트가 채널을 더 넓게 감싸 전기적 제어 성능을 높인 차세대 트랜지스터 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="sram static random access memory cache">
+            <h3>SRAM</h3>
+            <p>플립플롭 구조를 이용하는 고속 휘발성 메모리로 캐시에 많이 사용됩니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="soc system on chip integration">
+            <h3>SoC</h3>
+            <p>CPU, 메모리 인터페이스, I/O 등 여러 기능 블록을 하나의 칩에 통합한 시스템 반도체입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="pmic power management integrated circuit">
+            <h3>PMIC</h3>
+            <p>전압 변환과 전력 분배를 담당하는 전력 관리 반도체입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="chiplet advanced packaging modular die">
+            <h3>Chiplet</h3>
+            <p>기능별 다이를 분리해 패키지 수준에서 연결하는 설계 및 패키징 접근 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="tsv through silicon via 3d packaging">
+            <h3>TSV</h3>
+            <p>실리콘을 관통하는 수직 전기 연결 구조로 3D 적층 패키징에 사용됩니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="rdl redistribution layer packaging interconnect">
+            <h3>RDL</h3>
+            <p>패키지 상에서 입출력 위치를 재배치하기 위해 형성하는 배선층입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="bump micro bump solder ball package">
+            <h3>Bump</h3>
+            <p>칩과 기판을 전기적으로 연결하는 미세 돌기 구조로 플립칩 패키지에서 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="package substrate advanced packaging interposer">
+            <h3>Package Substrate</h3>
+            <p>칩과 시스템 보드를 연결하는 패키지 기판으로 신호와 전력 전달에 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="feol front end of line transistor formation">
+            <h3>FEOL</h3>
+            <p>트랜지스터와 같은 소자 자체를 형성하는 전공정 영역을 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="beol back end of line interconnect metallization">
+            <h3>BEOL</h3>
+            <p>금속 배선과 층간 연결을 형성하는 후반부 공정 영역을 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="wat wafer acceptance test parametric test">
+            <h3>WAT</h3>
+            <p>웨이퍼 단계에서 전기적 파라미터를 측정해 공정 상태를 확인하는 테스트입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cp chip probing wafer test">
+            <h3>CP</h3>
+            <p>웨이퍼 상태에서 프로브를 이용해 칩의 전기적 특성을 검사하는 테스트 단계입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ft final test package test">
+            <h3>FT</h3>
+            <p>패키징 이후 최종 제품 상태에서 수행하는 최종 테스트 단계입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="binning sort grade test result">
+            <h3>Binning</h3>
+            <p>테스트 결과에 따라 칩을 성능이나 품질 기준으로 분류하는 과정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="synopsys eda design automation company">
+            <h3>Synopsys</h3>
+            <p>반도체 설계 자동화와 IP 분야에서 핵심적인 EDA 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cadence eda design automation company">
+            <h3>Cadence</h3>
+            <p>회로 설계와 검증, 시스템 설계 도구를 제공하는 대표적인 EDA 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="arm ip cpu architecture company">
+            <h3>ARM</h3>
+            <p>CPU 아키텍처와 설계 IP 생태계에서 매우 중요한 역할을 하는 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="samsung samsung electronics memory foundry company">
+            <h3>Samsung</h3>
+            <p>한국 기업으로 메모리와 파운드리 모두에서 중요한 글로벌 반도체 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="sk hynix dram nand memory company">
+            <h3>SK hynix</h3>
+            <p>한국 기업으로 글로벌 메모리 산업의 핵심 기업이며 DRAM과 NAND에 강점을 가집니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="tsmc foundry company">
+            <h3>TSMC</h3>
+            <p>대만 기업으로 글로벌 파운드리 산업의 핵심 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="intel idm cpu foundry company">
+            <h3>Intel</h3>
+            <p>미국 기업으로 전통적인 IDM 대표 사례이며 로직 공정과 첨단 패키징에 강점이 있습니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="micron memory dram nand company">
+            <h3>Micron</h3>
+            <p>미국 기업으로 DRAM과 NAND 중심의 글로벌 메모리 사업을 수행합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="kioxia nand flash company">
+            <h3>Kioxia</h3>
+            <p>일본 기업으로 NAND 플래시 메모리 분야에서 중요한 위치를 가집니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="western digital nand storage company">
+            <h3>Western Digital</h3>
+            <p>미국 기업으로 저장장치와 NAND 생태계에서 중요한 역할을 합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="globalfoundries foundry company">
+            <h3>GlobalFoundries</h3>
+            <p>미국 기반 기업으로 특화 공정과 다양한 고객군을 가진 글로벌 파운드리 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="umc united microelectronics foundry company">
+            <h3>UMC</h3>
+            <p>대만 기업으로 성숙 공정 중심의 대표 파운드리 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="smic foundry china company">
+            <h3>SMIC</h3>
+            <p>중국 기업으로 대표적인 파운드리 사업을 수행합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="qualcomm fabless mobile soc company">
+            <h3>Qualcomm</h3>
+            <p>미국 기업으로 모바일 AP와 통신 칩 중심의 대표적인 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="nvidia fabless gpu ai company">
+            <h3>NVIDIA</h3>
+            <p>미국 기업으로 GPU와 AI 반도체 분야를 대표하는 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="amd fabless cpu gpu company">
+            <h3>AMD</h3>
+            <p>미국 기업으로 CPU와 GPU를 설계하는 대표적인 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="broadcom fabless networking company">
+            <h3>Broadcom</h3>
+            <p>미국 기업으로 통신과 네트워크 반도체 분야에서 강한 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mediatek fabless mobile soc company">
+            <h3>MediaTek</h3>
+            <p>대만 기업으로 모바일과 통신 칩 설계 분야에서 중요한 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="marvell fabless data center company">
+            <h3>Marvell</h3>
+            <p>미국 기업으로 데이터센터와 네트워크 반도체 설계 분야에서 영향력이 큽니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="infineon power semiconductor automotive company">
+            <h3>Infineon</h3>
+            <p>독일 기업으로 전력 반도체와 차량용 반도체 분야에서 강한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="texas instruments ti analog semiconductor company">
+            <h3>Texas Instruments</h3>
+            <p>미국 기업으로 아날로그와 임베디드 반도체 분야의 대표 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="nxp automotive semiconductor company">
+            <h3>NXP</h3>
+            <p>네덜란드 기업으로 차량용과 산업용 반도체 분야에서 중요한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="stmicroelectronics st automotive power company">
+            <h3>STMicroelectronics</h3>
+            <p>스위스 기반 기업으로 산업용, 전력, 차량용 반도체를 폭넓게 다룹니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="renesas automotive mcu company">
+            <h3>Renesas</h3>
+            <p>일본 기업으로 차량용 MCU와 임베디드 반도체 분야에서 영향력이 큽니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="onsemi on semiconductor power sensor company">
+            <h3>onsemi</h3>
+            <p>미국 기업으로 전력 반도체와 이미지 센서 분야에서 중요한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="asml euv lithography scanner company">
+            <h3>ASML</h3>
+            <p>네덜란드 기업으로 EUV 노광 장비 분야에서 핵심 역할을 합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="applied materials deposition cmp equipment company">
+            <h3>Applied Materials</h3>
+            <p>미국 기업으로 증착, CMP, 검사 장비를 폭넓게 공급하는 대표 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="lam research etch deposition company">
+            <h3>Lam Research</h3>
+            <p>미국 기업으로 식각과 일부 증착 장비 분야를 대표하는 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="tokyo electron tel track etch deposition company">
+            <h3>Tokyo Electron</h3>
+            <p>일본 기업으로 포토 보조 장비와 식각, 증착 장비를 공급하는 핵심 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="kla inspection metrology yield company">
+            <h3>KLA</h3>
+            <p>미국 기업으로 검사와 계측 분야에서 중요한 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="asm international ald epitaxy company">
+            <h3>ASM International</h3>
+            <p>네덜란드 기업으로 ALD와 에피택시 장비 분야에서 강점을 가집니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="screen semiconductor solutions clean track company">
+            <h3>SCREEN</h3>
+            <p>일본 기업으로 세정 장비와 포토 보조 장비 분야에서 중요한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="besi packaging die attach company">
+            <h3>BESI</h3>
+            <p>네덜란드 기업으로 패키징과 다이 본딩 장비 분야에서 주목받는 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ase osat packaging test company">
+            <h3>ASE</h3>
+            <p>대만 기업으로 세계적인 OSAT 기업이며 패키징과 테스트 역량이 강합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="amkor osat packaging test company">
+            <h3>Amkor</h3>
+            <p>미국 기반 기업으로 글로벌 후공정 분야를 대표하는 OSAT 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="jcet osat packaging test company">
+            <h3>JCET</h3>
+            <p>중국 기업으로 중요한 글로벌 OSAT 기업 중 하나입니다.</p>
+          </article>
+        </div>
+        <div class="card search-empty" id="search-empty" hidden>
+          <h3>검색 결과가 없습니다</h3>
+          <p>다른 용어, 약어, 공정명, 기업 이름으로 다시 검색해 보세요. 예: EUV, CMP, TSMC, NVIDIA</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
+            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a
+            class="button footer-button"
+            href="https://kimsihu0225.github.io/My-Cosmos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
