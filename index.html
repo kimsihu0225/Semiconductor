@@ -344,9 +344,9 @@
           <div class="process-flow-intro">
             <div>
               <p class="mini-label">Process Flow Visualization</p>
-              <h3>웨이퍼 단면 변화와 8대 공정 순서</h3>
+              <h3>공정 선택기 + 메인 웨이퍼 단면 패널</h3>
             </div>
-            <p>단계를 클릭하면 해당 공정 카드가 펼쳐지고 그 위치로 이동합니다.</p>
+            <p>상단에서 공정을 선택하면 아래 대형 단면도와 핵심 설명이 즉시 바뀝니다.</p>
           </div>
           <div class="process-flow-status">
             <div class="process-flow-progress-track" aria-hidden="true">
@@ -367,145 +367,100 @@
           <div class="process-flow">
             <button type="button" class="process-flow-step is-active" data-step-index="1" data-step-label="Oxidation" data-target-panel="proc-oxidation" data-scroll-target="proc-oxidation">
               <span class="flow-step-no">01</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="72" width="172" height="34" rx="6" />
-                  <rect class="svg-oxide" x="24" y="58" width="172" height="12" rx="3" />
-                  <line class="svg-callout" x1="110" y1="36" x2="110" y2="56" />
-                  <text class="svg-label" x="110" y="30" text-anchor="middle">Oxide Layer</text>
-                  <text class="svg-caption" x="110" y="98" text-anchor="middle">Si wafer substrate</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-oxidation" aria-hidden="true"></span>
               <strong>Oxidation</strong>
               <em>산화막 형성</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="2" data-step-label="Lithography" data-target-panel="proc-lithography" data-scroll-target="proc-lithography">
               <span class="flow-step-no">02</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="78" width="172" height="28" rx="6" />
-                  <rect class="svg-oxide" x="24" y="66" width="172" height="10" rx="3" />
-                  <path class="svg-resist" d="M24 42 H70 V60 H92 V42 H128 V60 H150 V42 H196 V64 H24 Z" />
-                  <line class="svg-callout" x1="110" y1="24" x2="110" y2="42" />
-                  <text class="svg-label" x="110" y="18" text-anchor="middle">Photoresist Pattern</text>
-                  <text class="svg-caption" x="110" y="61" text-anchor="middle">open window</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-lithography" aria-hidden="true"></span>
               <strong>Lithography</strong>
               <em>패턴 전사</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="3" data-step-label="Etching" data-target-panel="proc-etching" data-scroll-target="proc-etching">
               <span class="flow-step-no">03</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="72" width="172" height="34" rx="6" />
-                  <path class="svg-oxide" d="M24 58 H82 V72 H104 V58 H196 V70 H118 V106 H90 V70 H24 Z" />
-                  <path class="svg-resist" d="M24 36 H74 V54 H98 V36 H122 V54 H146 V36 H196 V58 H24 Z" />
-                  <line class="svg-etch-line" x1="104" y1="26" x2="104" y2="101" />
-                  <text class="svg-label" x="110" y="28" text-anchor="middle">etched trench</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-etching" aria-hidden="true"></span>
               <strong>Etching</strong>
               <em>선택 제거</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="4" data-step-label="Deposition" data-target-panel="proc-deposition" data-scroll-target="proc-deposition">
               <span class="flow-step-no">04</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="72" width="172" height="34" rx="6" />
-                  <path class="svg-oxide-outline" d="M24 58 H82 V72 H104 V58 H196" />
-                  <path class="svg-film" d="M24 50 H78 V65 H108 V50 H196 V62 H122 V102 H90 V62 H24 Z" />
-                  <text class="svg-label" x="110" y="30" text-anchor="middle">new film covers surface</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-deposition" aria-hidden="true"></span>
               <strong>Deposition</strong>
               <em>박막 추가</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="5" data-step-label="Ion Implantation" data-target-panel="proc-implantation" data-scroll-target="proc-implantation">
               <span class="flow-step-no">05</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="68" width="172" height="38" rx="6" />
-                  <rect class="svg-oxide" x="24" y="56" width="172" height="10" rx="3" />
-                  <path class="svg-arrow" d="M64 22 V50 M64 50 L57 42 M64 50 L71 42" />
-                  <path class="svg-arrow" d="M110 22 V50 M110 50 L103 42 M110 50 L117 42" />
-                  <path class="svg-arrow" d="M156 22 V50 M156 50 L149 42 M156 50 L163 42" />
-                  <circle class="svg-ion" cx="58" cy="80" r="3.5" />
-                  <circle class="svg-ion" cx="75" cy="87" r="3.5" />
-                  <circle class="svg-ion" cx="96" cy="82" r="3.5" />
-                  <circle class="svg-ion" cx="114" cy="89" r="3.5" />
-                  <circle class="svg-ion" cx="133" cy="82" r="3.5" />
-                  <circle class="svg-ion" cx="151" cy="88" r="3.5" />
-                  <text class="svg-label" x="110" y="24" text-anchor="middle">ion beam</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-implantation" aria-hidden="true"></span>
               <strong>Ion Implantation</strong>
               <em>도핑 주입</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="6" data-step-label="CMP" data-target-panel="proc-cmp" data-scroll-target="proc-cmp">
               <span class="flow-step-no">06</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="74" width="172" height="32" rx="6" />
-                  <path class="svg-cmp-before" d="M24 68 C48 62, 62 80, 86 74 S126 56, 150 64 S179 78, 196 70" />
-                  <line class="svg-cmp-after" x1="24" y1="52" x2="196" y2="52" />
-                  <rect class="svg-cmp-pad" x="20" y="28" width="180" height="10" rx="5" />
-                  <text class="svg-caption" x="110" y="48" text-anchor="middle">after CMP: flat surface</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-cmp" aria-hidden="true"></span>
               <strong>CMP</strong>
               <em>평탄화</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="7" data-step-label="Metallization" data-target-panel="proc-metallization" data-scroll-target="proc-metallization">
               <span class="flow-step-no">07</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-substrate" x="24" y="74" width="172" height="32" rx="6" />
-                  <rect class="svg-dielectric" x="24" y="52" width="172" height="20" rx="4" />
-                  <path class="svg-metal" d="M34 62 H84 V48 H106 V62 H186" />
-                  <path class="svg-metal" d="M48 88 H118 V74 H142 V88 H182" />
-                  <rect class="svg-via" x="100" y="62" width="12" height="14" rx="3" />
-                  <rect class="svg-via" x="136" y="62" width="12" height="14" rx="3" />
-                  <text class="svg-label" x="110" y="28" text-anchor="middle">metal interconnect</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-metallization" aria-hidden="true"></span>
               <strong>Metallization</strong>
               <em>배선 형성</em>
             </button>
             <span class="flow-arrow" aria-hidden="true">→</span>
             <button type="button" class="process-flow-step" data-step-index="8" data-step-label="Test & Packaging" data-target-panel="proc-packaging" data-scroll-target="proc-packaging">
               <span class="flow-step-no">08</span>
-              <span class="flow-diagram" aria-hidden="true">
-                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
-                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
-                  <rect class="svg-package-body" x="58" y="28" width="104" height="40" rx="8" />
-                  <rect class="svg-die" x="88" y="42" width="44" height="14" rx="4" />
-                  <circle class="svg-bump" cx="84" cy="74" r="5" />
-                  <circle class="svg-bump" cx="102" cy="74" r="5" />
-                  <circle class="svg-bump" cx="120" cy="74" r="5" />
-                  <circle class="svg-bump" cx="138" cy="74" r="5" />
-                  <rect class="svg-substrate" x="42" y="82" width="136" height="18" rx="5" />
-                  <line class="svg-lead" x1="58" y1="100" x2="44" y2="112" />
-                  <line class="svg-lead" x1="162" y1="100" x2="176" y2="112" />
-                  <text class="svg-label" x="110" y="24" text-anchor="middle">package + external connection</text>
-                </svg>
-              </span>
+              <span class="flow-icon flow-icon-packaging" aria-hidden="true"></span>
               <strong>Test & Packaging</strong>
               <em>검증과 보호</em>
             </button>
+          </div>
+
+          <div class="card process-visual-main" id="process-visual-main">
+            <div class="process-visual-head">
+              <div>
+                <p class="mini-label" id="process-visual-step">Step 1</p>
+                <h3 id="process-visual-title">Oxidation</h3>
+              </div>
+              <p class="process-visual-change" id="process-visual-change">산화막 추가</p>
+            </div>
+            <div class="process-visual-body">
+              <div class="process-visual-canvas">
+                <div class="process-visual-svg" id="process-visual-svg" aria-live="polite"></div>
+              </div>
+              <div class="process-visual-copy">
+                <div class="process-visual-summary card">
+                  <h4>구조 변화 핵심</h4>
+                  <p id="process-visual-summary">
+                    웨이퍼 표면에 균일한 산화막이 생기며 이후 패턴 형성을 위한 절연 기반이 준비됩니다.
+                  </p>
+                </div>
+                <div class="process-visual-notes">
+                  <article class="card process-note-card">
+                    <h4>공정 목적</h4>
+                    <ul id="process-purpose-list"></ul>
+                  </article>
+                  <article class="card process-note-card">
+                    <h4>무엇이 변하는지</h4>
+                    <ul id="process-change-list"></ul>
+                  </article>
+                  <article class="card process-note-card">
+                    <h4>대표 장비</h4>
+                    <ul id="process-equipment-list"></ul>
+                  </article>
+                  <article class="card process-note-card">
+                    <h4>핵심 포인트</h4>
+                    <ul id="process-keypoint-list"></ul>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
