@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -51,6 +51,7 @@
           <a href="#industry">산업/기업</a>
           <a href="#career">직무/취업</a>
           <a href="#interview">면접/시험</a>
+          <a href="#advanced-packaging">첨단기술</a>
           <a href="#glossary">용어/검색</a>
         </div>
       </nav>
@@ -179,7 +180,7 @@
             </div>
           </article>
 
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="wafer silicon substrate material 재료 웨이퍼">
             <h3>Silicon의 역할</h3>
             <p>
               실리콘은 자연계에 풍부하고 산화막 형성이 안정적이며 가공성이 좋아
@@ -192,7 +193,7 @@
             </p>
           </article>
 
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="photoresist resist pr material 재료 포토레지스트">
             <h3>Doping, P-type, N-type</h3>
             <p>
               순수 실리콘에 특정 원소를 소량 첨가해 전하 운반자를 늘리는 과정을
@@ -202,7 +203,7 @@
             </p>
           </article>
 
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="gas process gas chemistry material 재료 가스">
             <h3>Carrier Movement</h3>
             <p>
               반도체 내부에서 전류는 전자와 정공의 이동으로 형성됩니다. 농도 차이에
@@ -215,7 +216,7 @@
         </div>
 
         <div class="diagram-grid">
-          <article class="card diagram-card">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="track scanner lithography align expose coater developer equipment 장비 포토">
             <div class="diagram-header">
               <div>
                 <p class="mini-label">Clickable Diagram</p>
@@ -241,7 +242,7 @@
             </div>
           </article>
 
-          <article class="card diagram-card">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="ion implanter implant beamline mass filter equipment 장비 이온주입">
             <div class="diagram-header">
               <div>
                 <p class="mini-label">Clickable Diagram</p>
@@ -271,6 +272,52 @@
               </p>
             </div>
           </article>
+
+          <article class="card diagram-card band-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Clickable Diagram</p>
+                <h3>Energy Band / Band Gap</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="band-detail">상세 설명 보기</button>
+            </div>
+            <div class="band-diagram-board" aria-hidden="true">
+              <div class="band-column conductor">
+                <p class="band-label">Conductor</p>
+                <div class="band-rails overlap">
+                  <span class="band-rail conduction-band">Conduction Band</span>
+                  <span class="band-gap-label">Overlap</span>
+                  <span class="band-rail valence-band">Valence Band</span>
+                </div>
+                <p class="band-note">밴드가 겹쳐 전자가 바로 이동합니다.</p>
+              </div>
+              <div class="band-column insulator">
+                <p class="band-label">Insulator</p>
+                <div class="band-rails">
+                  <span class="band-rail conduction-band">Conduction Band</span>
+                  <span class="band-gap gap-wide"></span>
+                  <span class="band-gap-label">Large Gap</span>
+                  <span class="band-rail valence-band">Valence Band</span>
+                </div>
+                <p class="band-note">band gap이 커서 전류가 잘 흐르지 않습니다.</p>
+              </div>
+              <div class="band-column semiconductor">
+                <p class="band-label">Semiconductor</p>
+                <div class="band-rails">
+                  <span class="band-rail conduction-band">Conduction Band</span>
+                  <span class="band-gap gap-mid"></span>
+                  <span class="band-gap-label">Controlled Gap</span>
+                  <span class="band-rail valence-band">Valence Band</span>
+                </div>
+                <p class="band-note">온도, 도핑, 전압에 따라 성질을 조절할 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="expand-panel" id="band-detail" hidden>
+              <p><strong>Valence band</strong>는 전자가 주로 채워진 영역이고, <strong>conduction band</strong>는 전자가 이동하며 전류를 만드는 영역입니다.</p>
+              <p><strong>Band gap</strong>은 두 밴드 사이의 에너지 차이입니다. conductor는 거의 겹치고, insulator는 매우 크며, semiconductor는 중간이라 제어 가능한 전기적 특성을 가집니다.</p>
+              <p>입문 단계에서는 “반도체는 필요할 때만 흐르게 만들 수 있는 재료”라고 이해하면 PN junction와 MOSFET으로 연결하기 쉽습니다.</p>
+            </div>
+          </article>
         </div>
 
         <div class="related-links card">
@@ -294,20 +341,176 @@
         </div>
 
         <div class="card process-flow-card">
+          <div class="process-flow-intro">
+            <div>
+              <p class="mini-label">Process Flow Visualization</p>
+              <h3>웨이퍼 단면 변화와 8대 공정 순서</h3>
+            </div>
+            <p>단계를 클릭하면 해당 공정 카드가 펼쳐지고 그 위치로 이동합니다.</p>
+          </div>
+          <div class="process-flow-status">
+            <div class="process-flow-progress-track" aria-hidden="true">
+              <span class="process-flow-progress-fill" id="process-flow-progress"></span>
+            </div>
+            <div class="process-flow-meta">
+              <span id="process-flow-step-label">Step 1 · Oxidation</span>
+              <span id="process-flow-step-count">1 / 8</span>
+            </div>
+          </div>
+          <div class="process-flow-legend" aria-label="재료 색상 범례">
+            <span><i class="legend-swatch legend-substrate"></i>Substrate</span>
+            <span><i class="legend-swatch legend-oxide"></i>Oxide</span>
+            <span><i class="legend-swatch legend-resist"></i>Photoresist</span>
+            <span><i class="legend-swatch legend-film"></i>Film</span>
+            <span><i class="legend-swatch legend-metal"></i>Metal / Package</span>
+          </div>
           <div class="process-flow">
-            <span>Oxidation</span>
-            <span>Lithography</span>
-            <span>Etching</span>
-            <span>Deposition</span>
-            <span>Ion Implantation</span>
-            <span>CMP</span>
-            <span>Metallization</span>
-            <span>Test & Packaging</span>
+            <button type="button" class="process-flow-step is-active" data-step-index="1" data-step-label="Oxidation" data-target-panel="proc-oxidation" data-scroll-target="proc-oxidation">
+              <span class="flow-step-no">01</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="72" width="172" height="34" rx="6" />
+                  <rect class="svg-oxide" x="24" y="58" width="172" height="12" rx="3" />
+                  <line class="svg-callout" x1="110" y1="36" x2="110" y2="56" />
+                  <text class="svg-label" x="110" y="30" text-anchor="middle">Oxide Layer</text>
+                  <text class="svg-caption" x="110" y="98" text-anchor="middle">Si wafer substrate</text>
+                </svg>
+              </span>
+              <strong>Oxidation</strong>
+              <em>산화막 형성</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="2" data-step-label="Lithography" data-target-panel="proc-lithography" data-scroll-target="proc-lithography">
+              <span class="flow-step-no">02</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="78" width="172" height="28" rx="6" />
+                  <rect class="svg-oxide" x="24" y="66" width="172" height="10" rx="3" />
+                  <path class="svg-resist" d="M24 42 H70 V60 H92 V42 H128 V60 H150 V42 H196 V64 H24 Z" />
+                  <line class="svg-callout" x1="110" y1="24" x2="110" y2="42" />
+                  <text class="svg-label" x="110" y="18" text-anchor="middle">Photoresist Pattern</text>
+                  <text class="svg-caption" x="110" y="61" text-anchor="middle">open window</text>
+                </svg>
+              </span>
+              <strong>Lithography</strong>
+              <em>패턴 전사</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="3" data-step-label="Etching" data-target-panel="proc-etching" data-scroll-target="proc-etching">
+              <span class="flow-step-no">03</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="72" width="172" height="34" rx="6" />
+                  <path class="svg-oxide" d="M24 58 H82 V72 H104 V58 H196 V70 H118 V106 H90 V70 H24 Z" />
+                  <path class="svg-resist" d="M24 36 H74 V54 H98 V36 H122 V54 H146 V36 H196 V58 H24 Z" />
+                  <line class="svg-etch-line" x1="104" y1="26" x2="104" y2="101" />
+                  <text class="svg-label" x="110" y="28" text-anchor="middle">etched trench</text>
+                </svg>
+              </span>
+              <strong>Etching</strong>
+              <em>선택 제거</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="4" data-step-label="Deposition" data-target-panel="proc-deposition" data-scroll-target="proc-deposition">
+              <span class="flow-step-no">04</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="72" width="172" height="34" rx="6" />
+                  <path class="svg-oxide-outline" d="M24 58 H82 V72 H104 V58 H196" />
+                  <path class="svg-film" d="M24 50 H78 V65 H108 V50 H196 V62 H122 V102 H90 V62 H24 Z" />
+                  <text class="svg-label" x="110" y="30" text-anchor="middle">new film covers surface</text>
+                </svg>
+              </span>
+              <strong>Deposition</strong>
+              <em>박막 추가</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="5" data-step-label="Ion Implantation" data-target-panel="proc-implantation" data-scroll-target="proc-implantation">
+              <span class="flow-step-no">05</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="68" width="172" height="38" rx="6" />
+                  <rect class="svg-oxide" x="24" y="56" width="172" height="10" rx="3" />
+                  <path class="svg-arrow" d="M64 22 V50 M64 50 L57 42 M64 50 L71 42" />
+                  <path class="svg-arrow" d="M110 22 V50 M110 50 L103 42 M110 50 L117 42" />
+                  <path class="svg-arrow" d="M156 22 V50 M156 50 L149 42 M156 50 L163 42" />
+                  <circle class="svg-ion" cx="58" cy="80" r="3.5" />
+                  <circle class="svg-ion" cx="75" cy="87" r="3.5" />
+                  <circle class="svg-ion" cx="96" cy="82" r="3.5" />
+                  <circle class="svg-ion" cx="114" cy="89" r="3.5" />
+                  <circle class="svg-ion" cx="133" cy="82" r="3.5" />
+                  <circle class="svg-ion" cx="151" cy="88" r="3.5" />
+                  <text class="svg-label" x="110" y="24" text-anchor="middle">ion beam</text>
+                </svg>
+              </span>
+              <strong>Ion Implantation</strong>
+              <em>도핑 주입</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="6" data-step-label="CMP" data-target-panel="proc-cmp" data-scroll-target="proc-cmp">
+              <span class="flow-step-no">06</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="74" width="172" height="32" rx="6" />
+                  <path class="svg-cmp-before" d="M24 68 C48 62, 62 80, 86 74 S126 56, 150 64 S179 78, 196 70" />
+                  <line class="svg-cmp-after" x1="24" y1="52" x2="196" y2="52" />
+                  <rect class="svg-cmp-pad" x="20" y="28" width="180" height="10" rx="5" />
+                  <text class="svg-caption" x="110" y="48" text-anchor="middle">after CMP: flat surface</text>
+                </svg>
+              </span>
+              <strong>CMP</strong>
+              <em>평탄화</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="7" data-step-label="Metallization" data-target-panel="proc-metallization" data-scroll-target="proc-metallization">
+              <span class="flow-step-no">07</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-substrate" x="24" y="74" width="172" height="32" rx="6" />
+                  <rect class="svg-dielectric" x="24" y="52" width="172" height="20" rx="4" />
+                  <path class="svg-metal" d="M34 62 H84 V48 H106 V62 H186" />
+                  <path class="svg-metal" d="M48 88 H118 V74 H142 V88 H182" />
+                  <rect class="svg-via" x="100" y="62" width="12" height="14" rx="3" />
+                  <rect class="svg-via" x="136" y="62" width="12" height="14" rx="3" />
+                  <text class="svg-label" x="110" y="28" text-anchor="middle">metal interconnect</text>
+                </svg>
+              </span>
+              <strong>Metallization</strong>
+              <em>배선 형성</em>
+            </button>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <button type="button" class="process-flow-step" data-step-index="8" data-step-label="Test & Packaging" data-target-panel="proc-packaging" data-scroll-target="proc-packaging">
+              <span class="flow-step-no">08</span>
+              <span class="flow-diagram" aria-hidden="true">
+                <svg class="wafer-svg" viewBox="0 0 220 132" role="img" focusable="false">
+                  <rect class="svg-panel" x="9" y="10" width="202" height="112" rx="18" />
+                  <rect class="svg-package-body" x="58" y="28" width="104" height="40" rx="8" />
+                  <rect class="svg-die" x="88" y="42" width="44" height="14" rx="4" />
+                  <circle class="svg-bump" cx="84" cy="74" r="5" />
+                  <circle class="svg-bump" cx="102" cy="74" r="5" />
+                  <circle class="svg-bump" cx="120" cy="74" r="5" />
+                  <circle class="svg-bump" cx="138" cy="74" r="5" />
+                  <rect class="svg-substrate" x="42" y="82" width="136" height="18" rx="5" />
+                  <line class="svg-lead" x1="58" y1="100" x2="44" y2="112" />
+                  <line class="svg-lead" x1="162" y1="100" x2="176" y2="112" />
+                  <text class="svg-label" x="110" y="24" text-anchor="middle">package + external connection</text>
+                </svg>
+              </span>
+              <strong>Test & Packaging</strong>
+              <em>검증과 보호</em>
+            </button>
           </div>
         </div>
 
         <div class="content-grid process-grid">
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="oxidation oxidation furnace oxide sio2 thermal growth 산화 공정 산화막">
             <button class="accordion-trigger" type="button" data-target="proc-oxidation">
               <span>산화 (Oxidation)</span>
               <span class="plus">+</span>
@@ -322,7 +525,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="lithography photo resist exposure develop overlay cd 포토 노광 현상">
             <button class="accordion-trigger" type="button" data-target="proc-lithography">
               <span>포토 (Lithography)</span>
               <span class="plus">+</span>
@@ -346,7 +549,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="etch etching plasma selectivity residue dry etch wet etch 식각 플라즈마">
             <button class="accordion-trigger" type="button" data-target="proc-etching">
               <span>식각 (Etching)</span>
               <span class="plus">+</span>
@@ -370,7 +573,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="deposition cvd pvd ald thin film 증착 박막">
             <button class="accordion-trigger" type="button" data-target="proc-deposition">
               <span>증착 (Deposition)</span>
               <span class="plus">+</span>
@@ -394,7 +597,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="ion implantation implant dopant dose energy 도핑 이온주입">
             <button class="accordion-trigger" type="button" data-target="proc-implantation">
               <span>이온주입 (Ion Implantation)</span>
               <span class="plus">+</span>
@@ -409,7 +612,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="cmp planarization slurry pad 평탄화 씨엠피">
             <button class="accordion-trigger" type="button" data-target="proc-cmp">
               <span>CMP</span>
               <span class="plus">+</span>
@@ -424,7 +627,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="metallization interconnect copper aluminum metal line 금속배선 배선">
             <button class="accordion-trigger" type="button" data-target="proc-metallization">
               <span>금속배선 (Metallization)</span>
               <span class="plus">+</span>
@@ -439,7 +642,7 @@
             </div>
           </article>
 
-          <article class="card accordion-card">
+          <article class="card accordion-card searchable" data-search-category="process" data-search="test packaging package probing final test wat 후공정 테스트 패키징">
             <button class="accordion-trigger" type="button" data-target="proc-packaging">
               <span>테스트/패키징 (Test & Packaging)</span>
               <span class="plus">+</span>
@@ -476,7 +679,7 @@
         </div>
 
         <div class="content-grid equipment-grid">
-          <article class="card diagram-card">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="cvd pvd chamber vacuum heater rf deposition equipment">
             <div class="diagram-header">
               <div>
                 <p class="mini-label">Equipment Focus</p>
@@ -491,14 +694,14 @@
               <span>Heater / RF</span>
             </div>
             <div class="expand-panel" id="eq-cvd" hidden>
-              <p><strong>역할:</strong> 웨이퍼 표면에 박막을 형성합니다.</p>
+              <p><strong>역할:</strong> 웨이퍼 표면에 필요한 박막을 형성합니다.</p>
               <p><strong>구성:</strong> chamber, gas line, MFC, vacuum pump, heater, sensor.</p>
-              <p><strong>원리:</strong> CVD는 화학 반응, PVD는 물리적 증발/스퍼터링을 사용합니다.</p>
-              <p><strong>현업 포인트:</strong> 막질, 두께 균일도, chamber condition 관리가 중요합니다.</p>
+              <p><strong>원리:</strong> CVD는 화학 반응으로 막을 성장시키고, PVD는 물리적 증발과 스퍼터링으로 막을 쌓습니다.</p>
+              <p><strong>실무 포인트:</strong> 막 두께, 균일도, chamber condition 관리가 핵심입니다.</p>
             </div>
           </article>
 
-          <article class="card diagram-card">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="etcher etch plasma esc rf exhaust equipment">
             <div class="diagram-header">
               <div>
                 <p class="mini-label">Equipment Focus</p>
@@ -513,14 +716,14 @@
               <span>Exhaust</span>
             </div>
             <div class="expand-panel" id="eq-etch" hidden>
-              <p><strong>역할:</strong> 플라즈마를 이용해 막을 선택적으로 제거합니다.</p>
+              <p><strong>역할:</strong> 플라즈마를 이용해 필요한 부분만 선택적으로 제거합니다.</p>
               <p><strong>구성:</strong> chamber, ESC, RF generator, gas showerhead, exhaust.</p>
-              <p><strong>원리:</strong> 반응성 이온과 중성종이 표면에 작용해 식각을 진행합니다.</p>
-              <p><strong>현업 포인트:</strong> endpoint, residue, chamber seasoning이 중요합니다.</p>
+              <p><strong>원리:</strong> 이온과 라디칼이 표면과 반응하며 식각이 진행됩니다.</p>
+              <p><strong>실무 포인트:</strong> endpoint, residue, chamber seasoning 관리가 중요합니다.</p>
             </div>
           </article>
 
-          <article class="card diagram-card">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="track scanner lithography align expose coater developer equipment">
             <div class="diagram-header">
               <div>
                 <p class="mini-label">Equipment Focus</p>
@@ -537,12 +740,12 @@
             <div class="expand-panel" id="eq-litho" hidden>
               <p><strong>역할:</strong> 포토레지스트 도포와 노광 공정을 수행합니다.</p>
               <p><strong>구성:</strong> coater, developer, aligner, optics, stage.</p>
-              <p><strong>원리:</strong> 회로 마스크 이미지를 웨이퍼에 정밀하게 투영합니다.</p>
-              <p><strong>현업 포인트:</strong> focus, dose, overlay, contamination control이 핵심입니다.</p>
+              <p><strong>원리:</strong> 마스크 이미지를 웨이퍼 위에 정확하게 전사합니다.</p>
+              <p><strong>실무 포인트:</strong> focus, dose, overlay, contamination control이 핵심입니다.</p>
             </div>
           </article>
 
-          <article class="card diagram-card">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="ion implanter implant beamline mass filter equipment">
             <div class="diagram-header">
               <div>
                 <p class="mini-label">Equipment Focus</p>
@@ -560,24 +763,47 @@
               <p><strong>역할:</strong> 도핑 이온을 원하는 에너지와 양으로 주입합니다.</p>
               <p><strong>구성:</strong> ion source, analyzer magnet, accelerator, beam scanner, end station.</p>
               <p><strong>원리:</strong> 이온을 생성하고 질량 분리 후 가속해 웨이퍼에 주입합니다.</p>
-              <p><strong>현업 포인트:</strong> dose accuracy, contamination, beam stability 관리가 중요합니다.</p>
+              <p><strong>실무 포인트:</strong> dose accuracy, contamination, beam stability 관리가 중요합니다.</p>
             </div>
           </article>
         </div>
 
         <div class="content-grid support-grid">
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="maintenance pm preventive maintenance chamber cleaning calibration leak check">
             <h3>Maintenance / PM</h3>
             <p>
               장비 엔지니어는 정기 PM을 통해 chamber cleaning, 부품 교체, sensor calibration,
-              leak check 등을 수행합니다. 예방 정비는 수율과 장비 uptime에 직접 연결됩니다.
+              leak check 등을 수행합니다. 이런 정비가 수율과 장비 uptime에 직접 연결됩니다.
             </p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="troubleshooting particle rf mismatch drift log equipment">
             <h3>Troubleshooting</h3>
             <p>
               이상 징후가 발생하면 particle 증가, 진공 이상, RF mismatch, 가스 유량 이상,
-              temperature drift 등 원인을 데이터와 로그로 추적합니다.
+              temperature drift 등의 원인을 데이터와 로그로 추적합니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="content-grid support-grid equipment-software-grid">
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="mes secs gem automation software equipment recipe lot tracking">
+            <h3>Equipment Software & Automation</h3>
+            <p>
+              장비 소프트웨어 전공 관점에서 보면 장비는 하드웨어만으로 끝나지 않고, MES 연동, SECS/GEM 통신,
+              recipe 관리, lot tracking 같은 소프트웨어 레이어가 생산 흐름을 실제로 이어 줍니다.
+            </p>
+            <p>
+              쉽게 말해 장비는 혼자 일하는 것이 아니라 fab 전체 시스템과 계속 대화하며 움직입니다.
+            </p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="sensor data monitoring log collection alarm interlock automation productivity yield">
+            <h3>Monitoring, Log, Alarm / Interlock</h3>
+            <p>
+              sensor data monitoring은 온도, pressure, RF power, flow 같은 값을 실시간으로 읽어 이상 징후를 먼저 잡는 역할을 합니다.
+              log 수집은 원인 추적을 돕고, alarm/interlock은 문제가 커지기 전에 경고하거나 안전하게 멈추게 합니다.
+            </p>
+            <p>
+              자동화가 잘 설계될수록 다운타임이 줄고 recipe 이탈을 빨리 막을 수 있어 생산성과 yield가 함께 좋아집니다.
             </p>
           </article>
         </div>
@@ -603,33 +829,33 @@
         </div>
 
         <div class="content-grid materials-grid">
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="wafer silicon substrate material">
             <h3>Wafer</h3>
-            <p>반도체 소자가 만들어지는 기반 기판입니다. 평탄도와 결함 밀도, 결정 품질이 매우 중요합니다.</p>
+            <p>반도체 소자가 만들어지는 기반 기판입니다. 평탄도와 결함 밀도가 최종 수율과 성능에 큰 영향을 줍니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="photoresist resist pr material">
             <h3>Photoresist</h3>
-            <p>포토 공정에서 빛에 반응해 패턴 형성을 돕는 재료입니다. 해상도와 감도, 공정 호환성이 중요합니다.</p>
+            <p>포토 공정에서 빛에 반응해 패턴을 형성하도록 돕는 감광 재료입니다. 감도와 해상도, 공정 호환성이 중요합니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="gas process gas chemistry material">
             <h3>Gas</h3>
-            <p>증착, 식각, 이온주입 등 거의 모든 공정에 쓰입니다. 순도와 안정적 공급이 제품 품질을 좌우합니다.</p>
+            <p>증착, 식각, 이온주입 등 거의 모든 공정에 들어갑니다. 순도와 안정적 공급이 공정 결과에 직접 연결됩니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="slurry cmp pad material">
             <h3>Slurry</h3>
-            <p>CMP에서 평탄화를 담당합니다. removal rate와 scratch 억제가 핵심입니다.</p>
+            <p>CMP에서 표면을 연마하는 핵심 재료입니다. removal rate와 scratch 억제가 중요합니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="thin film sio2 sin tin material">
             <h3>Thin Film Materials</h3>
-            <p>SiO2, SiN, TiN, W 같은 박막 재료는 절연, barrier, 도전층 역할을 합니다.</p>
+            <p>SiO2, SiN, TiN, W 같은 박막 재료는 절연, barrier, 전도층 역할을 수행합니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="metal interconnect copper aluminum material">
             <h3>Metal / Interconnect</h3>
-            <p>Al, Cu 등은 배선 재료로 쓰이며 저항과 신뢰성, electromigration이 중요합니다.</p>
+            <p>Al, Cu 같은 배선 재료로 저항과 신뢰성, electromigration 특성이 중요합니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="material" data-search="mask reticle photomask material">
             <h3>Mask / Reticle</h3>
-            <p>회로 패턴의 원본 역할을 하며 포토 공정 정밀도를 좌우합니다.</p>
+            <p>포토 공정에서 회로 패턴 원본 역할을 하며, 정렬 정확도와 결함 관리가 중요합니다.</p>
           </article>
         </div>
 
@@ -654,26 +880,26 @@
         </div>
 
         <div class="content-grid industry-structure-grid">
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="company" data-search="idm integrated device manufacturer samsung intel company">
             <h3>IDM</h3>
             <p>설계부터 생산, 판매까지 내부에서 수행하는 구조입니다. Intel, Samsung Electronics 일부 영역이 대표적입니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="company" data-search="fabless design house nvidia amd qualcomm company">
             <h3>Fabless</h3>
             <p>설계 중심 기업으로 생산은 Foundry에 맡깁니다. 제품 기획과 IP, 설계 경쟁력이 핵심이며 Qualcomm, NVIDIA, AMD, MediaTek, Broadcom 같은 기업이 대표적입니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="company" data-search="foundry wafer manufacturing tsmc samsung foundry company">
             <h3>Foundry</h3>
             <p>외부 설계를 받아 웨이퍼 생산을 담당합니다. 공정 기술력과 고객 대응력이 중요하며 TSMC, Samsung Foundry, UMC, GlobalFoundries, SMIC 등이 대표적입니다.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="company" data-search="osat packaging test ase amkor jcet company">
             <h3>OSAT</h3>
             <p>후공정 전문 기업으로 패키징과 테스트를 수행합니다. ASE, Amkor, JCET 같은 기업이 대표적입니다.</p>
           </article>
         </div>
 
         <div class="content-grid company-grid">
-          <article class="card accordion-card searchable" data-search="samsung electronics samsung memory foundry idm">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="samsung electronics samsung memory foundry idm">
             <button class="accordion-trigger" type="button" data-target="company-samsung">
               <span>Samsung Electronics</span>
               <span class="plus">+</span>
@@ -684,7 +910,7 @@
               <p><strong>산업 내 위치:</strong> 글로벌 메모리 강자이자 주요 파운드리 플레이어입니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="sk hynix memory dram nand">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="sk hynix memory dram nand">
             <button class="accordion-trigger" type="button" data-target="company-sk">
               <span>SK hynix</span>
               <span class="plus">+</span>
@@ -695,7 +921,7 @@
               <p><strong>산업 내 위치:</strong> 글로벌 메모리 산업 핵심 기업입니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="tsmc foundry fabless customer advanced process">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="tsmc foundry fabless customer advanced process">
             <button class="accordion-trigger" type="button" data-target="company-tsmc">
               <span>TSMC</span>
               <span class="plus">+</span>
@@ -706,7 +932,7 @@
               <p><strong>산업 내 위치:</strong> 글로벌 팹리스 생태계의 핵심 생산 파트너입니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="intel idm cpu advanced packaging">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="intel idm cpu advanced packaging">
             <button class="accordion-trigger" type="button" data-target="company-intel">
               <span>Intel</span>
               <span class="plus">+</span>
@@ -717,7 +943,7 @@
               <p><strong>산업 내 위치:</strong> 설계와 제조를 동시에 수행하는 대표 사례입니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="asml lithography euv scanner">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="asml lithography euv scanner">
             <button class="accordion-trigger" type="button" data-target="company-asml">
               <span>ASML</span>
               <span class="plus">+</span>
@@ -728,7 +954,7 @@
               <p><strong>산업 내 위치:</strong> 첨단 노광 공정에서 매우 중요한 독보적 위치를 가집니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="applied materials deposition cmp inspection equipment">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="applied materials deposition cmp inspection equipment">
             <button class="accordion-trigger" type="button" data-target="company-amat">
               <span>Applied Materials</span>
               <span class="plus">+</span>
@@ -739,7 +965,7 @@
               <p><strong>산업 내 위치:</strong> 종합 장비 기업으로 영향력이 큽니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="lam research etch deposition plasma equipment">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="lam research etch deposition plasma equipment">
             <button class="accordion-trigger" type="button" data-target="company-lam">
               <span>Lam Research</span>
               <span class="plus">+</span>
@@ -750,7 +976,7 @@
               <p><strong>산업 내 위치:</strong> 플라즈마 기반 식각 분야에서 강한 존재감을 가집니다.</p>
             </div>
           </article>
-          <article class="card accordion-card searchable" data-search="tokyo electron tel coater developer etch deposition">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="tokyo electron tel coater developer etch deposition">
             <button class="accordion-trigger" type="button" data-target="company-tel">
               <span>Tokyo Electron</span>
               <span class="plus">+</span>
@@ -761,6 +987,62 @@
               <p><strong>산업 내 위치:</strong> 글로벌 장비 시장에서 매우 중요한 플레이어입니다.</p>
             </div>
           </article>
+        </div>
+
+        <div class="card domestic-company-card">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <p class="eyebrow">Korea Hiring Focus</p>
+              <h3>한국 반도체 취업 실전 기업군</h3>
+            </div>
+            <p>장비, 재료, 부품, 후공정까지 함께 보면 지원 폭과 산업 구조 이해가 더 선명해집니다.</p>
+          </div>
+          <div class="content-grid company-grid domestic-company-grid">
+            <article class="card accordion-card searchable" data-search-category="company" data-search="원익ips wonik ips deposition etch thermal equipment">
+              <button class="accordion-trigger" type="button" data-target="company-wonikips"><span>원익IPS</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-wonikips" hidden><p><strong>연결 분야:</strong> 증착, 식각, 열처리 장비.</p><p><strong>포인트:</strong> 장비 엔지니어와 장비 소프트웨어 직무가 모두 자주 연결됩니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="유진테크 eugene technology lpcvd pecvd deposition equipment">
+              <button class="accordion-trigger" type="button" data-target="company-eugene"><span>유진테크</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-eugene" hidden><p><strong>연결 분야:</strong> LPCVD, PECVD 등 증착 장비.</p><p><strong>포인트:</strong> 박막 형성과 recipe 제어 관점으로 보기 좋은 기업입니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="주성엔지니어링 jusung engineering deposition ald cvd equipment">
+              <button class="accordion-trigger" type="button" data-target="company-jusung"><span>주성엔지니어링</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-jusung" hidden><p><strong>연결 분야:</strong> 증착 중심 반도체 장비.</p><p><strong>포인트:</strong> CVD/ALD 계열 공정 이해와 자연스럽게 이어집니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="한미반도체 hanmi semiconductor packaging vision die attach tc bonder">
+              <button class="accordion-trigger" type="button" data-target="company-hanmi"><span>한미반도체</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-hanmi" hidden><p><strong>연결 분야:</strong> 패키징 장비, 비전 검사, TC bonder.</p><p><strong>포인트:</strong> 첨단 패키징과 후공정 자동화 관심자에게 중요합니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="psk dry strip descum plasma equipment ashing">
+              <button class="accordion-trigger" type="button" data-target="company-psk"><span>PSK</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-psk" hidden><p><strong>연결 분야:</strong> dry strip, descum, plasma 장비.</p><p><strong>포인트:</strong> 포토 이후 제거 공정과 플라즈마 제어를 함께 보기 좋습니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="tes cleaning deposition equipment semiconductor">
+              <button class="accordion-trigger" type="button" data-target="company-tes"><span>TES</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-tes" hidden><p><strong>연결 분야:</strong> 세정, 증착, 공정 장비.</p><p><strong>포인트:</strong> 장비 유지보수와 공정 품질 관리 직무와 연결성이 큽니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="솔브레인 soulbrain chemicals slurry etchant materials">
+              <button class="accordion-trigger" type="button" data-target="company-soulbrain"><span>솔브레인</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-soulbrain" hidden><p><strong>연결 분야:</strong> 식각액, 세정액, CMP slurry 등 소재.</p><p><strong>포인트:</strong> 재료가 공정 결과와 yield에 미치는 영향이 잘 드러나는 기업군입니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="동진쎄미켐 dongjin semchem photoresist thinner chemical materials">
+              <button class="accordion-trigger" type="button" data-target="company-dongjin"><span>동진쎄미켐</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-dongjin" hidden><p><strong>연결 분야:</strong> 포토레지스트, thinner, wet chemical.</p><p><strong>포인트:</strong> Lithography와 소재 산업을 함께 이해할 때 자주 등장합니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="후성 foosung gas nf3 precursor fluorine materials">
+              <button class="accordion-trigger" type="button" data-target="company-foosung"><span>후성</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-foosung" hidden><p><strong>연결 분야:</strong> 특수가스, 전구체, 불소계 소재.</p><p><strong>포인트:</strong> 증착, 세정, 식각 공정 공급망을 이해할 때 중요합니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="리노공업 leeno industrial probe pin socket test component">
+              <button class="accordion-trigger" type="button" data-target="company-leeno"><span>리노공업</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-leeno" hidden><p><strong>연결 분야:</strong> 테스트 소켓, 프로브 핀, 검사 부품.</p><p><strong>포인트:</strong> Test Engineer와 후공정 품질 직무를 볼 때 함께 보게 됩니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="isc socket burn in test interface component">
+              <button class="accordion-trigger" type="button" data-target="company-isc"><span>ISC</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-isc" hidden><p><strong>연결 분야:</strong> 테스트 인터페이스, 소켓, 부품.</p><p><strong>포인트:</strong> 테스트 장비와 디바이스를 연결하는 부품 생태계를 이해하기 좋습니다.</p></div>
+            </article>
+          </div>
         </div>
 
         <div class="related-links card">
@@ -795,35 +1077,35 @@
         </div>
 
         <div class="content-grid jobs-grid">
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="job" data-search="process engineer 직무 공정 엔지니어 spc yield defect">
             <h3>Process Engineer</h3>
             <p><strong>하는 일:</strong> 공정 조건 최적화, defect 개선, 수율 향상.</p>
             <p><strong>필요 지식:</strong> 8대 공정, defect, 통계, data interpretation.</p>
             <p><strong>중요 키워드:</strong> CD, uniformity, SPC, yield.</p>
             <p><strong>면접 포인트:</strong> 공정 간 연계와 문제 해결 관점 설명.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="job" data-search="equipment engineer 직무 장비 엔지니어 vacuum rf calibration pm">
             <h3>Equipment Engineer</h3>
             <p><strong>하는 일:</strong> 장비 안정화, PM, trouble shooting, uptime 관리.</p>
             <p><strong>필요 지식:</strong> vacuum, plasma, RF, sensor, mechanical system.</p>
             <p><strong>중요 키워드:</strong> PM, chamber, calibration, MTBF.</p>
             <p><strong>면접 포인트:</strong> 장비 구조와 이상 원인 추적 방식.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="job" data-search="yield engineer 직무 수율 엔지니어 defect pareto data">
             <h3>Yield Engineer</h3>
             <p><strong>하는 일:</strong> 수율 분석, 불량 원인 분류, data 기반 개선.</p>
             <p><strong>필요 지식:</strong> defect analysis, 통계, 공정 흐름 이해.</p>
             <p><strong>중요 키워드:</strong> fail bit, defect density, pareto.</p>
             <p><strong>면접 포인트:</strong> 데이터에서 원인을 좁혀 가는 사고 방식.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="job" data-search="test engineer 직무 테스트 엔지니어 wat final test binning">
             <h3>Test Engineer</h3>
             <p><strong>하는 일:</strong> 테스트 조건 설계, 양불 판정, 패키지 이후 검증.</p>
             <p><strong>필요 지식:</strong> 회로 기초, tester, 신호, 품질 개념.</p>
             <p><strong>중요 키워드:</strong> probe, binning, coverage, reliability.</p>
             <p><strong>면접 포인트:</strong> 테스트 목적과 생산 품질의 연결.</p>
           </article>
-          <article class="card learning-card">
+          <article class="card learning-card searchable" data-search-category="job" data-search="automation software engineer 직무 소프트웨어 자동화 엔지니어 mes secs gem log integration">
             <h3>Automation / Software Engineer</h3>
             <p><strong>하는 일:</strong> 장비 자동화, 데이터 수집, 공정 시스템 연계.</p>
             <p><strong>필요 지식:</strong> Python, C/C++, PLC/SECS-GEM, 데이터 처리.</p>
@@ -1033,8 +1315,18 @@
             type="search"
             placeholder="예: Lithography, CVD, Yield, Samsung, TSMC, NVIDIA"
           />
-          <p class="search-hint">기본 핵심 10개는 항상 먼저 보이고, 추가 용어와 기업은 펼쳐서 보거나 검색으로 바로 찾을 수 있습니다.</p>
-          <p class="search-meta" id="search-meta" aria-live="polite">현재 핵심 용어와 확장 용어/기업을 함께 탐색할 수 있습니다.</p>
+          <p class="search-hint">핵심 용어는 먼저 보이고, 확장 용어와 장비, 소자, 패키징, 기업, 직무는 펼치거나 검색으로 바로 찾을 수 있습니다.</p>
+          <p class="search-meta" id="search-meta" aria-live="polite">현재 공정, 장비, 재료, 소자/구조, 패키징, 기업, 직무를 함께 탐색할 수 있습니다.</p>
+          <div class="search-filters" role="tablist" aria-label="검색 필터">
+            <button type="button" class="search-filter is-active" data-filter="all" aria-selected="true">전체</button>
+            <button type="button" class="search-filter" data-filter="process" aria-selected="false">공정</button>
+            <button type="button" class="search-filter" data-filter="equipment" aria-selected="false">장비</button>
+            <button type="button" class="search-filter" data-filter="material" aria-selected="false">재료</button>
+            <button type="button" class="search-filter" data-filter="device" aria-selected="false">소자/구조</button>
+            <button type="button" class="search-filter" data-filter="package" aria-selected="false">패키징</button>
+            <button type="button" class="search-filter" data-filter="company" aria-selected="false">기업</button>
+            <button type="button" class="search-filter" data-filter="job" aria-selected="false">직무</button>
+          </div>
         </div>
 
         <div class="content-grid glossary-grid glossary-grid-primary">
@@ -1082,7 +1374,7 @@
 
         <div class="glossary-toggle-wrap">
           <button class="toggle-button glossary-toggle" type="button" data-target="glossary-more" aria-expanded="false">
-            <span>추가 용어/기업 펼치기</span>
+            <span>확장 용어사전 펼치기</span>
             <span class="toggle-arrow" aria-hidden="true">▾</span>
           </button>
         </div>
@@ -1300,6 +1592,98 @@
             <h3>Binning</h3>
             <p>테스트 결과에 따라 칩을 성능이나 품질 기준으로 분류하는 과정입니다.</p>
           </article>
+          <article class="card glossary-item searchable" data-search="load lock wafer vacuum isolation chamber equipment">
+            <h3>Load Lock</h3>
+            <p>대기와 진공 chamber 사이에서 웨이퍼를 안전하게 넘기는 중간 chamber입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="transfer module handler robot wafer equipment vacuum">
+            <h3>Transfer Module</h3>
+            <p>장비 내부에서 웨이퍼를 각 공정 chamber로 이동시키는 이송 구간입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="wafer handler robot arm vacuum equipment">
+            <h3>Wafer Handler</h3>
+            <p>웨이퍼를 집고 옮기는 로봇 메커니즘으로 장비 자동화의 핵심입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="showerhead gas distribution chamber deposition etch equipment">
+            <h3>Showerhead</h3>
+            <p>공정 가스를 균일하게 분사해 wafer 전면 반응 균일도를 돕는 부품입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="throttle valve pressure control vacuum exhaust equipment">
+            <h3>Throttle Valve</h3>
+            <p>배기량을 조절해 chamber pressure를 정밀하게 맞추는 밸브입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="turbo pump turbomolecular pump vacuum equipment">
+            <h3>Turbo Pump</h3>
+            <p>고진공 형성에 쓰이는 핵심 펌프로 공정 chamber의 낮은 압력을 유지합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="dry pump backing pump exhaust vacuum equipment">
+            <h3>Dry Pump</h3>
+            <p>오일 없이 배기하는 펌프로 반도체 장비의 청정 진공 유지에 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="chiller cooling temperature control equipment">
+            <h3>Chiller</h3>
+            <p>장비와 chuck, RF 부품의 온도를 안정적으로 유지하는 냉각 장치입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="he chuck heater electrostatic chuck temperature equipment">
+            <h3>Chuck Temperature Control</h3>
+            <p>ESC, heater, backside He 등을 이용해 wafer 온도를 제어하는 장비 기능입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="stage aligner motion control lithography equipment">
+            <h3>Stage</h3>
+            <p>웨이퍼를 정밀하게 이동시키는 축 시스템으로 노광과 검사 장비에서 매우 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="oes optical emission spectroscopy endpoint plasma equipment">
+            <h3>OES</h3>
+            <p>플라즈마 빛의 스펙트럼을 분석해 endpoint나 chamber 상태를 보는 계측 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="rga residual gas analyzer vacuum chamber equipment">
+            <h3>RGA</h3>
+            <p>chamber 내부 잔류 가스를 분석해 누설이나 오염을 추적하는 분석 장비입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mass filter analyzer magnet ion implantation equipment">
+            <h3>Mass Filter</h3>
+            <p>이온주입 장비에서 원하는 질량의 이온만 통과시키는 분리 구간입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="beamline ion implantation scan energy equipment">
+            <h3>Beamline</h3>
+            <p>이온 source에서 생성된 이온이 가속되고 조절되어 wafer로 이동하는 경로입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="recipe process parameter setpoint equipment automation">
+            <h3>Recipe</h3>
+            <p>공정 시간, pressure, gas flow, RF power 같은 조건 세트를 정의한 장비 실행 파일입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="interlock safety alarm equipment automation">
+            <h3>Interlock</h3>
+            <p>위험 상태나 오동작이 발생할 때 장비를 보호하기 위해 동작을 제한하는 안전 로직입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="secs gem communication equipment automation mes">
+            <h3>SECS/GEM</h3>
+            <p>반도체 장비와 상위 시스템이 상태, 이벤트, recipe를 주고받는 대표 통신 표준입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mes manufacturing execution system lot tracking automation">
+            <h3>MES</h3>
+            <p>lot 흐름, 작업 이력, 공정 지시를 관리하는 생산 실행 시스템입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="process engineer 직무 공정 엔지니어 spc yield defect">
+            <h3>Process Engineer</h3>
+            <p>공정 조건 최적화, defect 개선, 수율 향상을 담당하는 대표 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="equipment engineer 직무 장비 엔지니어 vacuum rf calibration pm">
+            <h3>Equipment Engineer</h3>
+            <p>장비 안정화, 예방정비, 이상 원인 분석과 uptime 관리를 담당하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="yield engineer 직무 수율 엔지니어 defect pareto data">
+            <h3>Yield Engineer</h3>
+            <p>불량 패턴과 데이터 분석을 통해 수율을 개선하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="test engineer 직무 테스트 엔지니어 wat cp ft binning">
+            <h3>Test Engineer</h3>
+            <p>웨이퍼 테스트와 최종 테스트 조건을 설계하고 품질 기준을 검증하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="automation software engineer 직무 소프트웨어 자동화 엔지니어 mes secs gem log integration">
+            <h3>Automation / Software Engineer</h3>
+            <p>장비와 MES를 연결하고 데이터 수집, 로그, 자동화 로직을 설계하는 직무입니다.</p>
+          </article>
           <article class="card glossary-item searchable" data-search="synopsys eda design automation company">
             <h3>Synopsys</h3>
             <p>반도체 설계 자동화와 IP 분야에서 핵심적인 EDA 기업입니다.</p>
@@ -1448,6 +1832,229 @@
         <div class="card search-empty" id="search-empty" hidden>
           <h3>검색 결과가 없습니다</h3>
           <p>다른 용어, 약어, 공정명, 기업 이름으로 다시 검색해 보세요. 예: EUV, CMP, TSMC, NVIDIA</p>
+        </div>
+      </section>
+
+      <section class="section shell" id="advanced-packaging" data-track-section="advanced-packaging" data-section-label="첨단 패키징과 차세대 기술">
+        <div class="section-heading">
+          <p class="eyebrow">Advanced Packaging & Emerging Technologies</p>
+          <h2>첨단 패키징 & 차세대 기술</h2>
+          <p>기초 공정 위에 최신 산업 흐름과 취업 관점을 얹는 심화 학습 파트로 구성했습니다.</p>
+          <div class="section-actions">
+            <button class="button secondary small-button complete-button" type="button" data-complete-target="advanced-packaging">이 섹션 완료</button>
+          </div>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card searchable" data-search-category="package" data-search="advanced packaging package protection electrical connection thermal signal packaging basics">
+            <h3>왜 패키징이 중요한가</h3>
+            <p>패키징은 칩을 외부 충격과 습기로부터 보호하고, 전기적으로 연결하며, 열을 밖으로 빼내고, 신호가 안정적으로 오가게 만드는 마지막 핵심 구조입니다.</p>
+            <p>즉 좋은 칩을 만들어도 패키징이 약하면 실제 제품 성능과 신뢰성은 충분히 나오지 않을 수 있습니다.</p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="package" data-search="wire bonding flip chip leadframe pcb package traditional advanced packaging comparison">
+            <h3>전통 패키징 vs 첨단 패키징</h3>
+            <p>전통 패키징은 Wire Bonding, Leadframe, PCB Package처럼 연결과 보호 중심이 강했고, 첨단 패키징은 Flip-Chip, TSV, HBM, Chiplet처럼 성능·대역폭·집적도를 함께 끌어올리는 방향으로 진화했습니다.</p>
+            <p>학생 관점에서는 “이제 패키징도 공정과 성능 경쟁의 중심”이라고 이해하면 가장 쉽습니다.</p>
+          </article>
+        </div>
+
+        <div class="content-grid advanced-grid">
+          <article class="card accordion-card searchable" data-search-category="package" data-search="wire bonding wire bond leadframe package traditional packaging">
+            <button class="accordion-trigger" type="button" data-target="adv-wire">
+              <span>Wire Bonding</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">전통 패키징 · 금선/구리선 · 범용성</p>
+            <div class="expand-panel" id="adv-wire" hidden>
+              <p><strong>무엇인지:</strong> 칩 pad와 패키지 리드를 가는 금속선으로 연결하는 대표적인 전통 패키징 방식입니다.</p>
+              <p><strong>왜 중요한지:</strong> 구조가 단순하고 비용 효율이 높아 많은 제품에 아직 널리 쓰입니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> 범용 반도체, 아날로그, 전력 소자, 비교적 고집적이 덜한 제품군에 자주 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 저비용과 양산성이 장점이지만, I/O 수 증가와 고속 신호 대응에는 한계가 있습니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="flip chip bump package advanced packaging high io">
+            <button class="accordion-trigger" type="button" data-target="adv-flipchip">
+              <span>Flip-Chip</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">범프 접속 · 짧은 경로 · 높은 I/O</p>
+            <div class="expand-panel" id="adv-flipchip" hidden>
+              <p><strong>무엇인지:</strong> 칩을 뒤집어 solder bump로 바로 기판과 연결하는 패키징 방식입니다.</p>
+              <p><strong>왜 중요한지:</strong> 배선 길이가 짧아져 신호와 전력 전달 특성이 좋아집니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> 고성능 프로세서, GPU, 모바일 AP, 고집적 제품에 널리 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 고집적과 열/신호 특성이 좋지만 공정 정렬과 underfill 관리가 중요합니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="leadframe pcb package traditional package substrate">
+            <button class="accordion-trigger" type="button" data-target="adv-leadframe">
+              <span>Leadframe / PCB Package</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">기초 패키지 · 구조 이해 · 입문 필수</p>
+            <div class="expand-panel" id="adv-leadframe" hidden>
+              <p><strong>무엇인지:</strong> leadframe 또는 PCB 기반으로 칩을 올리고 외부와 연결하는 기본 패키지 구조입니다.</p>
+              <p><strong>왜 중요한지:</strong> 첨단 패키징을 이해하려면 먼저 기본 패키지 뼈대를 알아야 비교가 쉽습니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> MCU, 전력 소자, 아날로그 IC, 범용 반도체 등에서 널리 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 구조 단순성과 비용 경쟁력이 장점이고, 초고속·초고집적 구현에는 한계가 있습니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="mcp multi chip package stacking memory package">
+            <button class="accordion-trigger" type="button" data-target="adv-mcp">
+              <span>MCP</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">Multi-Chip Package · 공간 절약 · 모바일</p>
+            <div class="expand-panel" id="adv-mcp" hidden>
+              <p><strong>무엇인지:</strong> 여러 칩을 하나의 패키지 안에 함께 넣는 구조입니다.</p>
+              <p><strong>왜 중요한지:</strong> 보드 면적을 줄이고 기능 통합도를 높일 수 있습니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> 모바일 메모리 조합, 저장장치 모듈, 소형 전자기기에서 자주 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 공간 효율이 좋지만 열과 테스트 복잡도가 높아질 수 있습니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="wlp wafer level packaging fan out wlp plp package">
+            <button class="accordion-trigger" type="button" data-target="adv-wlp">
+              <span>WLP / Fan-Out</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">웨이퍼 레벨 · 얇은 패키지 · 모바일/고성능</p>
+            <div class="expand-panel" id="adv-wlp" hidden>
+              <p><strong>무엇인지:</strong> 웨이퍼 단계에서 패키징을 진행하는 방식이며, Fan-Out WLP/PLP는 I/O를 바깥으로 더 넓게 빼는 구조입니다.</p>
+              <p><strong>왜 중요한지:</strong> 패키지를 더 얇고 작게 만들면서도 연결 수를 늘릴 수 있습니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> 모바일 칩, RF 칩, 고집적 패키지, 첨단 소비자 전자제품에 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 소형화와 전기 특성이 좋지만 warpage와 공정 난도가 부담입니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="tsv through silicon via hbm 3d packaging">
+            <button class="accordion-trigger" type="button" data-target="adv-tsv">
+              <span>TSV</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">수직 관통 전극 · 3D 적층 · HBM 핵심</p>
+            <div class="advanced-diagram tsv-diagram">
+              <span class="stack stack-top"></span>
+              <span class="stack stack-mid"></span>
+              <span class="stack stack-bottom"></span>
+              <span class="via via-left"></span>
+              <span class="via via-right"></span>
+            </div>
+            <div class="expand-panel" id="adv-tsv" hidden>
+              <p><strong>무엇인지:</strong> 실리콘 칩을 수직으로 관통하는 전기 연결 통로입니다.</p>
+              <p><strong>왜 중요한지:</strong> 층 사이 거리를 짧게 만들어 더 빠른 데이터 전달과 적층 구조를 가능하게 합니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> HBM, 3D 메모리 적층, 2.5D/3D 패키징에서 핵심 기술입니다.</p>
+              <p><strong>장점/한계:</strong> 대역폭과 집적도에 유리하지만 공정 난이도, 열, 비용 부담이 큽니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="hbm high bandwidth memory tsv stacked memory ai">
+            <button class="accordion-trigger" type="button" data-target="adv-hbm">
+              <span>HBM</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">TSV 기반 적층 메모리 · AI · 초고대역폭</p>
+            <div class="advanced-diagram hbm-diagram">
+              <span class="logic-base"></span>
+              <span class="memory-die die-1"></span>
+              <span class="memory-die die-2"></span>
+              <span class="memory-die die-3"></span>
+              <span class="memory-die die-4"></span>
+            </div>
+            <div class="expand-panel" id="adv-hbm" hidden>
+              <p><strong>무엇인지:</strong> TSV를 이용해 여러 메모리 다이를 수직 적층한 고대역폭 메모리입니다.</p>
+              <p><strong>왜 중요한지:</strong> AI와 HPC처럼 대용량 데이터를 빠르게 주고받아야 하는 환경에서 병목을 줄입니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> AI 가속기, GPU, 고성능 서버, 차세대 컴퓨팅 시스템에 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 대역폭과 전력 효율이 좋지만 열 관리, 패키징 난도, 비용이 높습니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="2.5d 3d packaging interposer stacked package">
+            <button class="accordion-trigger" type="button" data-target="adv-3d">
+              <span>2.5D / 3D Packaging</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">인터포저 · 적층 연결 · 고집적 시스템</p>
+            <div class="advanced-diagram package3d-diagram">
+              <span class="chip chip-left"></span>
+              <span class="chip chip-right"></span>
+              <span class="interposer"></span>
+              <span class="substrate"></span>
+            </div>
+            <div class="expand-panel" id="adv-3d" hidden>
+              <p><strong>무엇인지:</strong> 2.5D는 인터포저 위에 여러 칩을 나란히 올리고, 3D는 칩을 수직으로 쌓아 연결하는 구조입니다.</p>
+              <p><strong>왜 중요한지:</strong> 큰 시스템을 더 짧은 연결 거리와 높은 집적으로 묶을 수 있습니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> AI, HPC, 네트워크, 고성능 메모리-로직 통합 패키지에 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 성능 향상 폭이 크지만 열, 검사, 수율, 조립 비용 관리가 어렵습니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="chiplet modular die package advanced packaging">
+            <button class="accordion-trigger" type="button" data-target="adv-chiplet">
+              <span>Chiplet</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">기능 분리 · 작은 칩 조합 · 설계 유연성</p>
+            <div class="advanced-diagram chiplet-diagram">
+              <span class="chiplet-block cpu">CPU</span>
+              <span class="chiplet-block io">I/O</span>
+              <span class="chiplet-block ai">AI</span>
+              <span class="chiplet-link link-h"></span>
+              <span class="chiplet-link link-v"></span>
+            </div>
+            <div class="expand-panel" id="adv-chiplet" hidden>
+              <p><strong>무엇인지:</strong> 큰 단일 칩 하나 대신 기능별로 나눈 작은 칩들을 하나의 패키지 안에서 묶는 구조입니다.</p>
+              <p><strong>왜 중요한지:</strong> 설계 재사용성과 수율, 제품 조합 유연성을 높이기 좋습니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> CPU, GPU, AI 칩, 서버용 고성능 시스템에 빠르게 확산되고 있습니다.</p>
+              <p><strong>장점/한계:</strong> 확장성과 비용 측면 장점이 있지만 칩 간 연결 표준과 패키지 설계 복잡도가 과제입니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="advanced underfill package reliability thermal stress">
+            <button class="accordion-trigger" type="button" data-target="adv-underfill">
+              <span>Advanced Underfill</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">기계적 보강 · 열응력 완화 · 신뢰성</p>
+            <div class="expand-panel" id="adv-underfill" hidden>
+              <p><strong>무엇인지:</strong> 칩과 기판 사이를 채워 bump 구조를 보호하는 재료/공정입니다.</p>
+              <p><strong>왜 중요한지:</strong> 열팽창 차이에서 오는 스트레스를 줄여 패키지 신뢰성을 높입니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> Flip-Chip, HBM, 고밀도 패키징, 차량용/고신뢰성 제품에 많이 쓰입니다.</p>
+              <p><strong>장점/한계:</strong> 내구성과 수명 향상에 좋지만 void와 공정 시간, 재작업 어려움이 과제입니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="package" data-search="silicon photonics optical interconnect light data transfer packaging">
+            <button class="accordion-trigger" type="button" data-target="adv-photonics">
+              <span>Silicon Photonics</span>
+              <span class="plus">+</span>
+            </button>
+            <p class="card-chip-line">빛 기반 데이터 전송 · 초고속 인터커넥트</p>
+            <div class="advanced-diagram photonics-diagram">
+              <span class="electrical-chip">ASIC</span>
+              <span class="waveguide"></span>
+              <span class="light-pulse pulse-1"></span>
+              <span class="light-pulse pulse-2"></span>
+              <span class="optical-io">Light I/O</span>
+            </div>
+            <div class="expand-panel" id="adv-photonics" hidden>
+              <p><strong>무엇인지:</strong> 전기 신호 대신 빛을 활용해 데이터를 전달하는 실리콘 기반 광 인터커넥트 기술입니다.</p>
+              <p><strong>왜 중요한지:</strong> 고속 데이터센터와 AI 시스템에서 전기 신호의 손실과 발열 문제를 줄이는 대안이 됩니다.</p>
+              <p><strong>어디에 쓰이는지:</strong> 데이터센터, 광 트랜시버, AI 서버, 장거리 고속 통신 인터커넥트에 활용됩니다.</p>
+              <p><strong>장점/한계:</strong> 장거리 고속 전송에 강하지만 광소자 통합, 정렬, 비용 측면 과제가 남아 있습니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="#process">전공 기초 공정 다시 보기</a>
+            <a href="#industry">기업 구조와 연결하기</a>
+            <a href="#glossary">관련 용어: HBM / TSV / Chiplet</a>
+          </div>
         </div>
       </section>
     </main>
