@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반도체 장비</title>
+    <meta name="description" content="반도체 장비와 자동화 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<div class="background-glow background-glow-left"></div>
+<div class="background-glow background-glow-right"></div>
+<div class="equipment-layer" aria-hidden="true">
+  <div class="equipment wafer-rig">
+    <span class="wafer-ring wafer-ring-outer"></span>
+    <span class="wafer-ring wafer-ring-inner"></span>
+    <span class="wafer-grid"></span>
+  </div>
+  <div class="equipment chip-array">
+    <span class="chip-core"></span>
+    <span class="chip-pin chip-pin-top"></span>
+    <span class="chip-pin chip-pin-right"></span>
+    <span class="chip-pin chip-pin-bottom"></span>
+    <span class="chip-pin chip-pin-left"></span>
+  </div>
+  <div class="equipment process-arm">
+    <span class="arm-column"></span>
+    <span class="arm-beam"></span>
+    <span class="arm-head"></span>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="nav shell" aria-label="주요 섹션">
+    <a class="brand" href="index.html">Semiconductor</a>
+    <div class="nav-links">
+      <a href="intro.html">입문</a>
+      <a href="process.html">8대 공정</a>
+      <a href="equipment.html" class="is-active">장비</a>
+      <a href="materials.html">재료/부품</a>
+      <a href="industry.html">산업/기업</a>
+      <a href="career.html">직무/취업</a>
+      <a href="interview.html">면접/시험</a>
+      <a href="packaging.html">첨단기술</a>
+      <a href="terms.html">용어/검색</a>
+    </div>
+  </nav>
+</header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+<section class="section shell" id="equipment">
+        <div class="section-heading">
+          <p class="eyebrow">Equipment</p>
+          <h2>반도체 장비</h2>
+          <p>공정별 핵심 장비와 구조 요소, 유지보수 관점을 함께 정리했습니다.</p>
+          
+        </div>
+
+        <div class="content-grid equipment-grid">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="cvd pvd chamber vacuum heater rf deposition equipment">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>CVD / PVD</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-cvd">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>Gas Supply</span>
+              <span>Chamber</span>
+              <span>Vacuum</span>
+              <span>Heater / RF</span>
+            </div>
+            <div class="expand-panel" id="eq-cvd" hidden>
+              <p><strong>역할:</strong> 웨이퍼 표면에 필요한 박막을 형성합니다.</p>
+              <p><strong>구성:</strong> chamber, gas line, MFC, vacuum pump, heater, sensor.</p>
+              <p><strong>원리:</strong> CVD는 화학 반응으로 막을 성장시키고, PVD는 물리적 증발과 스퍼터링으로 막을 쌓습니다.</p>
+              <p><strong>실무 포인트:</strong> 막 두께, 균일도, chamber condition 관리가 핵심입니다.</p>
+            </div>
+          </article>
+
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="etcher etch plasma esc rf exhaust equipment">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>Etcher</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-etch">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>RF Power</span>
+              <span>Plasma</span>
+              <span>ESC</span>
+              <span>Exhaust</span>
+            </div>
+            <div class="expand-panel" id="eq-etch" hidden>
+              <p><strong>역할:</strong> 플라즈마를 이용해 필요한 부분만 선택적으로 제거합니다.</p>
+              <p><strong>구성:</strong> chamber, ESC, RF generator, gas showerhead, exhaust.</p>
+              <p><strong>원리:</strong> 이온과 라디칼이 표면과 반응하며 식각이 진행됩니다.</p>
+              <p><strong>실무 포인트:</strong> endpoint, residue, chamber seasoning 관리가 중요합니다.</p>
+            </div>
+          </article>
+
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="track scanner lithography align expose coater developer equipment">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>Track / Scanner</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-litho">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>Coat</span>
+              <span>Bake</span>
+              <span>Align</span>
+              <span>Expose</span>
+            </div>
+            <div class="expand-panel" id="eq-litho" hidden>
+              <p><strong>역할:</strong> 포토레지스트 도포와 노광 공정을 수행합니다.</p>
+              <p><strong>구성:</strong> coater, developer, aligner, optics, stage.</p>
+              <p><strong>원리:</strong> 마스크 이미지를 웨이퍼 위에 정확하게 전사합니다.</p>
+              <p><strong>실무 포인트:</strong> focus, dose, overlay, contamination control이 핵심입니다.</p>
+            </div>
+          </article>
+
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="ion implanter implant beamline mass filter equipment">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Equipment Focus</p>
+                <h3>Ion Implanter</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="eq-implant">구조 설명 보기</button>
+            </div>
+            <div class="equipment-diagram">
+              <span>Ion Source</span>
+              <span>Mass Filter</span>
+              <span>Beamline</span>
+              <span>End Station</span>
+            </div>
+            <div class="expand-panel" id="eq-implant" hidden>
+              <p><strong>역할:</strong> 도핑 이온을 원하는 에너지와 양으로 주입합니다.</p>
+              <p><strong>구성:</strong> ion source, analyzer magnet, accelerator, beam scanner, end station.</p>
+              <p><strong>원리:</strong> 이온을 생성하고 질량 분리 후 가속해 웨이퍼에 주입합니다.</p>
+              <p><strong>실무 포인트:</strong> dose accuracy, contamination, beam stability 관리가 중요합니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="maintenance pm preventive maintenance chamber cleaning calibration leak check">
+            <h3>Maintenance / PM</h3>
+            <p>
+              장비 엔지니어는 정기 PM을 통해 chamber cleaning, 부품 교체, sensor calibration,
+              leak check 등을 수행합니다. 이런 정비가 수율과 장비 uptime에 직접 연결됩니다.
+            </p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="troubleshooting particle rf mismatch drift log equipment">
+            <h3>Troubleshooting</h3>
+            <p>
+              이상 징후가 발생하면 particle 증가, 진공 이상, RF mismatch, 가스 유량 이상,
+              temperature drift 등의 원인을 데이터와 로그로 추적합니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="content-grid support-grid equipment-software-grid">
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="mes secs gem automation software equipment recipe lot tracking">
+            <h3>Equipment Software & Automation</h3>
+            <p>
+              장비 소프트웨어 전공 관점에서 보면 장비는 하드웨어만으로 끝나지 않고, MES 연동, SECS/GEM 통신,
+              recipe 관리, lot tracking 같은 소프트웨어 레이어가 생산 흐름을 실제로 이어 줍니다.
+            </p>
+            <p>
+              쉽게 말해 장비는 혼자 일하는 것이 아니라 fab 전체 시스템과 계속 대화하며 움직입니다.
+            </p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="sensor data monitoring log collection alarm interlock automation productivity yield">
+            <h3>Monitoring, Log, Alarm / Interlock</h3>
+            <p>
+              sensor data monitoring은 온도, pressure, RF power, flow 같은 값을 실시간으로 읽어 이상 징후를 먼저 잡는 역할을 합니다.
+              log 수집은 원인 추적을 돕고, alarm/interlock은 문제가 커지기 전에 경고하거나 안전하게 멈추게 합니다.
+            </p>
+            <p>
+              자동화가 잘 설계될수록 다운타임이 줄고 recipe 이탈을 빨리 막을 수 있어 생산성과 yield가 함께 좋아집니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="process.html#process">연결 공정 보기</a>
+            <a href="career.html#career">연결 직무: Equipment Engineer</a>
+            <a href="terms.html#glossary">관련 용어: Vacuum / RF Power / ESC</a>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
+            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a
+            class="button footer-button"
+            href="https://kimsihu0225.github.io/My-Cosmos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

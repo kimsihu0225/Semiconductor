@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>산업 / 기업 구조</title>
+    <meta name="description" content="반도체 산업 구조와 기업 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<div class="background-glow background-glow-left"></div>
+<div class="background-glow background-glow-right"></div>
+<div class="equipment-layer" aria-hidden="true">
+  <div class="equipment wafer-rig">
+    <span class="wafer-ring wafer-ring-outer"></span>
+    <span class="wafer-ring wafer-ring-inner"></span>
+    <span class="wafer-grid"></span>
+  </div>
+  <div class="equipment chip-array">
+    <span class="chip-core"></span>
+    <span class="chip-pin chip-pin-top"></span>
+    <span class="chip-pin chip-pin-right"></span>
+    <span class="chip-pin chip-pin-bottom"></span>
+    <span class="chip-pin chip-pin-left"></span>
+  </div>
+  <div class="equipment process-arm">
+    <span class="arm-column"></span>
+    <span class="arm-beam"></span>
+    <span class="arm-head"></span>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="nav shell" aria-label="주요 섹션">
+    <a class="brand" href="index.html">Semiconductor</a>
+    <div class="nav-links">
+      <a href="intro.html">입문</a>
+      <a href="process.html">8대 공정</a>
+      <a href="equipment.html">장비</a>
+      <a href="materials.html">재료/부품</a>
+      <a href="industry.html" class="is-active">산업/기업</a>
+      <a href="career.html">직무/취업</a>
+      <a href="interview.html">면접/시험</a>
+      <a href="packaging.html">첨단기술</a>
+      <a href="terms.html">용어/검색</a>
+    </div>
+  </nav>
+</header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+<section class="section shell" id="industry">
+        <div class="section-heading">
+          <p class="eyebrow">Industry & Companies</p>
+          <h2>산업/기업 구조</h2>
+          <p>산업 구조를 먼저 이해한 뒤, 주요 기업이 어느 위치에 있는지 카드로 연결했습니다.</p>
+          
+        </div>
+
+        <div class="content-grid industry-structure-grid">
+          <article class="card learning-card searchable" data-search-category="company" data-search="idm integrated device manufacturer samsung intel company">
+            <h3>IDM</h3>
+            <p>설계부터 생산, 판매까지 내부에서 수행하는 구조입니다. Intel, Samsung Electronics 일부 영역이 대표적입니다.</p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="company" data-search="fabless design house nvidia amd qualcomm company">
+            <h3>Fabless</h3>
+            <p>설계 중심 기업으로 생산은 Foundry에 맡깁니다. 제품 기획과 IP, 설계 경쟁력이 핵심이며 Qualcomm, NVIDIA, AMD, MediaTek, Broadcom 같은 기업이 대표적입니다.</p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="company" data-search="foundry wafer manufacturing tsmc samsung foundry company">
+            <h3>Foundry</h3>
+            <p>외부 설계를 받아 웨이퍼 생산을 담당합니다. 공정 기술력과 고객 대응력이 중요하며 TSMC, Samsung Foundry, UMC, GlobalFoundries, SMIC 등이 대표적입니다.</p>
+          </article>
+          <article class="card learning-card searchable" data-search-category="company" data-search="osat packaging test ase amkor jcet company">
+            <h3>OSAT</h3>
+            <p>후공정 전문 기업으로 패키징과 테스트를 수행합니다. ASE, Amkor, JCET 같은 기업이 대표적입니다.</p>
+          </article>
+        </div>
+
+        <div class="content-grid company-grid">
+          <article class="card accordion-card searchable" data-search-category="company" data-search="samsung electronics samsung memory foundry idm">
+            <button class="accordion-trigger" type="button" data-target="company-samsung">
+              <span>Samsung Electronics</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-samsung" hidden>
+              <p><strong>역할:</strong> 한국 기업으로 메모리, 파운드리, 시스템 반도체 등 폭넓은 사업 구조를 가집니다.</p>
+              <p><strong>관련 공정/장비:</strong> 메모리 제조, 첨단 공정, 대규모 팹 운영.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 메모리 강자이자 주요 파운드리 플레이어입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="sk hynix memory dram nand">
+            <button class="accordion-trigger" type="button" data-target="company-sk">
+              <span>SK hynix</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-sk" hidden>
+              <p><strong>역할:</strong> 한국 기업으로 DRAM, NAND 등 메모리 중심 사업 구조를 가집니다.</p>
+              <p><strong>관련 공정/장비:</strong> 메모리 셀 구조와 미세공정, 패키징 기술.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 메모리 산업 핵심 기업입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="tsmc foundry fabless customer advanced process">
+            <button class="accordion-trigger" type="button" data-target="company-tsmc">
+              <span>TSMC</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-tsmc" hidden>
+              <p><strong>역할:</strong> 대만 기업으로 세계 최대 파운드리 사업을 수행합니다.</p>
+              <p><strong>관련 공정/장비:</strong> 첨단 로직 공정, EUV 기반 생산.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 팹리스 생태계의 핵심 생산 파트너입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="intel idm cpu advanced packaging">
+            <button class="accordion-trigger" type="button" data-target="company-intel">
+              <span>Intel</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-intel" hidden>
+              <p><strong>역할:</strong> 미국 기업으로 전통적인 IDM 대표 사례이며 CPU와 첨단 패키징 기술이 강점입니다.</p>
+              <p><strong>관련 공정/장비:</strong> 로직 공정, 패키징, 테스트.</p>
+              <p><strong>산업 내 위치:</strong> 설계와 제조를 동시에 수행하는 대표 사례입니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="asml lithography euv scanner">
+            <button class="accordion-trigger" type="button" data-target="company-asml">
+              <span>ASML</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-asml" hidden>
+              <p><strong>역할:</strong> 네덜란드 기업으로 노광 장비, 특히 EUV scanner 분야의 핵심 기업입니다.</p>
+              <p><strong>관련 공정/장비:</strong> Lithography.</p>
+              <p><strong>산업 내 위치:</strong> 첨단 노광 공정에서 매우 중요한 독보적 위치를 가집니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="applied materials deposition cmp inspection equipment">
+            <button class="accordion-trigger" type="button" data-target="company-amat">
+              <span>Applied Materials</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-amat" hidden>
+              <p><strong>역할:</strong> 미국 기업으로 증착, CMP, 검사 등 다양한 장비 포트폴리오를 보유합니다.</p>
+              <p><strong>관련 공정/장비:</strong> Deposition, CMP, inspection.</p>
+              <p><strong>산업 내 위치:</strong> 종합 장비 기업으로 영향력이 큽니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="lam research etch deposition plasma equipment">
+            <button class="accordion-trigger" type="button" data-target="company-lam">
+              <span>Lam Research</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-lam" hidden>
+              <p><strong>역할:</strong> 미국 기업으로 식각과 일부 증착 장비 분야의 핵심 기업입니다.</p>
+              <p><strong>관련 공정/장비:</strong> Etching, deposition.</p>
+              <p><strong>산업 내 위치:</strong> 플라즈마 기반 식각 분야에서 강한 존재감을 가집니다.</p>
+            </div>
+          </article>
+          <article class="card accordion-card searchable" data-search-category="company" data-search="tokyo electron tel coater developer etch deposition">
+            <button class="accordion-trigger" type="button" data-target="company-tel">
+              <span>Tokyo Electron</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="company-tel" hidden>
+              <p><strong>역할:</strong> 일본 기업으로 Coater/Developer, Etch, Deposition 등 다양한 장비를 제공합니다.</p>
+              <p><strong>관련 공정/장비:</strong> Lithography 보조 장비, Etch, Deposition.</p>
+              <p><strong>산업 내 위치:</strong> 글로벌 장비 시장에서 매우 중요한 플레이어입니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="card domestic-company-card">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <p class="eyebrow">Korea Hiring Focus</p>
+              <h3>한국 반도체 취업 실전 기업군</h3>
+            </div>
+            <p>장비, 재료, 부품, 후공정까지 함께 보면 지원 폭과 산업 구조 이해가 더 선명해집니다.</p>
+          </div>
+          <div class="content-grid company-grid domestic-company-grid">
+            <article class="card accordion-card searchable" data-search-category="company" data-search="원익ips wonik ips deposition etch thermal equipment">
+              <button class="accordion-trigger" type="button" data-target="company-wonikips"><span>원익IPS</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-wonikips" hidden><p><strong>연결 분야:</strong> 증착, 식각, 열처리 장비.</p><p><strong>포인트:</strong> 장비 엔지니어와 장비 소프트웨어 직무가 모두 자주 연결됩니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="유진테크 eugene technology lpcvd pecvd deposition equipment">
+              <button class="accordion-trigger" type="button" data-target="company-eugene"><span>유진테크</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-eugene" hidden><p><strong>연결 분야:</strong> LPCVD, PECVD 등 증착 장비.</p><p><strong>포인트:</strong> 박막 형성과 recipe 제어 관점으로 보기 좋은 기업입니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="주성엔지니어링 jusung engineering deposition ald cvd equipment">
+              <button class="accordion-trigger" type="button" data-target="company-jusung"><span>주성엔지니어링</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-jusung" hidden><p><strong>연결 분야:</strong> 증착 중심 반도체 장비.</p><p><strong>포인트:</strong> CVD/ALD 계열 공정 이해와 자연스럽게 이어집니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="한미반도체 hanmi semiconductor packaging vision die attach tc bonder">
+              <button class="accordion-trigger" type="button" data-target="company-hanmi"><span>한미반도체</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-hanmi" hidden><p><strong>연결 분야:</strong> 패키징 장비, 비전 검사, TC bonder.</p><p><strong>포인트:</strong> 첨단 패키징과 후공정 자동화 관심자에게 중요합니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="psk dry strip descum plasma equipment ashing">
+              <button class="accordion-trigger" type="button" data-target="company-psk"><span>PSK</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-psk" hidden><p><strong>연결 분야:</strong> dry strip, descum, plasma 장비.</p><p><strong>포인트:</strong> 포토 이후 제거 공정과 플라즈마 제어를 함께 보기 좋습니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="tes cleaning deposition equipment semiconductor">
+              <button class="accordion-trigger" type="button" data-target="company-tes"><span>TES</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-tes" hidden><p><strong>연결 분야:</strong> 세정, 증착, 공정 장비.</p><p><strong>포인트:</strong> 장비 유지보수와 공정 품질 관리 직무와 연결성이 큽니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="솔브레인 soulbrain chemicals slurry etchant materials">
+              <button class="accordion-trigger" type="button" data-target="company-soulbrain"><span>솔브레인</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-soulbrain" hidden><p><strong>연결 분야:</strong> 식각액, 세정액, CMP slurry 등 소재.</p><p><strong>포인트:</strong> 재료가 공정 결과와 yield에 미치는 영향이 잘 드러나는 기업군입니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="동진쎄미켐 dongjin semchem photoresist thinner chemical materials">
+              <button class="accordion-trigger" type="button" data-target="company-dongjin"><span>동진쎄미켐</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-dongjin" hidden><p><strong>연결 분야:</strong> 포토레지스트, thinner, wet chemical.</p><p><strong>포인트:</strong> Lithography와 소재 산업을 함께 이해할 때 자주 등장합니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="후성 foosung gas nf3 precursor fluorine materials">
+              <button class="accordion-trigger" type="button" data-target="company-foosung"><span>후성</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-foosung" hidden><p><strong>연결 분야:</strong> 특수가스, 전구체, 불소계 소재.</p><p><strong>포인트:</strong> 증착, 세정, 식각 공정 공급망을 이해할 때 중요합니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="리노공업 leeno industrial probe pin socket test component">
+              <button class="accordion-trigger" type="button" data-target="company-leeno"><span>리노공업</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-leeno" hidden><p><strong>연결 분야:</strong> 테스트 소켓, 프로브 핀, 검사 부품.</p><p><strong>포인트:</strong> Test Engineer와 후공정 품질 직무를 볼 때 함께 보게 됩니다.</p></div>
+            </article>
+            <article class="card accordion-card searchable" data-search-category="company" data-search="isc socket burn in test interface component">
+              <button class="accordion-trigger" type="button" data-target="company-isc"><span>ISC</span><span class="plus">+</span></button>
+              <div class="expand-panel" id="company-isc" hidden><p><strong>연결 분야:</strong> 테스트 인터페이스, 소켓, 부품.</p><p><strong>포인트:</strong> 테스트 장비와 디바이스를 연결하는 부품 생태계를 이해하기 좋습니다.</p></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="career.html#career">직무와 기업 연결 보기</a>
+            <a href="terms.html#glossary">기업 통합 검색 사용</a>
+            <a href="process.html#process">공정 관점으로 다시 보기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+<footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
+            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a
+            class="button footer-button"
+            href="https://kimsihu0225.github.io/My-Cosmos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
