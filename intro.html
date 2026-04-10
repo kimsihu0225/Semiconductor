@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반도체 입문</title>
+    <meta name="description" content="반도체 입문과 기초 개념 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<div class="background-glow background-glow-left"></div>
+<div class="background-glow background-glow-right"></div>
+<div class="equipment-layer" aria-hidden="true">
+  <div class="equipment wafer-rig">
+    <span class="wafer-ring wafer-ring-outer"></span>
+    <span class="wafer-ring wafer-ring-inner"></span>
+    <span class="wafer-grid"></span>
+  </div>
+  <div class="equipment chip-array">
+    <span class="chip-core"></span>
+    <span class="chip-pin chip-pin-top"></span>
+    <span class="chip-pin chip-pin-right"></span>
+    <span class="chip-pin chip-pin-bottom"></span>
+    <span class="chip-pin chip-pin-left"></span>
+  </div>
+  <div class="equipment process-arm">
+    <span class="arm-column"></span>
+    <span class="arm-beam"></span>
+    <span class="arm-head"></span>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="nav shell" aria-label="주요 섹션">
+    <a class="brand" href="index.html">Semiconductor</a>
+    <div class="nav-links">
+      <a href="intro.html" class="is-active">입문</a>
+      <a href="process.html">8대 공정</a>
+      <a href="equipment.html">장비</a>
+      <a href="materials.html">재료/부품</a>
+      <a href="industry.html">산업/기업</a>
+      <a href="career.html">직무/취업</a>
+      <a href="interview.html">면접/시험</a>
+      <a href="packaging.html">첨단기술</a>
+      <a href="terms.html">용어/검색</a>
+    </div>
+  </nav>
+</header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+<section class="section shell" id="introduction">
+        <div class="section-heading">
+          <p class="eyebrow">Introduction</p>
+          <h2>반도체 입문</h2>
+          <p>처음 배우는 사람도 개념이 이어지도록 텍스트 설명 중심으로 구성했습니다.</p>
+          
+        </div>
+
+        <div class="content-grid intro-grid">
+          <article class="card learning-card text-heavy">
+            <h3>반도체란 무엇인가</h3>
+            <p>
+              반도체는 전기가 매우 잘 흐르는 도체와 거의 흐르지 않는 부도체의
+              중간 성질을 갖는 물질입니다. 외부 조건이나 불순물 첨가에 따라
+              전기적 특성을 조절할 수 있기 때문에 스위치와 메모리의 핵심 재료가
+              됩니다.
+            </p>
+            <div class="topic-list">
+              <div>
+                <strong>Conductor</strong>
+                <p>전자 이동이 쉬워 전류가 잘 흐릅니다.</p>
+              </div>
+              <div>
+                <strong>Insulator</strong>
+                <p>전자 이동이 매우 어려워 전류가 거의 흐르지 않습니다.</p>
+              </div>
+              <div>
+                <strong>Semiconductor</strong>
+                <p>도핑, 전압, 온도에 따라 전기 특성을 정밀하게 제어할 수 있습니다.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card learning-card searchable" data-search-category="material" data-search="wafer silicon substrate material 재료 웨이퍼">
+            <h3>Silicon의 역할</h3>
+            <p>
+              실리콘은 자연계에 풍부하고 산화막 형성이 안정적이며 가공성이 좋아
+              가장 대표적인 반도체 재료입니다. 실리콘 산화막은 MOS 구조에서 매우
+              중요한 절연층으로 활용됩니다.
+            </p>
+            <p>
+              이 특성 덕분에 집적도 향상, 공정 안정성, 대량 생산 측면에서 큰
+              장점을 가집니다.
+            </p>
+          </article>
+
+          <article class="card learning-card searchable" data-search-category="material" data-search="photoresist resist pr material 재료 포토레지스트">
+            <h3>Doping, P-type, N-type</h3>
+            <p>
+              순수 실리콘에 특정 원소를 소량 첨가해 전하 운반자를 늘리는 과정을
+              도핑이라고 합니다. 인(P), 비소(As) 같은 5가 원소를 넣으면
+              전자가 많아지는 N-type이 되고, 붕소(B) 같은 3가 원소를 넣으면 정공이
+              많아지는 P-type이 됩니다.
+            </p>
+          </article>
+
+          <article class="card learning-card searchable" data-search-category="material" data-search="gas process gas chemistry material 재료 가스">
+            <h3>Carrier Movement</h3>
+            <p>
+              반도체 내부에서 전류는 전자와 정공의 이동으로 형성됩니다. 농도 차이에
+              의한 확산(diffusion)과 전기장에 의한 drift가 핵심 이동 메커니즘입니다.
+            </p>
+            <p>
+              이후 PN junction과 MOSFET을 이해할 때 이 개념이 그대로 연결됩니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="diagram-grid">
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="track scanner lithography align expose coater developer equipment 장비 포토">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Clickable Diagram</p>
+                <h3>PN Junction</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="pn-detail">상세 설명 보기</button>
+            </div>
+            <div class="pn-diagram">
+              <div class="pn-side p-side">P-type<br /><span>Hole 다수</span></div>
+              <div class="pn-barrier">Depletion Region</div>
+              <div class="pn-side n-side">N-type<br /><span>Electron 다수</span></div>
+            </div>
+            <div class="expand-panel" id="pn-detail" hidden>
+              <p>
+                P형과 N형이 만나면 전자와 정공이 서로 확산하면서 접합부 근처에
+                공핍층이 형성됩니다. 이 공핍층은 전하 운반자가 부족한 구간이며,
+                내부 전기장을 만들어 추가 확산을 막습니다.
+              </p>
+              <p>
+                순방향 바이어스를 걸면 장벽이 낮아져 전류가 흐르고, 역방향 바이어스에서는
+                장벽이 높아져 전류가 거의 흐르지 않습니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="card diagram-card searchable" data-search-category="equipment" data-search="ion implanter implant beamline mass filter equipment 장비 이온주입">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Clickable Diagram</p>
+                <h3>MOSFET 기초 구조</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="mosfet-detail">상세 설명 보기</button>
+            </div>
+            <div class="mosfet-diagram">
+              <div class="mos-gate">Gate</div>
+              <div class="mos-oxide">Oxide</div>
+              <div class="mos-channel">Channel</div>
+              <div class="mos-terminals">
+                <span>Source</span>
+                <span>Drain</span>
+              </div>
+              <div class="mos-substrate">P-type Substrate</div>
+            </div>
+            <div class="expand-panel" id="mosfet-detail" hidden>
+              <p>
+                MOSFET은 Gate 전압으로 채널 형성을 제어해 Source와 Drain 사이 전류를
+                켜고 끄는 소자입니다. 디지털 회로에서는 스위치 역할을 하며,
+                반도체 집적 회로의 핵심 기본 단위입니다.
+              </p>
+              <p>
+                Gate, Oxide, Channel, Source/Drain 구조를 먼저 이해하면 이후
+                공정과 소자 엔지니어링 학습이 훨씬 쉬워집니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="card diagram-card band-card">
+            <div class="diagram-header">
+              <div>
+                <p class="mini-label">Clickable Diagram</p>
+                <h3>Energy Band / Band Gap</h3>
+              </div>
+              <button class="toggle-button" type="button" data-target="band-detail">상세 설명 보기</button>
+            </div>
+            <div class="band-diagram-board" aria-hidden="true">
+              <div class="band-column conductor">
+                <p class="band-label">Conductor</p>
+                <div class="band-rails overlap">
+                  <span class="band-rail conduction-band">Conduction Band</span>
+                  <span class="band-gap-label">Overlap</span>
+                  <span class="band-rail valence-band">Valence Band</span>
+                </div>
+                <p class="band-note">밴드가 겹쳐 전자가 바로 이동합니다.</p>
+              </div>
+              <div class="band-column insulator">
+                <p class="band-label">Insulator</p>
+                <div class="band-rails">
+                  <span class="band-rail conduction-band">Conduction Band</span>
+                  <span class="band-gap gap-wide"></span>
+                  <span class="band-gap-label">Large Gap</span>
+                  <span class="band-rail valence-band">Valence Band</span>
+                </div>
+                <p class="band-note">band gap이 커서 전류가 잘 흐르지 않습니다.</p>
+              </div>
+              <div class="band-column semiconductor">
+                <p class="band-label">Semiconductor</p>
+                <div class="band-rails">
+                  <span class="band-rail conduction-band">Conduction Band</span>
+                  <span class="band-gap gap-mid"></span>
+                  <span class="band-gap-label">Controlled Gap</span>
+                  <span class="band-rail valence-band">Valence Band</span>
+                </div>
+                <p class="band-note">온도, 도핑, 전압에 따라 성질을 조절할 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="expand-panel" id="band-detail" hidden>
+              <p><strong>Valence band</strong>는 전자가 주로 채워진 영역이고, <strong>conduction band</strong>는 전자가 이동하며 전류를 만드는 영역입니다.</p>
+              <p><strong>Band gap</strong>은 두 밴드 사이의 에너지 차이입니다. conductor는 거의 겹치고, insulator는 매우 크며, semiconductor는 중간이라 제어 가능한 전기적 특성을 가집니다.</p>
+              <p>입문 단계에서는 “반도체는 필요할 때만 흐르게 만들 수 있는 재료”라고 이해하면 PN junction와 MOSFET으로 연결하기 쉽습니다.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="process.html#process">다음 단계: 8대 공정</a>
+            <a href="terms.html#glossary">관련 용어: PN Junction / MOSFET</a>
+            <a href="career.html#career">연결 직무: Process Engineer</a>
+          </div>
+        </div>
+      
+        <!-- content-boost-start -->
+        <div class="content-grid intro-grid">
+          <article class="card learning-card text-heavy">
+            <h3>📌 핵심 정리</h3>
+            <ul>
+              <li>반도체 (Semiconductor)는 도체 (Conductor)와 부도체 (Insulator)의 중간 성질을 가진 재료입니다.</li>
+              <li>도핑 (Doping)을 통해 전자 (Electron)와 정공 (Hole)의 수를 조절합니다.</li>
+              <li>PN 접합 (PN Junction)은 다이오드 (Diode), 트랜지스터 (Transistor) 이해의 출발점입니다.</li>
+              <li>MOSFET (Metal-Oxide-Semiconductor FET)은 전압으로 전류 흐름을 제어하는 핵심 소자입니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card">
+            <h3>📌 쉽게 이해하기</h3>
+            <ul>
+              <li>반도체는 전기를 “흐르게도, 막게도” 만들 수 있는 조절 가능한 스위치 재료입니다.</li>
+              <li>도핑 (Doping)은 순수한 재료에 아주 적은 양의 조미료를 넣어 성질을 바꾸는 과정과 비슷합니다.</li>
+              <li>MOSFET (Metal-Oxide-Semiconductor FET)은 손잡이 없이 전압으로 여닫는 전자 문이라고 보면 됩니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="probe station microscope semiconductor beginner equipment">
+            <h3>🔧 핵심 장비</h3>
+            <ul>
+              <li><strong>프로브 스테이션 (Probe Station)</strong>: 웨이퍼 위 소자에 바늘을 접촉해 전기 특성을 측정합니다.</li>
+              <li><strong>광학 현미경 (Optical Microscope)</strong>: 패턴, 오염, 표면 상태를 빠르게 확인하는 기본 장비입니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="future ai semiconductor training workstation cleanroom">
+            <h3>🚀 미래 장비 (10년 후)</h3>
+            <p><strong>AI 반도체 실습 워크스테이션 (AI Semiconductor Training Workstation)</strong></p>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Clean_room.jpg" alt="반도체 클린룸 장비 사진" loading="lazy" width="640" height="360" style="width:100%;max-height:260px;object-fit:cover;border-radius:18px;display:block;margin:12px 0;" />
+            <p>초보자가 웨이퍼 구조, 측정 데이터, 공정 결과를 한 화면에서 학습하는 통합 실습 장비입니다. 실제 장비 데이터를 기반으로 동작을 시뮬레이션하고, AI가 측정 결과와 오류 원인을 설명해 줍니다. 학교 실습과 기업 장비 교육 사이의 간격을 줄이는 방향으로 발전할 수 있습니다.</p>
+            <h3>⚡ 현재 장비와 차이점</h3>
+            <ul>
+              <li>측정 결과를 AI가 바로 해설해 학습 속도가 빨라집니다.</li>
+              <li>실제 웨이퍼 없이도 공정 조건 변화 결과를 비교할 수 있습니다.</li>
+              <li>장비 안전 교육과 기초 데이터 분석을 한 장비에서 연결합니다.</li>
+              <li>학생별 오답 패턴을 기반으로 학습 경로를 추천합니다.</li>
+            </ul>
+            <p class="search-meta">이미지: Wikimedia Commons, Clean room.jpg</p>
+          </article>
+        </div>
+        <!-- content-boost-end -->
+</section>
+    </main>
+<footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
+            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a
+            class="button footer-button"
+            href="https://kimsihu0225.github.io/My-Cosmos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+

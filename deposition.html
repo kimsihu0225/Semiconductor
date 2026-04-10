@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>증착 공정 (Deposition)</title>
+    <meta name="description" content="증착 공정 상세 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<div class="background-glow background-glow-left"></div>
+<div class="background-glow background-glow-right"></div>
+<div class="equipment-layer" aria-hidden="true">
+  <div class="equipment wafer-rig">
+    <span class="wafer-ring wafer-ring-outer"></span>
+    <span class="wafer-ring wafer-ring-inner"></span>
+    <span class="wafer-grid"></span>
+  </div>
+  <div class="equipment chip-array">
+    <span class="chip-core"></span>
+    <span class="chip-pin chip-pin-top"></span>
+    <span class="chip-pin chip-pin-right"></span>
+    <span class="chip-pin chip-pin-bottom"></span>
+    <span class="chip-pin chip-pin-left"></span>
+  </div>
+  <div class="equipment process-arm">
+    <span class="arm-column"></span>
+    <span class="arm-beam"></span>
+    <span class="arm-head"></span>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="nav shell" aria-label="주요 섹션">
+    <a class="brand" href="index.html">Semiconductor</a>
+    <div class="nav-links">
+      <a href="intro.html">입문</a>
+      <a href="process.html">8대 공정</a>
+      <a href="equipment.html">장비</a>
+      <a href="materials.html">재료/부품</a>
+      <a href="industry.html">산업/기업</a>
+      <a href="career.html">직무/취업</a>
+      <a href="interview.html">면접/시험</a>
+      <a href="packaging.html">첨단기술</a>
+      <a href="terms.html">용어/검색</a>
+    </div>
+  </nav>
+</header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+<section class="section shell" id="deposition-page">
+  <div class="section-heading">
+    <p class="eyebrow">Process Detail</p>
+    <h2>증착 공정 (Deposition)</h2>
+    <p>기존 사이트의 증착 공정 관련 내용을 한 페이지로 모았습니다.</p>
+  </div>
+  <div class="content-grid process-grid">
+<article class="card accordion-card searchable" data-search-category="process" data-search="oxidation oxidation furnace oxide sio2 thermal growth 산화 공정 산화막">
+            <button class="accordion-trigger" type="button" data-target="proc-oxidation">
+              <span>산화 (Oxidation)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="expand-panel" id="proc-oxidation" hidden>
+              <p><strong>목적:</strong> 절연막 형성과 표면 보호.</p>
+              <p><strong>원리:</strong> 실리콘 표면을 산소 또는 수증기와 반응시켜 SiO2를 성장시킵니다.</p>
+              <p><strong>주요 장비:</strong> Furnace, oxidation tube.</p>
+              <p><strong>주요 재료:</strong> O2, H2O, 실리콘 웨이퍼.</p>
+              <p><strong>대표 defect:</strong> 박막 두께 불균일, particle, pinhole.</p>
+              <p><strong>중요 포인트:</strong> 막질 균일성과 산화 온도 제어가 핵심입니다.</p>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="process" data-search="lithography photo resist exposure develop overlay cd 포토 노광 현상">
+            <button class="accordion-trigger" type="button" data-target="proc-lithography">
+              <span>포토 (Lithography)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="process-mini-diagram">
+              <span>Coat</span>
+              <span>Expose</span>
+              <span>Develop</span>
+            </div>
+            <div class="expand-panel" id="proc-lithography" hidden>
+              <p><strong>목적:</strong> 회로 패턴을 웨이퍼 위에 전사합니다.</p>
+              <p><strong>원리:</strong> 포토레지스트 도포 후 노광과 현상을 통해 원하는 패턴만 남깁니다.</p>
+              <p><strong>주요 장비:</strong> Track, Scanner, Coater/Developer.</p>
+              <p><strong>주요 재료:</strong> Photoresist, developer, mask/reticle.</p>
+              <p><strong>대표 defect:</strong> misalignment, footing, scum, collapse.</p>
+              <p><strong>중요 포인트:</strong> CD, overlay, focus, dose 관리가 현업에서 매우 중요합니다.</p>
+              <div class="step-detail">
+                <strong>Step-by-step</strong>
+                <p>1. 포토레지스트 도포 → 2. Soft bake → 3. 노광 → 4. 현상 → 5. 후속 공정 연결</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="process" data-search="etch etching plasma selectivity residue dry etch wet etch 식각 플라즈마">
+            <button class="accordion-trigger" type="button" data-target="proc-etching">
+              <span>식각 (Etching)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="process-mini-diagram">
+              <span>Mask</span>
+              <span>Plasma</span>
+              <span>Remove</span>
+            </div>
+            <div class="expand-panel" id="proc-etching" hidden>
+              <p><strong>목적:</strong> 필요한 부분만 선택적으로 제거해 패턴을 형성합니다.</p>
+              <p><strong>원리:</strong> 플라즈마 또는 화학 용액 반응을 이용해 막을 제거합니다.</p>
+              <p><strong>주요 장비:</strong> Dry etcher, wet bench.</p>
+              <p><strong>주요 재료:</strong> CF4, Cl2, BCl3, 세정액.</p>
+              <p><strong>대표 defect:</strong> over-etch, residue, profile imbalance, damage.</p>
+              <p><strong>중요 포인트:</strong> 선택비, 이방성, profile control이 핵심입니다.</p>
+              <div class="step-detail">
+                <strong>Step-by-step</strong>
+                <p>1. Mask 준비 → 2. Plasma 형성 → 3. 반응종 충돌/제거 → 4. endpoint 확인 → 5. residue 세정</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card accordion-card searchable" data-search-category="process" data-search="deposition cvd pvd ald thin film 증착 박막">
+            <button class="accordion-trigger" type="button" data-target="proc-deposition">
+              <span>증착 (Deposition)</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="process-mini-diagram">
+              <span>Gas In</span>
+              <span>Reaction</span>
+              <span>Film</span>
+            </div>
+            <div class="expand-panel" id="proc-deposition" hidden>
+              <p><strong>목적:</strong> 절연막, 도전막, barrier막 등을 웨이퍼 위에 형성합니다.</p>
+              <p><strong>원리:</strong> 기상 반응 또는 물리적 전달로 박막을 쌓습니다.</p>
+              <p><strong>주요 장비:</strong> CVD, ALD, PVD 장비.</p>
+              <p><strong>주요 재료:</strong> SiH4, NH3, TEOS, TiN, W, Cu.</p>
+              <p><strong>대표 defect:</strong> 막질 불균일, particle, poor step coverage.</p>
+              <p><strong>중요 포인트:</strong> 두께, 균일도, 막질, conformality가 중요합니다.</p>
+              <div class="step-detail">
+                <strong>Step-by-step</strong>
+                <p>1. 가스 공급 → 2. 반응 생성 → 3. 표면 흡착 및 성장 → 4. purge → 5. 두께 검증</p>
+              </div>
+            </div>
+          </article>
+  </div>
+
+        <!-- content-boost-start -->
+        <div class="content-grid process-grid">
+          <article class="card learning-card text-heavy">
+            <h3>📌 핵심 정리</h3>
+            <ul>
+              <li>증착 공정 (Deposition)은 웨이퍼 위에 절연막, 도전막, 배리어막을 쌓는 공정입니다.</li>
+              <li>CVD (Chemical Vapor Deposition)는 기체 반응으로 막을 형성합니다.</li>
+              <li>PVD (Physical Vapor Deposition)는 물리적으로 재료를 날려 막을 입힙니다.</li>
+              <li>ALD (Atomic Layer Deposition)는 원자층 단위로 얇고 균일한 막을 만들 수 있습니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card">
+            <h3>📌 쉽게 이해하기</h3>
+            <ul>
+              <li>증착은 웨이퍼 위에 아주 얇은 페인트 층을 균일하게 입히는 과정과 비슷합니다.</li>
+              <li>구조가 복잡할수록 구석까지 고르게 덮는 능력 (Step Coverage)이 중요합니다.</li>
+              <li>막이 너무 두껍거나 얇으면 전기 특성과 후속 공정이 흔들립니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="cvd ald pvd deposition equipment">
+            <h3>🔧 핵심 장비</h3>
+            <ul>
+              <li><strong>화학기상증착 장비 (CVD System)</strong>: 반응 가스로 박막을 형성합니다.</li>
+              <li><strong>원자층증착 장비 (ALD System)</strong>: 전구체를 번갈아 공급해 원자층 단위 막을 만듭니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="future next generation ald cluster tool deposition">
+            <h3>🚀 미래 장비 (10년 후)</h3>
+            <p><strong>차세대 원자층 증착 클러스터 (Next-Gen ALD Cluster Tool)</strong></p>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/FZU%20ALD%201.jpg" alt="원자층 증착 장비" loading="lazy" width="640" height="360" style="width:100%;max-height:260px;object-fit:cover;border-radius:18px;display:block;margin:12px 0;" />
+            <p>차세대 ALD 클러스터는 복잡한 3D 구조 위에도 균일한 막을 만들기 위해 더 정밀한 전구체 공급과 퍼지 제어를 사용합니다. 공정 중 센서로 막 성장 상태를 추적하고, 필요한 경우 레시피를 미세 조정하는 방향으로 발전합니다. GAA (Gate-All-Around), 3D NAND, 첨단 패키징에서 중요성이 커집니다.</p>
+            <h3>⚡ 현재 장비와 차이점</h3>
+            <ul>
+              <li>막 두께 제어가 더 정밀해져 원자층 단위 균일성이 향상됩니다.</li>
+              <li>복잡한 3D 구조 내부까지 덮는 능력이 강화됩니다.</li>
+              <li>전구체 사용 효율과 배기 관리가 개선됩니다.</li>
+              <li>실시간 센서 기반 막질 모니터링 비중이 커집니다.</li>
+            </ul>
+            <p class="search-meta">이미지: Wikimedia Commons, FZU ALD 1.jpg</p>
+          </article>
+        </div>
+        <!-- content-boost-end -->
+</section>
+    </main>
+<footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
+            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a
+            class="button footer-button"
+            href="https://kimsihu0225.github.io/My-Cosmos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+

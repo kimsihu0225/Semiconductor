@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>용어사전 / 검색</title>
+    <meta name="description" content="반도체 용어사전과 검색 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<div class="background-glow background-glow-left"></div>
+<div class="background-glow background-glow-right"></div>
+<div class="equipment-layer" aria-hidden="true">
+  <div class="equipment wafer-rig">
+    <span class="wafer-ring wafer-ring-outer"></span>
+    <span class="wafer-ring wafer-ring-inner"></span>
+    <span class="wafer-grid"></span>
+  </div>
+  <div class="equipment chip-array">
+    <span class="chip-core"></span>
+    <span class="chip-pin chip-pin-top"></span>
+    <span class="chip-pin chip-pin-right"></span>
+    <span class="chip-pin chip-pin-bottom"></span>
+    <span class="chip-pin chip-pin-left"></span>
+  </div>
+  <div class="equipment process-arm">
+    <span class="arm-column"></span>
+    <span class="arm-beam"></span>
+    <span class="arm-head"></span>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="nav shell" aria-label="주요 섹션">
+    <a class="brand" href="index.html">Semiconductor</a>
+    <div class="nav-links">
+      <a href="intro.html">입문</a>
+      <a href="process.html">8대 공정</a>
+      <a href="equipment.html">장비</a>
+      <a href="materials.html">재료/부품</a>
+      <a href="industry.html">산업/기업</a>
+      <a href="career.html">직무/취업</a>
+      <a href="interview.html">면접/시험</a>
+      <a href="packaging.html">첨단기술</a>
+      <a href="terms.html" class="is-active">용어/검색</a>
+    </div>
+  </nav>
+</header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+<section class="section shell" id="glossary">
+        <div class="section-heading">
+          <p class="eyebrow">Glossary & Search</p>
+          <h2>용어사전 및 검색 기능</h2>
+          <p>용어와 기업 이름을 함께 검색할 수 있도록 통합 검색 구조로 만들었습니다.</p>
+        </div>
+
+        <div class="card search-card">
+          <label class="search-label" for="search-input">통합 검색</label>
+          <input
+            id="search-input"
+            class="search-input"
+            type="search"
+            placeholder="예: Lithography, CVD, Yield, Samsung, TSMC, NVIDIA"
+          />
+          <p class="search-hint">핵심 용어는 먼저 보이고, 확장 용어와 장비, 소자, 패키징, 기업, 직무는 펼치거나 검색으로 바로 찾을 수 있습니다.</p>
+          <p class="search-meta" id="search-meta" aria-live="polite">현재 공정, 장비, 재료, 소자/구조, 패키징, 기업, 직무를 함께 탐색할 수 있습니다.</p>
+          <div class="search-filters" role="tablist" aria-label="검색 필터">
+            <button type="button" class="search-filter is-active" data-filter="all" aria-selected="true">전체</button>
+            <button type="button" class="search-filter" data-filter="process" aria-selected="false">공정</button>
+            <button type="button" class="search-filter" data-filter="equipment" aria-selected="false">장비</button>
+            <button type="button" class="search-filter" data-filter="material" aria-selected="false">재료</button>
+            <button type="button" class="search-filter" data-filter="device" aria-selected="false">소자/구조</button>
+            <button type="button" class="search-filter" data-filter="package" aria-selected="false">패키징</button>
+            <button type="button" class="search-filter" data-filter="company" aria-selected="false">기업</button>
+            <button type="button" class="search-filter" data-filter="job" aria-selected="false">직무</button>
+          </div>
+        </div>
+
+        <div class="content-grid glossary-grid glossary-grid-primary">
+          <article class="card glossary-item searchable" data-search="silicon silicon wafer material semiconductor">
+            <h3>Silicon</h3>
+            <p>가장 대표적인 반도체 재료로 웨이퍼와 MOS 구조의 기반이 됩니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="doping dopant p-type n-type donor acceptor">
+            <h3>Doping</h3>
+            <p>불순물을 소량 첨가해 반도체의 전기적 특성을 제어하는 과정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="pn junction depletion diffusion drift diode">
+            <h3>PN Junction</h3>
+            <p>P형과 N형이 만나는 접합 구조로 다이오드와 트랜지스터 이해의 출발점입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mosfet transistor gate source drain channel oxide">
+            <h3>MOSFET</h3>
+            <p>Gate 전압으로 채널을 제어해 전류를 스위칭하는 핵심 반도체 소자입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="lithography photo exposure overlay cd">
+            <h3>Lithography</h3>
+            <p>회로 패턴을 웨이퍼 위에 전사하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="etch etching plasma residue selectivity">
+            <h3>Etch</h3>
+            <p>원하는 부분만 제거해 패턴을 만드는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="deposition cvd pvd ald thin film">
+            <h3>Deposition</h3>
+            <p>절연막과 금속막 같은 박막을 웨이퍼 위에 형성하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="yield defect fail pareto">
+            <h3>Yield</h3>
+            <p>전체 생산 중 정상 동작하는 양품 비율을 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="defect particle scratch residue void">
+            <h3>Defect</h3>
+            <p>제품 성능이나 수율에 영향을 주는 공정상 결함입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="overlay lithography alignment">
+            <h3>Overlay</h3>
+            <p>현재 패턴이 이전 층과 얼마나 정확히 맞는지를 나타내는 지표입니다.</p>
+          </article>
+        </div>
+
+        <div class="glossary-toggle-wrap">
+          <button class="toggle-button glossary-toggle" type="button" data-target="glossary-more" aria-expanded="false">
+            <span>확장 용어사전 펼치기</span>
+            <span class="toggle-arrow" aria-hidden="true">▾</span>
+          </button>
+        </div>
+
+        <div class="content-grid glossary-grid collapsible-panel" id="glossary-more">
+          <article class="card glossary-item searchable" data-search="cvd chemical vapor deposition deposition">
+            <h3>CVD</h3>
+            <p>기상 화학 반응으로 박막을 형성하는 증착 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="pvd physical vapor deposition sputter">
+            <h3>PVD</h3>
+            <p>물리적 전달로 박막을 형성하는 방식으로 스퍼터링이 대표적입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ald atomic layer deposition conformality">
+            <h3>ALD</h3>
+            <p>원자층 단위로 막을 형성해 높은 균일도와 우수한 단차 피복성을 얻는 증착 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="oxidation sio2 oxide furnace">
+            <h3>Oxidation</h3>
+            <p>실리콘 표면에 산화막을 형성해 절연층이나 보호막을 만드는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ion implantation implant dose energy dopant">
+            <h3>Ion Implantation</h3>
+            <p>도펀트 이온을 가속해 웨이퍼에 주입하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cmp chemical mechanical planarization slurry pad">
+            <h3>CMP</h3>
+            <p>화학적·기계적 연마로 표면을 평탄화하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="metallization copper aluminum interconnect">
+            <h3>Metallization</h3>
+            <p>금속 배선을 형성해 소자와 소자를 전기적으로 연결하는 공정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="anneal annealing thermal activation damage recovery">
+            <h3>Annealing</h3>
+            <p>이온주입 이후 손상 회복과 도펀트 활성화를 위해 열처리하는 과정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="photoresist resist pr">
+            <h3>Photoresist</h3>
+            <p>빛에 반응해 패턴 형성을 돕는 감광성 재료입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="wafer substrate silicon wafer">
+            <h3>Wafer</h3>
+            <p>반도체 소자가 형성되는 얇은 기판입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="reticle mask photomask">
+            <h3>Mask / Reticle</h3>
+            <p>포토 공정에서 회로 패턴 원본 역할을 하는 광학 마스크입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="critical dimension cd lithography line width">
+            <h3>CD</h3>
+            <p>패턴의 핵심 선폭 또는 구조 치수를 뜻하는 지표입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="uniformity thickness uniformity process control">
+            <h3>Uniformity</h3>
+            <p>막 두께나 공정 결과가 웨이퍼 전체에 얼마나 균일한지를 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="selectivity etch selectivity material ratio">
+            <h3>Selectivity</h3>
+            <p>목표 막과 다른 막 사이의 식각 속도 비율입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="plasma ion radical dry etch rf">
+            <h3>Plasma</h3>
+            <p>이온, 전자, 라디칼이 공존하는 활성 상태로 식각과 증착 장비에서 핵심입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="vacuum chamber pump pressure">
+            <h3>Vacuum</h3>
+            <p>공정 chamber 내부 압력을 낮춰 오염을 줄이고 반응을 제어하는 환경입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="rf power radio frequency plasma equipment">
+            <h3>RF Power</h3>
+            <p>플라즈마를 형성하거나 유지하기 위해 사용하는 고주파 전력입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mfc mass flow controller gas supply">
+            <h3>MFC</h3>
+            <p>가스 유량을 정밀하게 제어하는 장치입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="esc electrostatic chuck wafer holding">
+            <h3>ESC</h3>
+            <p>정전기력으로 웨이퍼를 고정하는 chuck입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="endpoint end point etch detection">
+            <h3>Endpoint</h3>
+            <p>식각이 목표 층에 도달했는지 판단하는 종료 지점입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="particle contamination defect cleanroom">
+            <h3>Particle</h3>
+            <p>미세 오염 입자로 수율 저하의 대표 원인입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="step coverage conformality deposition">
+            <h3>Step Coverage</h3>
+            <p>단차가 있는 구조를 박막이 얼마나 잘 따라 덮는지를 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="electromigration metal reliability interconnect">
+            <h3>Electromigration</h3>
+            <p>금속 배선에 전류가 지속되며 원자가 이동해 신뢰성이 저하되는 현상입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="leakage current off current device">
+            <h3>Leakage</h3>
+            <p>원하지 않는 경로로 흐르는 전류로 저전력 소자에서 매우 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="reliability lifetime breakdown degradation">
+            <h3>Reliability</h3>
+            <p>소자가 오랜 시간 안정적으로 동작하는 능력입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="dram memory cell capacitor">
+            <h3>DRAM</h3>
+            <p>커패시터에 전하를 저장하는 휘발성 메모리입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="nand flash memory storage">
+            <h3>NAND</h3>
+            <p>전하 저장 구조를 활용하는 비휘발성 메모리입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="hbm high bandwidth memory ai">
+            <h3>HBM</h3>
+            <p>고대역폭 데이터 처리를 위해 적층 구조를 활용하는 메모리입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="euv extreme ultraviolet lithography">
+            <h3>EUV</h3>
+            <p>초미세 패턴 형성을 위해 사용하는 극자외선 노광 기술입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cleanroom contamination control fab">
+            <h3>Cleanroom</h3>
+            <p>오염 제어를 위해 미세 입자를 엄격하게 관리하는 생산 환경입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="spc statistical process control quality">
+            <h3>SPC</h3>
+            <p>통계 기반으로 공정 이상을 감시하고 관리하는 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="fdc fault detection classification equipment">
+            <h3>FDC</h3>
+            <p>장비 센서 데이터를 이용해 이상 상태를 감지하고 분류하는 시스템입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cpk process capability index">
+            <h3>Cpk</h3>
+            <p>공정이 규격 내에서 얼마나 안정적으로 유지되는지 보여주는 지표입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="idm integrated device manufacturer">
+            <h3>IDM</h3>
+            <p>설계, 제조, 판매를 내부에서 함께 수행하는 기업 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="fabless design only semiconductor company">
+            <h3>Fabless</h3>
+            <p>제조 설비 없이 설계와 제품 기획에 집중하는 기업 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="foundry wafer manufacturing service">
+            <h3>Foundry</h3>
+            <p>외부 고객의 설계를 받아 웨이퍼 생산을 담당하는 기업 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="osat packaging test outsourced semiconductor assembly and test">
+            <h3>OSAT</h3>
+            <p>반도체 패키징과 테스트를 전문으로 수행하는 후공정 기업군입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="finfet fin field effect transistor 3d transistor">
+            <h3>FinFET</h3>
+            <p>채널을 핀 형태로 세워 게이트 제어력을 높인 3차원 트랜지스터 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="gaa gate all around nanosheet transistor">
+            <h3>GAA</h3>
+            <p>게이트가 채널을 더 넓게 감싸 전기적 제어 성능을 높인 차세대 트랜지스터 구조입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="sram static random access memory cache">
+            <h3>SRAM</h3>
+            <p>플립플롭 구조를 이용하는 고속 휘발성 메모리로 캐시에 많이 사용됩니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="soc system on chip integration">
+            <h3>SoC</h3>
+            <p>CPU, 메모리 인터페이스, I/O 등 여러 기능 블록을 하나의 칩에 통합한 시스템 반도체입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="pmic power management integrated circuit">
+            <h3>PMIC</h3>
+            <p>전압 변환과 전력 분배를 담당하는 전력 관리 반도체입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="chiplet advanced packaging modular die">
+            <h3>Chiplet</h3>
+            <p>기능별 다이를 분리해 패키지 수준에서 연결하는 설계 및 패키징 접근 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="tsv through silicon via 3d packaging">
+            <h3>TSV</h3>
+            <p>실리콘을 관통하는 수직 전기 연결 구조로 3D 적층 패키징에 사용됩니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="rdl redistribution layer packaging interconnect">
+            <h3>RDL</h3>
+            <p>패키지 상에서 입출력 위치를 재배치하기 위해 형성하는 배선층입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="bump micro bump solder ball package">
+            <h3>Bump</h3>
+            <p>칩과 기판을 전기적으로 연결하는 미세 돌기 구조로 플립칩 패키지에서 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="package substrate advanced packaging interposer">
+            <h3>Package Substrate</h3>
+            <p>칩과 시스템 보드를 연결하는 패키지 기판으로 신호와 전력 전달에 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="feol front end of line transistor formation">
+            <h3>FEOL</h3>
+            <p>트랜지스터와 같은 소자 자체를 형성하는 전공정 영역을 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="beol back end of line interconnect metallization">
+            <h3>BEOL</h3>
+            <p>금속 배선과 층간 연결을 형성하는 후반부 공정 영역을 뜻합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="wat wafer acceptance test parametric test">
+            <h3>WAT</h3>
+            <p>웨이퍼 단계에서 전기적 파라미터를 측정해 공정 상태를 확인하는 테스트입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cp chip probing wafer test">
+            <h3>CP</h3>
+            <p>웨이퍼 상태에서 프로브를 이용해 칩의 전기적 특성을 검사하는 테스트 단계입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ft final test package test">
+            <h3>FT</h3>
+            <p>패키징 이후 최종 제품 상태에서 수행하는 최종 테스트 단계입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="binning sort grade test result">
+            <h3>Binning</h3>
+            <p>테스트 결과에 따라 칩을 성능이나 품질 기준으로 분류하는 과정입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="load lock wafer vacuum isolation chamber equipment">
+            <h3>Load Lock</h3>
+            <p>대기와 진공 chamber 사이에서 웨이퍼를 안전하게 넘기는 중간 chamber입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="transfer module handler robot wafer equipment vacuum">
+            <h3>Transfer Module</h3>
+            <p>장비 내부에서 웨이퍼를 각 공정 chamber로 이동시키는 이송 구간입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="wafer handler robot arm vacuum equipment">
+            <h3>Wafer Handler</h3>
+            <p>웨이퍼를 집고 옮기는 로봇 메커니즘으로 장비 자동화의 핵심입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="showerhead gas distribution chamber deposition etch equipment">
+            <h3>Showerhead</h3>
+            <p>공정 가스를 균일하게 분사해 wafer 전면 반응 균일도를 돕는 부품입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="throttle valve pressure control vacuum exhaust equipment">
+            <h3>Throttle Valve</h3>
+            <p>배기량을 조절해 chamber pressure를 정밀하게 맞추는 밸브입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="turbo pump turbomolecular pump vacuum equipment">
+            <h3>Turbo Pump</h3>
+            <p>고진공 형성에 쓰이는 핵심 펌프로 공정 chamber의 낮은 압력을 유지합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="dry pump backing pump exhaust vacuum equipment">
+            <h3>Dry Pump</h3>
+            <p>오일 없이 배기하는 펌프로 반도체 장비의 청정 진공 유지에 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="chiller cooling temperature control equipment">
+            <h3>Chiller</h3>
+            <p>장비와 chuck, RF 부품의 온도를 안정적으로 유지하는 냉각 장치입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="he chuck heater electrostatic chuck temperature equipment">
+            <h3>Chuck Temperature Control</h3>
+            <p>ESC, heater, backside He 등을 이용해 wafer 온도를 제어하는 장비 기능입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="stage aligner motion control lithography equipment">
+            <h3>Stage</h3>
+            <p>웨이퍼를 정밀하게 이동시키는 축 시스템으로 노광과 검사 장비에서 매우 중요합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="oes optical emission spectroscopy endpoint plasma equipment">
+            <h3>OES</h3>
+            <p>플라즈마 빛의 스펙트럼을 분석해 endpoint나 chamber 상태를 보는 계측 방식입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="rga residual gas analyzer vacuum chamber equipment">
+            <h3>RGA</h3>
+            <p>chamber 내부 잔류 가스를 분석해 누설이나 오염을 추적하는 분석 장비입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mass filter analyzer magnet ion implantation equipment">
+            <h3>Mass Filter</h3>
+            <p>이온주입 장비에서 원하는 질량의 이온만 통과시키는 분리 구간입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="beamline ion implantation scan energy equipment">
+            <h3>Beamline</h3>
+            <p>이온 source에서 생성된 이온이 가속되고 조절되어 wafer로 이동하는 경로입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="recipe process parameter setpoint equipment automation">
+            <h3>Recipe</h3>
+            <p>공정 시간, pressure, gas flow, RF power 같은 조건 세트를 정의한 장비 실행 파일입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="interlock safety alarm equipment automation">
+            <h3>Interlock</h3>
+            <p>위험 상태나 오동작이 발생할 때 장비를 보호하기 위해 동작을 제한하는 안전 로직입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="secs gem communication equipment automation mes">
+            <h3>SECS/GEM</h3>
+            <p>반도체 장비와 상위 시스템이 상태, 이벤트, recipe를 주고받는 대표 통신 표준입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mes manufacturing execution system lot tracking automation">
+            <h3>MES</h3>
+            <p>lot 흐름, 작업 이력, 공정 지시를 관리하는 생산 실행 시스템입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="process engineer 직무 공정 엔지니어 spc yield defect">
+            <h3>Process Engineer</h3>
+            <p>공정 조건 최적화, defect 개선, 수율 향상을 담당하는 대표 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="equipment engineer 직무 장비 엔지니어 vacuum rf calibration pm">
+            <h3>Equipment Engineer</h3>
+            <p>장비 안정화, 예방정비, 이상 원인 분석과 uptime 관리를 담당하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="yield engineer 직무 수율 엔지니어 defect pareto data">
+            <h3>Yield Engineer</h3>
+            <p>불량 패턴과 데이터 분석을 통해 수율을 개선하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="test engineer 직무 테스트 엔지니어 wat cp ft binning">
+            <h3>Test Engineer</h3>
+            <p>웨이퍼 테스트와 최종 테스트 조건을 설계하고 품질 기준을 검증하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search-category="job" data-search="automation software engineer 직무 소프트웨어 자동화 엔지니어 mes secs gem log integration">
+            <h3>Automation / Software Engineer</h3>
+            <p>장비와 MES를 연결하고 데이터 수집, 로그, 자동화 로직을 설계하는 직무입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="synopsys eda design automation company">
+            <h3>Synopsys</h3>
+            <p>반도체 설계 자동화와 IP 분야에서 핵심적인 EDA 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="cadence eda design automation company">
+            <h3>Cadence</h3>
+            <p>회로 설계와 검증, 시스템 설계 도구를 제공하는 대표적인 EDA 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="arm ip cpu architecture company">
+            <h3>ARM</h3>
+            <p>CPU 아키텍처와 설계 IP 생태계에서 매우 중요한 역할을 하는 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="samsung samsung electronics memory foundry company">
+            <h3>Samsung</h3>
+            <p>한국 기업으로 메모리와 파운드리 모두에서 중요한 글로벌 반도체 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="sk hynix dram nand memory company">
+            <h3>SK hynix</h3>
+            <p>한국 기업으로 글로벌 메모리 산업의 핵심 기업이며 DRAM과 NAND에 강점을 가집니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="tsmc foundry company">
+            <h3>TSMC</h3>
+            <p>대만 기업으로 글로벌 파운드리 산업의 핵심 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="intel idm cpu foundry company">
+            <h3>Intel</h3>
+            <p>미국 기업으로 전통적인 IDM 대표 사례이며 로직 공정과 첨단 패키징에 강점이 있습니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="micron memory dram nand company">
+            <h3>Micron</h3>
+            <p>미국 기업으로 DRAM과 NAND 중심의 글로벌 메모리 사업을 수행합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="kioxia nand flash company">
+            <h3>Kioxia</h3>
+            <p>일본 기업으로 NAND 플래시 메모리 분야에서 중요한 위치를 가집니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="western digital nand storage company">
+            <h3>Western Digital</h3>
+            <p>미국 기업으로 저장장치와 NAND 생태계에서 중요한 역할을 합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="globalfoundries foundry company">
+            <h3>GlobalFoundries</h3>
+            <p>미국 기반 기업으로 특화 공정과 다양한 고객군을 가진 글로벌 파운드리 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="umc united microelectronics foundry company">
+            <h3>UMC</h3>
+            <p>대만 기업으로 성숙 공정 중심의 대표 파운드리 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="smic foundry china company">
+            <h3>SMIC</h3>
+            <p>중국 기업으로 대표적인 파운드리 사업을 수행합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="qualcomm fabless mobile soc company">
+            <h3>Qualcomm</h3>
+            <p>미국 기업으로 모바일 AP와 통신 칩 중심의 대표적인 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="nvidia fabless gpu ai company">
+            <h3>NVIDIA</h3>
+            <p>미국 기업으로 GPU와 AI 반도체 분야를 대표하는 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="amd fabless cpu gpu company">
+            <h3>AMD</h3>
+            <p>미국 기업으로 CPU와 GPU를 설계하는 대표적인 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="broadcom fabless networking company">
+            <h3>Broadcom</h3>
+            <p>미국 기업으로 통신과 네트워크 반도체 분야에서 강한 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="mediatek fabless mobile soc company">
+            <h3>MediaTek</h3>
+            <p>대만 기업으로 모바일과 통신 칩 설계 분야에서 중요한 팹리스 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="marvell fabless data center company">
+            <h3>Marvell</h3>
+            <p>미국 기업으로 데이터센터와 네트워크 반도체 설계 분야에서 영향력이 큽니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="infineon power semiconductor automotive company">
+            <h3>Infineon</h3>
+            <p>독일 기업으로 전력 반도체와 차량용 반도체 분야에서 강한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="texas instruments ti analog semiconductor company">
+            <h3>Texas Instruments</h3>
+            <p>미국 기업으로 아날로그와 임베디드 반도체 분야의 대표 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="nxp automotive semiconductor company">
+            <h3>NXP</h3>
+            <p>네덜란드 기업으로 차량용과 산업용 반도체 분야에서 중요한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="stmicroelectronics st automotive power company">
+            <h3>STMicroelectronics</h3>
+            <p>스위스 기반 기업으로 산업용, 전력, 차량용 반도체를 폭넓게 다룹니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="renesas automotive mcu company">
+            <h3>Renesas</h3>
+            <p>일본 기업으로 차량용 MCU와 임베디드 반도체 분야에서 영향력이 큽니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="onsemi on semiconductor power sensor company">
+            <h3>onsemi</h3>
+            <p>미국 기업으로 전력 반도체와 이미지 센서 분야에서 중요한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="asml euv lithography scanner company">
+            <h3>ASML</h3>
+            <p>네덜란드 기업으로 EUV 노광 장비 분야에서 핵심 역할을 합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="applied materials deposition cmp equipment company">
+            <h3>Applied Materials</h3>
+            <p>미국 기업으로 증착, CMP, 검사 장비를 폭넓게 공급하는 대표 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="lam research etch deposition company">
+            <h3>Lam Research</h3>
+            <p>미국 기업으로 식각과 일부 증착 장비 분야를 대표하는 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="tokyo electron tel track etch deposition company">
+            <h3>Tokyo Electron</h3>
+            <p>일본 기업으로 포토 보조 장비와 식각, 증착 장비를 공급하는 핵심 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="kla inspection metrology yield company">
+            <h3>KLA</h3>
+            <p>미국 기업으로 검사와 계측 분야에서 중요한 장비 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="asm international ald epitaxy company">
+            <h3>ASM International</h3>
+            <p>네덜란드 기업으로 ALD와 에피택시 장비 분야에서 강점을 가집니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="screen semiconductor solutions clean track company">
+            <h3>SCREEN</h3>
+            <p>일본 기업으로 세정 장비와 포토 보조 장비 분야에서 중요한 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="besi packaging die attach company">
+            <h3>BESI</h3>
+            <p>네덜란드 기업으로 패키징과 다이 본딩 장비 분야에서 주목받는 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="ase osat packaging test company">
+            <h3>ASE</h3>
+            <p>대만 기업으로 세계적인 OSAT 기업이며 패키징과 테스트 역량이 강합니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="amkor osat packaging test company">
+            <h3>Amkor</h3>
+            <p>미국 기반 기업으로 글로벌 후공정 분야를 대표하는 OSAT 기업입니다.</p>
+          </article>
+          <article class="card glossary-item searchable" data-search="jcet osat packaging test company">
+            <h3>JCET</h3>
+            <p>중국 기업으로 중요한 글로벌 OSAT 기업 중 하나입니다.</p>
+          </article>
+        </div>
+        <div class="card search-empty" id="search-empty" hidden>
+          <h3>검색 결과가 없습니다</h3>
+          <p>다른 용어, 약어, 공정명, 기업 이름으로 다시 검색해 보세요. 예: EUV, CMP, TSMC, NVIDIA</p>
+        </div>
+      
+        <!-- content-boost-start -->
+        <div class="content-grid glossary-grid">
+          <article class="card learning-card text-heavy">
+            <h3>📌 핵심 정리</h3>
+            <ul>
+              <li>용어사전 (Glossary)은 공정, 장비, 재료, 기업, 직무를 빠르게 연결해 보는 학습 도구입니다.</li>
+              <li>같은 단어도 공정 맥락에 따라 의미가 달라질 수 있어 카테고리 분류가 중요합니다.</li>
+              <li>장비 용어는 챔버 (Chamber), 진공 (Vacuum), 센서 (Sensor), 레시피 (Recipe)를 함께 이해해야 합니다.</li>
+              <li>면접에서는 용어 정의보다 “어느 공정에서 왜 중요한지”까지 말하는 것이 좋습니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card">
+            <h3>📌 쉽게 이해하기</h3>
+            <ul>
+              <li>용어사전은 반도체 언어를 빠르게 찾는 지도입니다.</li>
+              <li>단어만 외우기보다 공정 흐름 안에서 위치를 잡으면 오래 기억됩니다.</li>
+              <li>장비 소프트웨어 용어는 로그, 알람, 레시피, 인터락을 묶어서 보면 이해가 쉽습니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="mes secs gem equipment data server glossary automation">
+            <h3>🔧 핵심 장비</h3>
+            <ul>
+              <li><strong>장비 데이터 서버 (Equipment Data Server)</strong>: 장비 로그, 센서 데이터, 알람을 수집합니다.</li>
+              <li><strong>MES 연동 시스템 (MES Interface)</strong>: 생산 지시와 장비 상태를 연결합니다.</li>
+            </ul>
+          </article>
+          <article class="card learning-card searchable" data-search-category="equipment" data-search="future equipment knowledge server ai glossary automation">
+            <h3>🚀 미래 장비 (10년 후)</h3>
+            <p><strong>장비 지식 서버 (Equipment Knowledge Server)</strong></p>
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/UC%20Davis%20Cleanroom%20%2844815084014%29.jpg" alt="반도체 클린룸 장비와 데이터 기반 운영 환경" loading="lazy" width="640" height="360" style="width:100%;max-height:260px;object-fit:cover;border-radius:18px;display:block;margin:12px 0;" />
+            <p>장비 지식 서버는 단순 검색을 넘어 로그, 알람, 레시피, 공정 결과를 용어와 연결해 설명하는 시스템입니다. 엔지니어가 모르는 약어를 검색하면 관련 장비, 공정, 불량 사례까지 함께 보여주는 방향으로 발전할 수 있습니다. 장비 소프트웨어 직무에서는 이런 데이터 연결 능력이 점점 중요해집니다.</p>
+            <h3>⚡ 현재 장비와 차이점</h3>
+            <ul>
+              <li>단순 키워드 검색에서 공정 맥락 기반 검색으로 발전합니다.</li>
+              <li>알람 코드와 실제 조치 이력을 함께 보여줍니다.</li>
+              <li>MES (Manufacturing Execution System), SECS/GEM 데이터를 학습 자료와 연결합니다.</li>
+              <li>신입 엔지니어의 장비 용어 학습 시간을 줄여줍니다.</li>
+            </ul>
+            <p class="search-meta">이미지: Wikimedia Commons, UC Davis Cleanroom</p>
+          </article>
+        </div>
+        <!-- content-boost-end -->
+</section>
+    </main>
+<footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
+            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a
+            class="button footer-button"
+            href="https://kimsihu0225.github.io/My-Cosmos/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
