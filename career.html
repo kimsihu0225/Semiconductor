@@ -1,148 +1,532 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>직무 / 취업 준비</title>
-    <meta name="description" content="반도체 직무와 취업 준비 페이지" />
+    <title>반도체 기업 / 취업 정보</title>
+    <meta name="description" content="대한민국 반도체 기업, 채용, 연봉 수준, 취업 정보를 정리한 페이지" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-<a class="skip-link" href="#main-content">본문 바로가기</a>
-<div class="background-glow background-glow-left"></div>
-<div class="background-glow background-glow-right"></div>
-<div class="equipment-layer" aria-hidden="true">
-  <div class="equipment wafer-rig">
-    <span class="wafer-ring wafer-ring-outer"></span>
-    <span class="wafer-ring wafer-ring-inner"></span>
-    <span class="wafer-grid"></span>
-  </div>
-  <div class="equipment chip-array">
-    <span class="chip-core"></span>
-    <span class="chip-pin chip-pin-top"></span>
-    <span class="chip-pin chip-pin-right"></span>
-    <span class="chip-pin chip-pin-bottom"></span>
-    <span class="chip-pin chip-pin-left"></span>
-  </div>
-  <div class="equipment process-arm">
-    <span class="arm-column"></span>
-    <span class="arm-beam"></span>
-    <span class="arm-head"></span>
-  </div>
-</div>
-<header class="site-header">
-  <nav class="nav shell" aria-label="주요 섹션">
-    <a class="brand" href="index.html">Semiconductor</a>
-    <div class="nav-links">
-      <a href="intro.html">입문</a>
-      <a href="process.html">8대 공정</a>
-      <a href="equipment.html">장비</a>
-      <a href="materials.html">재료/부품</a>
-      <a href="industry.html">산업/기업</a>
-      <a href="career.html" class="is-active">직무/취업</a>
-      <a href="interview.html">면접/시험</a>
-      <a href="packaging.html">첨단기술</a>
-      <a href="terms.html">용어/검색</a>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <div class="equipment-layer" aria-hidden="true">
+      <div class="equipment wafer-rig"><span class="wafer-ring wafer-ring-outer"></span><span class="wafer-ring wafer-ring-inner"></span><span class="wafer-grid"></span></div>
+      <div class="equipment chip-array"><span class="chip-core"></span><span class="chip-pin chip-pin-top"></span><span class="chip-pin chip-pin-right"></span><span class="chip-pin chip-pin-bottom"></span><span class="chip-pin chip-pin-left"></span></div>
+      <div class="equipment process-arm"><span class="arm-column"></span><span class="arm-beam"></span><span class="arm-head"></span></div>
     </div>
-  </nav>
-</header>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html">소프트웨어</a>
+          <a href="ai.html">AI</a>
+          <a href="career.html" class="is-active">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
     <main id="main-content">
       <section class="section shell compact-top">
         <div class="related-links card">
           <p class="mini-label">Navigation</p>
           <div class="related-chip-row">
             <a href="index.html">메인으로 돌아가기</a>
+            <a href="software.html">소프트웨어 페이지 보기</a>
           </div>
         </div>
       </section>
-<section class="section shell" id="career">
+
+      <section class="section shell" id="career">
         <div class="section-heading">
-          <p class="eyebrow">Career & Jobs</p>
-          <h2>직무/취업</h2>
-          <p>직무 이해와 학습 순서를 함께 보여줘서 실제 준비 흐름이 보이도록 구성했습니다.</p>
-          
+          <p class="eyebrow">Companies & Careers</p>
+          <h2>반도체 기업 / 취업 정보</h2>
+          <p>2026년 4월 17일 기준 공개 자료를 바탕으로, 국내 반도체 기업을 규모와 역할별로 나누고 채용·연봉 정보를 구조적으로 정리했습니다.</p>
         </div>
 
-        <div class="card roadmap-visual-card">
-          <div class="roadmap-visual">
-            <div>기초 물성</div>
-            <div>8대 공정</div>
-            <div>장비/재료</div>
-            <div>산업 구조</div>
-            <div>직무별 심화</div>
-            <div>면접/시험</div>
+        <div class="card summary-strip">
+          <div>
+            <strong>대기업</strong>
+            <p>메모리, 파운드리, 대형 팹 운영 중심. 삼성전자, SK하이닉스, DB하이텍, LX세미콘이 대표 축입니다.</p>
+          </div>
+          <div>
+            <strong>중견기업</strong>
+            <p>장비, 소재, 패키징, 검사, 테스트 부품에서 강한 경쟁력을 가진 기업군입니다.</p>
+          </div>
+          <div>
+            <strong>중소기업</strong>
+            <p>부품, 안전, 자동화, 현장 장비 개조, 협력 제조에서 실제 취업 진입 통로 역할을 합니다.</p>
+          </div>
+          <div>
+            <strong>핵심 포인트</strong>
+            <p>반도체 취업은 메모리 기업만 보는 것이 아니라 장비·소재·후공정·소프트웨어까지 함께 봐야 구조가 선명해집니다.</p>
           </div>
         </div>
 
+        <div class="card info-table-wrap">
+          <h3>대표 기업 빠른 비교표</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>기업명</th>
+                <th>분야</th>
+                <th>대표 직무</th>
+                <th>연봉 수준</th>
+                <th>추천 학생 유형</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>삼성전자 DS</td>
+                <td>메모리 / 파운드리 / 시스템 반도체</td>
+                <td>공정, 장비기술, 설계, 패키지, SW</td>
+                <td>대기업 최상위권</td>
+                <td>전 영역을 폭넓게 보고 싶은 학생</td>
+              </tr>
+              <tr>
+                <td>SK하이닉스</td>
+                <td>메모리 / HBM</td>
+                <td>공정, 제품기술, PKG, Solution SW</td>
+                <td>업계 최상위권</td>
+                <td>메모리와 AI 반도체 흐름에 관심 있는 학생</td>
+              </tr>
+              <tr>
+                <td>DB하이텍</td>
+                <td>파운드리 / 특화공정</td>
+                <td>공정, 생산기술, 제품기술</td>
+                <td>대기업 상위권</td>
+                <td>메모리 외 파운드리 진로를 보는 학생</td>
+              </tr>
+              <tr>
+                <td>원익IPS / 유진테크 / 주성엔지니어링</td>
+                <td>장비 / 증착</td>
+                <td>장비개발, 생산기술, 제어, CS</td>
+                <td>중견 장비사 상위권</td>
+                <td>장비 엔지니어를 목표로 하는 학생</td>
+              </tr>
+              <tr>
+                <td>한미반도체 / 앰코코리아 / SFA반도체</td>
+                <td>패키징 / 테스트 / 후공정</td>
+                <td>패키지기술, 생산기술, 품질</td>
+                <td>기업별 차이 큼</td>
+                <td>첨단패키징과 후공정에 관심 있는 학생</td>
+              </tr>
+              <tr>
+                <td>솔브레인 / 동진쎄미켐 / 후성 / SK실트론</td>
+                <td>소재 / 웨이퍼 / 화학</td>
+                <td>소재개발, 품질, 제조기술, 고객기술지원</td>
+                <td>소재 대기업·중견 상위권</td>
+                <td>재료와 화학 기반 진로를 보는 학생</td>
+              </tr>
+              <tr>
+                <td>LX세미콘</td>
+                <td>팹리스 / 시스템 반도체</td>
+                <td>설계, 검증, SW, 알고리즘</td>
+                <td>대기업 팹리스 상위권</td>
+                <td>설계와 검증 중심 진로를 원하는 학생</td>
+              </tr>
+              <tr>
+                <td>리노공업 / ISC</td>
+                <td>테스트 소켓 / 검사 부품</td>
+                <td>품질, 생산기술, 테스트 연계 직무</td>
+                <td>중견 경쟁권</td>
+                <td>테스트와 검사 부품 산업에 관심 있는 학생</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Hiring Structure</p>
+          <h2>기업 분류와 준비 방향</h2>
+          <p>먼저 산업의 큰 축을 보고, 그 다음 대표 기업을 카드와 표로 함께 보면 구조를 더 쉽게 이해할 수 있습니다.</p>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>기업군 요약표</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>기업군</th>
+                <th>주요 분야</th>
+                <th>대표 예시</th>
+                <th>취업 준비 키워드</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>대기업</td>
+                <td>메모리, 시스템 반도체, 파운드리, 팹 운영</td>
+                <td>삼성전자 DS, SK하이닉스, DB하이텍, LX세미콘</td>
+                <td>공정, 설계, 장비기술, 패키지, Solution SW</td>
+              </tr>
+              <tr>
+                <td>중견기업</td>
+                <td>장비, 소재, 패키징, 테스트 부품</td>
+                <td>원익IPS, 한미반도체, 솔브레인, 동진쎄미켐, 유진테크, 리노공업</td>
+                <td>장비 엔지니어, 자동화, 소재개발, 품질, 생산기술</td>
+              </tr>
+              <tr>
+                <td>중소기업</td>
+                <td>부품, 안전, 계측, 현장 대응</td>
+                <td>가스트론, 장비 협력사, 자동화 중소기업</td>
+                <td>현장 실무, 장비 유지보수, 제어, 설치/CS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Representative Companies</p>
+          <h2>대한민국 반도체 대표 기업 정리</h2>
+          <p>기업명만 나열하지 않고, 이 기업이 산업 안에서 어떤 역할을 맡고 있는지와 공개 채용·연봉 정보를 함께 묶었습니다.</p>
+        </div>
+
+        <div class="content-grid company-grid">
+          <article class="card learning-card">
+            <h3>삼성전자 DS부문</h3>
+            <p><strong>기업 규모:</strong> 대기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 메모리 / 시스템 반도체 / 파운드리 / 패키지 / 설계</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 메모리부터 System LSI, Foundry까지 아우르며 설계와 양산을 동시에 이끄는 한국 대표 반도체 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 공정, 장비기술, 패키지, 소프트웨어, 품질, 설계 직무가 모두 연결되는 가장 큰 생태계입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 2026년 상반기 공채가 3월 10일 시작되어 3월 17일까지 진행됐고, Samsung Careers DS 페이지에는 Software Development, Equipment Technology, Semiconductor Process Technology, Package Development 직무가 공개돼 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 기업정보 기준 평균연봉 7,589만원으로 확인되며, 실제 보상은 성과급 영향이 커 대기업 최상위권으로 보는 것이 안전합니다.</p>
+            <p class="source-note">주요 공개 자료: Samsung Careers DS, 삼성 뉴스룸 2026-03-09, 인크루트 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>SK하이닉스</h3>
+            <p><strong>기업 규모:</strong> 대기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 메모리 / HBM / 패키징 / 생산기술</p>
+            <p><strong>무엇을 하는 기업인가:</strong> DRAM, NAND, HBM 중심의 글로벌 메모리 기업으로 AI 시대와 직접 연결되는 핵심 플레이어입니다.</p>
+            <p><strong>대표 특징:</strong> 메모리 제조와 패키지, 테스트, 설비 운영, Solution SW 역할까지 직무 폭이 넓습니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공식 채용 사이트가 2026년 3월 9일 Talent Hub 형태로 개편됐고, 공식 careers 페이지에는 R&amp;D Process, Product Engineering, PKG Development, Solution SW, System Software 역할이 안내돼 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 기업정보 기준 평균연봉 11,391만원으로 공개되어 있으며, 업황과 성과급 영향이 큰 업계 상위권 기업입니다.</p>
+            <p class="source-note">주요 공개 자료: SK hynix 채용 사이트, SK hynix Careers, 인크루트 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>DB하이텍</h3>
+            <p><strong>기업 규모:</strong> 대기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 파운드리 / 아날로그 / 전력반도체 / 특화공정</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 8인치 특화 파운드리 서비스를 중심으로 BCDMOS, Analog CMOS, CIS, SiC, GaN 공정까지 제공하는 국내 대표 파운드리 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 메모리 외에 파운드리와 전력반도체 진로를 설명할 때 매우 좋은 사례입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공식 홈페이지에서 DB 채용 페이지와 연결되고, 채용/인사 문의 채널을 별도로 운영합니다. 파운드리 공정, 제품기술, 생산기술 계열 직무와 자연스럽게 연결됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 연봉정보 기준 평균예상연봉 8,986만원으로 공개돼 있어 대기업 파운드리 계열 상위권으로 볼 수 있습니다.</p>
+            <p class="source-note">주요 공개 자료: DB하이텍 공식 홈페이지, DB 채용 페이지 연결, 인크루트 연봉정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>LX세미콘</h3>
+            <p><strong>기업 규모:</strong> 대기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 팹리스 / 시스템 반도체 / 디스플레이 구동칩 / 차량용 반도체</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 디스플레이 구동칩과 시스템 반도체를 개발하는 국내 대표 팹리스 기업입니다.</p>
+            <p><strong>대표 특징:</strong> “설계 중심 반도체 기업”을 보여주기 좋은 예시이며, 공정이 아니라 설계·검증 직무를 강조하기 좋습니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> LX Careers 메인 기준 2026년 4월 현재 LX세미콘 경력사원 채용이 진행 중으로 노출되고 있으며, 공식 뉴스룸과 채용 포털 중심의 수시채용 구조가 확인됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 캐치 2026년 4월 기준 대기업으로 분류되며, 공개 플랫폼상 대기업 팹리스 상위권 수준으로 이해하는 것이 적절합니다.</p>
+            <p class="source-note">주요 공개 자료: LX Careers, LX세미콘 뉴스룸, 캐치 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>원익IPS</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 장비 / CVD / 가스캐비닛 / 증착 / 열처리</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 장비 제작 기업으로 증착과 공정 장비 포트폴리오를 가진 대표 장비사입니다.</p>
+            <p><strong>대표 특징:</strong> 장비 엔지니어, 생산기술, 장비 소프트웨어 직무와 연결해 설명하기 좋습니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 인크루트 2026년 기업정보 기준 채용 탭이 운영되고 있으며, 장비 제작과 연구개발 중심 직무 구조를 확인할 수 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 기업정보 기준 평균연봉 7,890만원으로 공개되어 중견 장비사 상위권으로 볼 수 있습니다.</p>
+            <p class="source-note">주요 공개 자료: 인크루트 원익아이피에스 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>한미반도체</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 패키징 장비 / 본딩 / 후공정 / HBM</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 제조용 기계와 후공정 장비를 만드는 기업으로, 최근 HBM용 TC Bonder 흐름에서 특히 주목받고 있습니다.</p>
+            <p><strong>대표 특징:</strong> 첨단 패키징과 후공정 장비 취업을 설명할 때 가장 직접적인 국내 사례입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 2026년 2월 세미콘 코리아에서 HBM5·6용 와이드 TC 본더를 공개했고, 공개 채용 플랫폼에서도 상시 채용 탭과 기업 정보를 확인할 수 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 연봉정보 기준 평균예상연봉 6,331만원으로 공개되어 중견 패키징 장비사 경쟁권으로 볼 수 있습니다.</p>
+            <p class="source-note">주요 공개 자료: 한미반도체 관련 2026 세미콘 코리아 보도, 인크루트 연봉정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>솔브레인</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 소재 / 식각액 / 세정액 / CMP 슬러리 / 전구체</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 핵심 공정에 필요한 초고순도 화학 소재를 공급하는 대표 소재 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 재료가 수율을 바꾼다는 점을 보여주기에 매우 좋은 사례입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공식 Recruitment Info 페이지에서 채용 프로세스와 공고 확인 구조가 안내되며, 연구개발과 제조, 지원 직무 흐름이 정리돼 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 사람인과 캐치 2026년 공개 정보 기준 중견기업으로 분류되며, 소재기업 상위권 보상 수준으로 이해하는 것이 적절합니다.</p>
+            <p class="source-note">주요 공개 자료: Soulbrain 공식 홈페이지/Recruitment Info, 사람인, 캐치</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>동진쎄미켐</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 포토레지스트 / CMP 슬러리 / 전자재료</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 감광액, BARC, Developer, CMP slurry 등 전자재료를 제조하는 대표 소재 기업입니다.</p>
+            <p><strong>대표 특징:</strong> Lithography와 소재 국산화 흐름을 연결해 설명하기 좋은 회사입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 인크루트 2026년 기업정보 페이지에서 채용 탭과 취업TIP이 운영되고 있으며, 반도체·디스플레이 화학소재 중심의 기업 소개가 확인됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 기업정보 기준 평균연봉 7,731만원으로 공개돼 중견 소재기업 상위권으로 볼 수 있습니다.</p>
+            <p class="source-note">주요 공개 자료: 인크루트 동진쎄미켐 기업정보, 캐치 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>유진테크</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 장비 / LPCVD / ALD / Dry Cleaning</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 웨이퍼 증착 장비를 개발·생산하는 장비 기업으로 LPCVD, ALD 계열 장비에 강합니다.</p>
+            <p><strong>대표 특징:</strong> 증착 장비 쪽으로 진로를 생각하는 학생에게 매우 직관적인 기업입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공식 사이트에 Recruit 메뉴가 운영되고 있으며, 인크루트 기업정보에서도 채용·연봉 정보를 확인할 수 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 기업정보 기준 평균연봉 9,248만원으로 공개돼 장비 분야 중견기업 중 상당히 높은 수준으로 보입니다.</p>
+            <p class="source-note">주요 공개 자료: 유진테크 공식 홈페이지, 인크루트 기업정보/연봉정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>리노공업</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 테스트 소켓 / 프로브 핀 / 검사 부품</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 검사용 소켓과 프로브 핀, 테스트 인터페이스 부품을 공급하는 대표 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 후공정 품질, 테스트 엔지니어, 검사 부품 산업을 설명할 때 핵심 사례입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 인크루트와 캐치 2026년 공개 페이지에서 채용 및 기업 정보가 운영되고 있으며, 테스트 부품 전문 기업으로 분류됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 연봉정보 기준 평균예상연봉 9,009만원으로 공개돼 검사·부품 기업군에서 높은 수준입니다.</p>
+            <p class="source-note">주요 공개 자료: 인크루트 리노공업 연봉정보, 캐치 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>가스트론</h3>
+            <p><strong>기업 규모:</strong> 중소기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 안전 / 가스 감지 / 설비 안전</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 산업용 가스 누설 경보기와 안전 장비를 만드는 기업으로, 반도체 공장의 가스·안전 관리와 직접 연결됩니다.</p>
+            <p><strong>대표 특징:</strong> 중소기업도 반도체 산업 체인의 중요한 한 축이라는 점을 설명하기 좋은 사례입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 인크루트 2026년 기업정보에서 강소기업·이노비즈 기업으로 소개되고, 채용 탭이 운영됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 연봉정보 기준 평균예상연봉 5,919만원으로 공개돼 중소기업 가운데 경쟁력이 있는 편입니다.</p>
+            <p class="source-note">주요 공개 자료: 인크루트 가스트론 기업정보/연봉정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>SFA반도체</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> OSAT / 패키징 / 테스트</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 후공정 전문 기업으로 패키징과 테스트를 중심으로 생산을 수행합니다.</p>
+            <p><strong>대표 특징:</strong> 첨단패키징과 취업 정보를 연결할 때 국내 후공정 사례로 보기 좋습니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공개 채용 플랫폼에서 기업 및 채용 정보 확인이 가능하며, 후공정 생산기술과 품질 직무 이해에 도움이 됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 연봉정보 기준 평균예상연봉 5,823만원으로 공개돼 후공정 기업군의 참고 지표가 됩니다.</p>
+            <p class="source-note">주요 공개 자료: 인크루트 SFA반도체 연봉정보</p>
+          </article>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Added Major Names</p>
+          <h2>추가 보강한 유명 기업</h2>
+          <p>너무 무명 기업은 제외하고, 국내 반도체 취업 준비에서 자주 언급되는 대표 기업들을 더 넓게 보강했습니다.</p>
+        </div>
+
+        <div class="content-grid company-grid">
+          <article class="card learning-card">
+            <h3>SK실트론</h3>
+            <p><strong>기업 규모:</strong> 대기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 웨이퍼 / 실리콘 소재 / SiC 웨이퍼</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 칩 제조의 출발점이 되는 실리콘 웨이퍼와 SiC 웨이퍼를 생산하는 국내 대표 소재 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 메모리나 장비만이 아니라 웨이퍼 자체를 공급하는 소재 축이 중요하다는 점을 설명하기 좋습니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 캐치와 자소설 기준 2026년 기업정보가 계속 갱신되고 있으며, 웨이퍼 생산·품질·기술 직무와 연결해서 많이 언급됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 자소설 2026년 기업정보 기준 평균연봉 7,730만원으로 공개돼 소재 대기업 상위권 수준으로 볼 수 있습니다.</p>
+            <p class="source-note">주요 공개 자료: 캐치 SK실트론 기업정보, 자소설 SK실트론 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>앰코테크놀로지코리아</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> OSAT / 패키징 / 테스트 / 첨단패키징</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 패키징과 테스트 서비스를 제공하는 대표적인 글로벌 후공정 기업이며, 국내 취업시장에서도 인지도가 매우 높습니다.</p>
+            <p><strong>대표 특징:</strong> 첨단 패키징, WLCSP, SiP, 테스트 서비스까지 함께 볼 수 있어 산업 구조와 취업 정보 양쪽에 모두 강합니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> Amkor 공식 사이트는 채용 섹션을 운영하고 있고, 2026년에도 첨단 패키징 관련 행사와 기술 리더십 활동이 활발히 공개되고 있습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 공개 플랫폼마다 차이는 있지만 국내 후공정 대형 기업군으로 분류되며, 보상 수준도 후공정 업계 상위권으로 보는 것이 적절합니다.</p>
+            <p class="source-note">주요 공개 자료: Amkor 공식 사이트, Amkor 이벤트/IR 공개 자료, 공개 취업 플랫폼</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>PSK</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 장비 / Dry Strip / Descum / Plasma</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 감광액 제거기와 반도체 제조용 장비, 부품, A/S를 주력으로 하는 국내 대표 장비 기업입니다.</p>
+            <p><strong>대표 특징:</strong> Lithography 이후 공정과 플라즈마 장비 분야를 설명할 때 빠지지 않는 장비사입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 인크루트 2026년 기업정보 기준 반도체장비 제조 기업으로 채용 탭이 운영되고 있고, 장비 개발·생산·서비스 직무와 연결됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 인크루트 2026년 기업정보 기준 평균연봉 7,975만원으로 공개돼 국내 장비 중견기업 상위권 수준입니다.</p>
+            <p class="source-note">주요 공개 자료: 인크루트 피에스케이 기업정보</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>주성엔지니어링</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 장비 / CVD / ALD / 증착</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 증착 장비를 중심으로 성장한 국내 대표 장비 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 유진테크, 원익IPS와 함께 국내 증착 장비 축을 구성하는 회사로 설명하기 좋습니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공식 홈페이지와 공개 취업 플랫폼에서 채용 및 기업 정보를 확인할 수 있으며, 장비 설계·제어·생산기술과 연관성이 큽니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 공개 플랫폼 기준 중견 장비기업 경쟁권 수준으로 보는 것이 적절합니다.</p>
+            <p class="source-note">주요 공개 자료: 주성엔지니어링 공식 홈페이지, 공개 취업 플랫폼</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>후성</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 특수가스 / 불소계 소재 / 전구체</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 식각, 세정, 증착 공정에 쓰이는 특수가스와 화학 소재를 공급하는 대표 소재 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 반도체 산업에서 재료 공급망이 왜 중요한지 보여주는 사례입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 사람인 등 공개 플랫폼에서 기업 및 채용 정보가 계속 운영되고 있으며, 소재 생산·품질·기술 직무와 연결됩니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 공개 플랫폼 기준 중견 화학·소재기업 중상위권 수준으로 정리하는 것이 안전합니다.</p>
+            <p class="source-note">주요 공개 자료: 사람인 후성 기업정보, 공개 취업 플랫폼</p>
+          </article>
+
+          <article class="card learning-card">
+            <h3>ISC</h3>
+            <p><strong>기업 규모:</strong> 중견기업</p>
+            <p><strong>산업 역할 / 분야:</strong> 테스트 소켓 / 인터페이스 부품 / 검사</p>
+            <p><strong>무엇을 하는 기업인가:</strong> 반도체 테스트 과정에서 칩과 장비를 연결하는 소켓과 인터페이스 부품을 공급하는 기업입니다.</p>
+            <p><strong>대표 특징:</strong> 리노공업과 함께 테스트 부품 생태계를 설명할 때 자주 등장하는 이름입니다.</p>
+            <p><strong>최신 채용정보 요약:</strong> 공개 취업 플랫폼에서 채용 탭과 기업 정보를 확인할 수 있으며, 테스트/품질/생산기술과 연결해 보기 좋습니다.</p>
+            <p><strong>연봉 정보 / 수준:</strong> 공개 플랫폼 기준 테스트 부품 기업군의 경쟁권 수준으로 이해하는 것이 적절합니다.</p>
+            <p class="source-note">주요 공개 자료: 공개 취업 플랫폼 기업정보</p>
+          </article>
+        </div>
+
+        <div class="card highlight-box">
+          <h3>이번 보강 기준</h3>
+          <p>이번 추가 보강은 “국내 반도체 취업 준비에서 자주 언급되는 기업인가”, “산업 역할을 설명하기 쉬운가”, “너무 무명 기업은 아닌가”를 기준으로 선별했습니다. 그래서 숫자를 무리하게 늘리기보다, 메모리·파운드리·웨이퍼·장비·소재·후공정·테스트 부품 축을 대표하는 기업 위주로 넓혔습니다.</p>
+        </div>
+
+        <div class="card highlight-box">
+          <h3>핵심 3줄 요약</h3>
+          <ul class="compact-list">
+            <li>반도체 취업은 메모리 대기업만이 아니라 장비, 소재, 후공정, 팹리스까지 함께 봐야 구조가 선명해집니다.</li>
+            <li>기업 정보는 이름보다 “산업에서 하는 역할”과 “대표 직무”를 중심으로 이해하는 것이 중요합니다.</li>
+            <li>채용과 연봉은 공식 사이트와 공개 플랫폼을 함께 보고, 최신 공개 자료 기준이라고 분명히 적는 것이 안전합니다.</li>
+          </ul>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">How To Research</p>
+          <h2>기업 정보 조사 방식</h2>
+          <p>채용·연봉·기업 규모는 변동 가능성이 있어, 어떤 자료를 기준으로 확인했는지 분명히 적는 것이 중요합니다.</p>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card">
+            <h3>우선순위 1: 공식 자료</h3>
+            <ul class="compact-list">
+              <li>기업 공식 홈페이지</li>
+              <li>공식 채용 사이트</li>
+              <li>기업 뉴스룸 / 보도자료</li>
+              <li>전자공시, IR 자료, 사업보고서</li>
+            </ul>
+          </article>
+          <article class="card learning-card">
+            <h3>우선순위 2: 공개 취업 플랫폼</h3>
+            <ul class="compact-list">
+              <li>사람인, 인크루트, 잡코리아, 캐치</li>
+              <li>공개된 기업규모, 매출, 사원수, 평균연봉, 채용 탭</li>
+              <li>연봉은 플랫폼 산식 차이가 있어 “참고용 수준”으로 표기</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>채용 확인 체크리스트</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>확인 항목</th>
+                <th>어디서 확인하는가</th>
+                <th>정리 포인트</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>기업 역할</td>
+                <td>공식 홈페이지 / 사업소개</td>
+                <td>“이 기업은 메모리/파운드리/장비/소재 중 어디를 맡는가”</td>
+              </tr>
+              <tr>
+                <td>최신 채용 구조</td>
+                <td>공식 채용 페이지 / 공개 채용 포털</td>
+                <td>“상시채용인지, 신입/경력 수시채용인지”</td>
+              </tr>
+              <tr>
+                <td>연봉 수준</td>
+                <td>인크루트 / 사람인 / 캐치</td>
+                <td>“정확한 확정액이 아니라 공개 플랫폼 기준 참고 수준”</td>
+              </tr>
+              <tr>
+                <td>재무 / 규모</td>
+                <td>사업보고서 / 기업정보 플랫폼</td>
+                <td>“대기업, 중견기업, 중소기업 중 어디인가”</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="content-grid jobs-grid">
-          <article class="card learning-card searchable" data-search-category="job" data-search="process engineer 직무 공정 엔지니어 spc yield defect">
-            <h3>Process Engineer</h3>
-            <p><strong>하는 일:</strong> 공정 조건 최적화, defect 개선, 수율 향상.</p>
-            <p><strong>필요 지식:</strong> 8대 공정, defect, 통계, data interpretation.</p>
-            <p><strong>중요 키워드:</strong> CD, uniformity, SPC, yield.</p>
-            <p><strong>면접 포인트:</strong> 공정 간 연계와 문제 해결 관점 설명.</p>
+          <article class="card learning-card">
+            <h3>공정 엔지니어</h3>
+            <p>삼성전자, SK하이닉스, DB하이텍 같은 제조 중심 기업에서 공정 안정화와 수율 향상을 맡습니다.</p>
           </article>
-          <article class="card learning-card searchable" data-search-category="job" data-search="equipment engineer 직무 장비 엔지니어 vacuum rf calibration pm">
-            <h3>Equipment Engineer</h3>
-            <p><strong>하는 일:</strong> 장비 안정화, PM, trouble shooting, uptime 관리.</p>
-            <p><strong>필요 지식:</strong> vacuum, plasma, RF, sensor, mechanical system.</p>
-            <p><strong>중요 키워드:</strong> PM, chamber, calibration, MTBF.</p>
-            <p><strong>면접 포인트:</strong> 장비 구조와 이상 원인 추적 방식.</p>
+          <article class="card learning-card">
+            <h3>장비 엔지니어</h3>
+            <p>원익IPS, 유진테크, 한미반도체 같은 장비사와 팹 현장에서 장비 안정화, PM, 트러블슈팅을 담당합니다.</p>
           </article>
-          <article class="card learning-card searchable" data-search-category="job" data-search="yield engineer 직무 수율 엔지니어 defect pareto data">
-            <h3>Yield Engineer</h3>
-            <p><strong>하는 일:</strong> 수율 분석, 불량 원인 분류, data 기반 개선.</p>
-            <p><strong>필요 지식:</strong> defect analysis, 통계, 공정 흐름 이해.</p>
-            <p><strong>중요 키워드:</strong> fail bit, defect density, pareto.</p>
-            <p><strong>면접 포인트:</strong> 데이터에서 원인을 좁혀 가는 사고 방식.</p>
+          <article class="card learning-card">
+            <h3>재료 / 화학 엔지니어</h3>
+            <p>솔브레인, 동진쎄미켐 같은 소재기업에서 공정 적용성, 품질, 고객 대응, 신소재 개발을 맡습니다.</p>
           </article>
-          <article class="card learning-card searchable" data-search-category="job" data-search="test engineer 직무 테스트 엔지니어 wat final test binning">
-            <h3>Test Engineer</h3>
-            <p><strong>하는 일:</strong> 테스트 조건 설계, 양불 판정, 패키지 이후 검증.</p>
-            <p><strong>필요 지식:</strong> 회로 기초, tester, 신호, 품질 개념.</p>
-            <p><strong>중요 키워드:</strong> probe, binning, coverage, reliability.</p>
-            <p><strong>면접 포인트:</strong> 테스트 목적과 생산 품질의 연결.</p>
+          <article class="card learning-card">
+            <h3>자동화 / 소프트웨어 엔지니어</h3>
+            <p>장비 제어, 검사, MES, 데이터 수집, 분석 시스템을 통해 장비기업과 팹 양쪽에서 수요가 있습니다.</p>
           </article>
-          <article class="card learning-card searchable" data-search-category="job" data-search="automation software engineer 직무 소프트웨어 자동화 엔지니어 mes secs gem log integration">
-            <h3>Automation / Software Engineer</h3>
-            <p><strong>하는 일:</strong> 장비 자동화, 데이터 수집, 공정 시스템 연계.</p>
-            <p><strong>필요 지식:</strong> Python, C/C++, PLC/SECS-GEM, 데이터 처리.</p>
-            <p><strong>중요 키워드:</strong> MES, automation, log, integration.</p>
-            <p><strong>면접 포인트:</strong> 소프트웨어가 생산성과 품질에 미치는 영향.</p>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card highlight-box">
+            <h3>취업 준비 팁</h3>
+            <p>대기업만 보지 말고 장비·소재·후공정 기업까지 함께 보세요. 공정 이해에 데이터·소프트웨어 역량을 더하면 지원 가능한 직무 폭이 크게 넓어집니다.</p>
           </article>
+          <article class="card learning-card">
+            <h3>핵심 관점</h3>
+            <p>반도체 취업은 “어느 회사에 갈까”보다 “산업 체인 어디에 들어갈까”로 접근해야 구조가 명확해집니다. 그래서 기업 정보는 규모, 역할, 직무, 채용 경로를 함께 봐야 합니다.</p>
+          </article>
+        </div>
+
+        <div class="card learning-card text-heavy">
+          <h3>최신 정보 조사 기준</h3>
+          <p>이 페이지는 2026년 4월 17일 기준으로 공식 홈페이지, 공식 채용 사이트, 기업 뉴스룸, 삼성 뉴스룸, Samsung Careers, SK hynix Careers/Talent Hub, LX Careers, Soulbrain Recruitment Info, DB하이텍 공식 홈페이지, 그리고 사람인·인크루트·캐치의 공개 기업정보를 우선 확인해 정리했습니다. 연봉은 플랫폼 산식 차이가 있어 절대값보다 “공개 플랫폼 기준 수준”으로 이해하는 것이 안전합니다.</p>
         </div>
 
         <div class="related-links card">
           <p class="mini-label">Related Learning</p>
           <div class="related-chip-row">
-            <a href="industry.html#industry">목표 기업 구조 다시 보기</a>
-            <a href="interview.html#interview">면접/시험 대비 바로가기</a>
-            <a href="terms.html#glossary">직무 키워드 검색하기</a>
+            <a href="software.html">소프트웨어 페이지 보기</a>
+            <a href="equipment.html">장비 페이지 보기</a>
+            <a href="packaging.html">첨단패키징 보기</a>
           </div>
         </div>
       </section>
     </main>
-<footer class="site-footer shell">
+    <footer class="site-footer shell">
       <div class="footer-content card">
         <div class="footer-copy">
           <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
-          <p class="footer-note">
-            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
-            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
-          </p>
+          <p class="footer-note">기업명 나열이 아니라 산업 내 역할, 채용 확인 경로, 연봉 수준, 직무 연결까지 한눈에 보이도록 재구성했습니다.</p>
         </div>
         <div class="footer-actions">
-          <a
-            class="button footer-button"
-            href="https://kimsihu0225.github.io/My-Cosmos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            이전 사이트 보기
-          </a>
+          <a class="button footer-button" href="https://kimsihu0225.github.io/My-Cosmos/" target="_blank" rel="noreferrer">이전 사이트 보기</a>
         </div>
       </div>
     </footer>

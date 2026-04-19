@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verilog / SystemVerilog와 반도체</title>
+    <meta name="description" content="Verilog와 SystemVerilog 기초와 반도체 설계 활용을 정리한 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="software-pages">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html" class="is-active">소프트웨어</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Language Navigation</p>
+          <div class="related-chip-row">
+            <a href="software.html">소프트웨어 허브로 돌아가기</a>
+            <a href="lang-tcl.html">다음: Tcl 보기</a>
+          </div>
+        </div>
+      </section>
+      <section class="section shell">
+        <div class="section-heading">
+          <p class="eyebrow">Hardware Description Language</p>
+          <h2>Verilog / SystemVerilog</h2>
+          <p>Verilog와 SystemVerilog는 일반 소프트웨어 언어라기보다 하드웨어 동작을 기술하고 검증하는 HDL입니다.</p>
+        </div>
+        <div class="card summary-strip">
+          <div><strong>특징</strong><p>회로 동작과 타이밍을 기술합니다.</p></div>
+          <div><strong>주요 직무</strong><p>RTL 설계, 검증, 시뮬레이션</p></div>
+          <div><strong>주요 툴</strong><p>Synopsys, Cadence, Siemens EDA</p></div>
+          <div><strong>학습 포인트</strong><p>모듈, 신호, always, testbench가 핵심입니다.</p></div>
+        </div>
+        <div class="content-grid language-stat-grid">
+          <article class="card stat-card">
+            <h3>언어 스탯</h3>
+            <div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 10"></div><strong>10/10</strong></div>
+            <div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 4"></div><strong>4/10</strong></div>
+            <div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 7"></div><strong>7/10</strong></div>
+            <p class="stat-note">학습 난이도는 점수가 높을수록 더 어렵다는 뜻입니다.</p>
+          </article>
+        </div>
+
+        <div class="curriculum-grid">
+          <article class="card curriculum-step"><span class="step-number">01</span><h3>모듈</h3><p>회로를 블록 단위로 정의하는 출발점입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">02</span><h3>입출력 포트</h3><p>입력과 출력을 정의해 모듈 간 연결을 만듭니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">03</span><h3>자료형과 신호</h3><p>`wire`, `reg`, `logic`의 차이를 이해합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">04</span><h3>연산자</h3><p>산술, 논리, 비트, 시프트 연산을 익힙니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">05</span><h3>assign</h3><p>조합 논리를 간단하게 표현하는 방법입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">06</span><h3>always 블록</h3><p>조합 논리와 순차 논리를 나눠 기술합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">07</span><h3>if / case</h3><p>상태와 조건에 따라 회로 동작을 나누는 구조입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">08</span><h3>클럭과 리셋</h3><p>순차 회로의 기본 동작 기준입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">09</span><h3>FSM</h3><p>상태기계를 설계하고 제어 로직을 구조화합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">10</span><h3>Testbench</h3><p>입력을 주고 결과를 확인하는 검증용 코드입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">11</span><h3>타이밍 이해</h3><p>setup, hold, delay 같은 개념을 익힙니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">12</span><h3>SystemVerilog 확장</h3><p>검증 기능, 인터페이스, assertions로 확장됩니다.</p></article>
+        </div>
+        <div class="card info-table-wrap">
+          <h3>Verilog / SystemVerilog에서 꼭 알아야 하는 개념</h3>
+          <table class="info-table">
+            <thead><tr><th>개념</th><th>설명</th><th>실무 연결</th></tr></thead>
+            <tbody>
+              <tr><td>모듈</td><td>회로 블록을 정의하는 단위입니다.</td><td>CPU, 컨트롤러, 인터페이스 블록 설계의 기본입니다.</td></tr>
+              <tr><td>조합 / 순차 논리</td><td>현재 입력만 보는지, 클럭 기반으로 상태가 변하는지 구분합니다.</td><td>회로 구조를 이해하는 핵심입니다.</td></tr>
+              <tr><td>신호 타입</td><td>wire, reg, logic의 용도를 구분합니다.</td><td>시뮬레이션과 합성 결과를 올바르게 만들기 위해 필요합니다.</td></tr>
+              <tr><td>FSM</td><td>상태 기반 제어 회로를 표현합니다.</td><td>프로토콜 제어와 인터페이스 설계에 자주 사용됩니다.</td></tr>
+              <tr><td>Testbench</td><td>설계 코드가 맞는지 검증하는 환경입니다.</td><td>실제 칩 제작 전에 오류를 줄이는 핵심 단계입니다.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>Verilog / SystemVerilog의 장점과 반도체 외 대표 활용</h3>
+          <table class="info-table">
+            <thead><tr><th>항목</th><th>정리</th></tr></thead>
+            <tbody>
+              <tr><td>무엇에 특화되어 있나</td><td>하드웨어 회로 동작 기술, 타이밍 기반 설계, 디지털 논리 검증에 특화되어 있습니다.</td></tr>
+              <tr><td>장점</td><td>실제 칩 제작 전에 회로 구조와 동작을 미리 설계하고 검증할 수 있습니다.</td></tr>
+              <tr><td>반도체 외 주요 활용</td><td>FPGA 개발, 디지털 시스템 교육, 통신 장비 로직, 영상 처리 보드, 제어 보드 프로토타이핑처럼 하드웨어 설계가 필요한 분야에서 쓰입니다.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="content-grid support-grid">
+          <article class="card learning-card text-heavy">
+            <h3>반도체에서 어디에 쓰이는가</h3>
+            <p>Verilog와 SystemVerilog는 CPU, 메모리 컨트롤러, 인터페이스 회로, 검증 환경 같은 RTL 설계와 검증 업무에 직접 연결됩니다.</p>
+          </article>
+          <article class="card learning-card text-heavy">
+            <h3>실무 예시</h3>
+            <p>데이터를 받아 저장하는 모듈을 설계하고, 시뮬레이션으로 입력 패턴을 넣어 출력이 예상대로 나오는지 확인하는 식입니다.</p>
+          </article>
+        </div>
+        <div class="card highlight-box">
+          <h3>핵심 3줄 요약</h3>
+          <ul class="compact-list">
+            <li>Verilog / SystemVerilog는 소프트웨어 언어보다 회로 기술 언어에 가깝습니다.</li>
+            <li>기초는 모듈, 신호, always, 조합/순차 논리, testbench 순으로 잡으면 좋습니다.</li>
+            <li>반도체 설계와 검증 직무를 본다면 반드시 익숙해져야 하는 핵심 언어입니다.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

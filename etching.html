@@ -1,200 +1,47 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>식각 공정 (Etching)</title>
-    <meta name="description" content="식각 공정 상세 페이지" />
+    <title>식각 페이지 통합 안내</title>
+    <meta name="description" content="식각 페이지 통합 안내" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-<a class="skip-link" href="#main-content">본문 바로가기</a>
-<div class="background-glow background-glow-left"></div>
-<div class="background-glow background-glow-right"></div>
-<div class="equipment-layer" aria-hidden="true">
-  <div class="equipment wafer-rig">
-    <span class="wafer-ring wafer-ring-outer"></span>
-    <span class="wafer-ring wafer-ring-inner"></span>
-    <span class="wafer-grid"></span>
-  </div>
-  <div class="equipment chip-array">
-    <span class="chip-core"></span>
-    <span class="chip-pin chip-pin-top"></span>
-    <span class="chip-pin chip-pin-right"></span>
-    <span class="chip-pin chip-pin-bottom"></span>
-    <span class="chip-pin chip-pin-left"></span>
-  </div>
-  <div class="equipment process-arm">
-    <span class="arm-column"></span>
-    <span class="arm-beam"></span>
-    <span class="arm-head"></span>
-  </div>
-</div>
-<header class="site-header">
-  <nav class="nav shell" aria-label="주요 섹션">
-    <a class="brand" href="index.html">Semiconductor</a>
-    <div class="nav-links">
-      <a href="intro.html">입문</a>
-      <a href="process.html">8대 공정</a>
-      <a href="equipment.html">장비</a>
-      <a href="materials.html">재료/부품</a>
-      <a href="industry.html">산업/기업</a>
-      <a href="career.html">직무/취업</a>
-      <a href="interview.html">면접/시험</a>
-      <a href="packaging.html">첨단기술</a>
-      <a href="terms.html">용어/검색</a>
-    </div>
-  </nav>
-</header>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html">소프트웨어</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
     <main id="main-content">
-      <section class="section shell compact-top">
-        <div class="related-links card">
-          <p class="mini-label">Navigation</p>
-          <div class="related-chip-row">
-            <a href="index.html">메인으로 돌아가기</a>
+      <section class="section shell">
+        <div class="card merge-hero-card">
+          <p class="eyebrow">Merged Page</p>
+          <h2>식각은 공정 전체 페이지 안으로 통합되었습니다.</h2>
+          <p>식각을 단독 페이지로 보기보다, 포토와 증착 사이의 연결 공정으로 함께 보는 편이 더 이해하기 쉽습니다.</p>
+          <div class="merge-actions">
+            <a class="button primary" href="process.html#proc-etching">공정 페이지에서 식각 보기</a>
+            <a class="button secondary" href="equipment.html">관련 장비 보기</a>
           </div>
         </div>
       </section>
-<section class="section shell" id="etching-page">
-  <div class="section-heading">
-    <p class="eyebrow">Process Detail</p>
-    <h2>식각 공정 (Etching)</h2>
-    <p>기존 사이트의 식각 공정 관련 내용을 한 페이지로 모았습니다.</p>
-  </div>
-  <div class="content-grid process-grid">
-<article class="card accordion-card searchable" data-search-category="process" data-search="oxidation oxidation furnace oxide sio2 thermal growth 산화 공정 산화막">
-            <button class="accordion-trigger" type="button" data-target="proc-oxidation">
-              <span>산화 (Oxidation)</span>
-              <span class="plus">+</span>
-            </button>
-            <div class="expand-panel" id="proc-oxidation" hidden>
-              <p><strong>목적:</strong> 절연막 형성과 표면 보호.</p>
-              <p><strong>원리:</strong> 실리콘 표면을 산소 또는 수증기와 반응시켜 SiO2를 성장시킵니다.</p>
-              <p><strong>주요 장비:</strong> Furnace, oxidation tube.</p>
-              <p><strong>주요 재료:</strong> O2, H2O, 실리콘 웨이퍼.</p>
-              <p><strong>대표 defect:</strong> 박막 두께 불균일, particle, pinhole.</p>
-              <p><strong>중요 포인트:</strong> 막질 균일성과 산화 온도 제어가 핵심입니다.</p>
-            </div>
-          </article>
-
-          <article class="card accordion-card searchable" data-search-category="process" data-search="lithography photo resist exposure develop overlay cd 포토 노광 현상">
-            <button class="accordion-trigger" type="button" data-target="proc-lithography">
-              <span>포토 (Lithography)</span>
-              <span class="plus">+</span>
-            </button>
-            <div class="process-mini-diagram">
-              <span>Coat</span>
-              <span>Expose</span>
-              <span>Develop</span>
-            </div>
-            <div class="expand-panel" id="proc-lithography" hidden>
-              <p><strong>목적:</strong> 회로 패턴을 웨이퍼 위에 전사합니다.</p>
-              <p><strong>원리:</strong> 포토레지스트 도포 후 노광과 현상을 통해 원하는 패턴만 남깁니다.</p>
-              <p><strong>주요 장비:</strong> Track, Scanner, Coater/Developer.</p>
-              <p><strong>주요 재료:</strong> Photoresist, developer, mask/reticle.</p>
-              <p><strong>대표 defect:</strong> misalignment, footing, scum, collapse.</p>
-              <p><strong>중요 포인트:</strong> CD, overlay, focus, dose 관리가 현업에서 매우 중요합니다.</p>
-              <div class="step-detail">
-                <strong>Step-by-step</strong>
-                <p>1. 포토레지스트 도포 → 2. Soft bake → 3. 노광 → 4. 현상 → 5. 후속 공정 연결</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card accordion-card searchable" data-search-category="process" data-search="etch etching plasma selectivity residue dry etch wet etch 식각 플라즈마">
-            <button class="accordion-trigger" type="button" data-target="proc-etching">
-              <span>식각 (Etching)</span>
-              <span class="plus">+</span>
-            </button>
-            <div class="process-mini-diagram">
-              <span>Mask</span>
-              <span>Plasma</span>
-              <span>Remove</span>
-            </div>
-            <div class="expand-panel" id="proc-etching" hidden>
-              <p><strong>목적:</strong> 필요한 부분만 선택적으로 제거해 패턴을 형성합니다.</p>
-              <p><strong>원리:</strong> 플라즈마 또는 화학 용액 반응을 이용해 막을 제거합니다.</p>
-              <p><strong>주요 장비:</strong> Dry etcher, wet bench.</p>
-              <p><strong>주요 재료:</strong> CF4, Cl2, BCl3, 세정액.</p>
-              <p><strong>대표 defect:</strong> over-etch, residue, profile imbalance, damage.</p>
-              <p><strong>중요 포인트:</strong> 선택비, 이방성, profile control이 핵심입니다.</p>
-              <div class="step-detail">
-                <strong>Step-by-step</strong>
-                <p>1. Mask 준비 → 2. Plasma 형성 → 3. 반응종 충돌/제거 → 4. endpoint 확인 → 5. residue 세정</p>
-              </div>
-            </div>
-          </article>
-  </div>
-
-        <!-- content-boost-start -->
-        <div class="content-grid process-grid">
-          <article class="card learning-card text-heavy">
-            <h3>📌 핵심 정리</h3>
-            <ul>
-              <li>식각 공정 (Etching)은 필요한 부분만 선택적으로 제거해 패턴을 만드는 공정입니다.</li>
-              <li>건식 식각 (Dry Etch)은 플라즈마 (Plasma)를 이용해 미세 패턴 형성에 유리합니다.</li>
-              <li>선택비 (Selectivity)는 목표막은 잘 깎고 보호막은 덜 깎는 능력입니다.</li>
-              <li>프로파일 (Profile), 잔류물 (Residue), 손상 (Damage) 관리가 수율에 중요합니다.</li>
-            </ul>
-          </article>
-          <article class="card learning-card">
-            <h3>📌 쉽게 이해하기</h3>
-            <ul>
-              <li>식각은 회로 모양대로 필요 없는 부분을 정밀하게 깎아내는 과정입니다.</li>
-              <li>마스크 (Mask)는 깎이면 안 되는 부분을 보호하는 방패 역할을 합니다.</li>
-              <li>너무 많이 깎으면 구조가 무너지고, 덜 깎으면 연결 불량이 생길 수 있습니다.</li>
-            </ul>
-          </article>
-          <article class="card learning-card searchable" data-search-category="equipment" data-search="reactive ion etcher plasma etcher etching equipment">
-            <h3>🔧 핵심 장비</h3>
-            <ul>
-              <li><strong>반응성 이온 식각 장비 (Reactive Ion Etcher)</strong>: 플라즈마와 이온 충돌로 막을 선택적으로 제거합니다.</li>
-              <li><strong>종말점 검출 장치 (Endpoint Detection)</strong>: 식각이 목표 지점에 도달했는지 감지합니다.</li>
-            </ul>
-          </article>
-          <article class="card learning-card searchable" data-search-category="equipment" data-search="future ai plasma etcher atomic layer etch">
-            <h3>🚀 미래 장비 (10년 후)</h3>
-            <p><strong>AI 플라즈마 식각 장비 (AI Plasma Etcher)</strong></p>
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Reactive%20Ion%20Etcher.JPG" alt="반응성 이온 식각 장비" loading="lazy" width="640" height="360" style="width:100%;max-height:260px;object-fit:cover;border-radius:18px;display:block;margin:12px 0;" />
-            <p>AI 플라즈마 식각 장비는 센서 데이터를 이용해 플라즈마 상태와 식각 결과를 실시간으로 예측합니다. 원자층 식각 (Atomic Layer Etching)처럼 매우 얇은 단위로 제거하는 기술과 결합될 가능성이 큽니다. 엔지니어는 장비가 제안한 조건을 검증하고 공정 한계를 관리하는 역할이 커집니다.</p>
-            <h3>⚡ 현재 장비와 차이점</h3>
-            <ul>
-              <li>플라즈마 변동을 실시간 감지해 조건 보정이 빨라집니다.</li>
-              <li>과식각 (Over-Etch)과 잔류물 (Residue) 발생 가능성을 낮춥니다.</li>
-              <li>원자층 단위 제거로 3D 구조 제어가 정밀해집니다.</li>
-              <li>장비 로그와 센서 데이터 기반 예지보전이 강화됩니다.</li>
-            </ul>
-            <p class="search-meta">이미지: Wikimedia Commons, Reactive Ion Etcher.JPG</p>
-          </article>
-        </div>
-        <!-- content-boost-end -->
-</section>
     </main>
-<footer class="site-footer shell">
-      <div class="footer-content card">
-        <div class="footer-copy">
-          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
-          <p class="footer-note">
-            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
-            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
-          </p>
-        </div>
-        <div class="footer-actions">
-          <a
-            class="button footer-button"
-            href="https://kimsihu0225.github.io/My-Cosmos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            이전 사이트 보기
-          </a>
-        </div>
-      </div>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
-

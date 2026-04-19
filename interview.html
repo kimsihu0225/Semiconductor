@@ -1,258 +1,48 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>면접 / 시험 대비</title>
-    <meta name="description" content="면접과 시험 대비 페이지" />
+    <title>면접/시험 페이지 통합 안내</title>
+    <meta name="description" content="면접/시험 페이지 통합 안내" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-<a class="skip-link" href="#main-content">본문 바로가기</a>
-<div class="background-glow background-glow-left"></div>
-<div class="background-glow background-glow-right"></div>
-<div class="equipment-layer" aria-hidden="true">
-  <div class="equipment wafer-rig">
-    <span class="wafer-ring wafer-ring-outer"></span>
-    <span class="wafer-ring wafer-ring-inner"></span>
-    <span class="wafer-grid"></span>
-  </div>
-  <div class="equipment chip-array">
-    <span class="chip-core"></span>
-    <span class="chip-pin chip-pin-top"></span>
-    <span class="chip-pin chip-pin-right"></span>
-    <span class="chip-pin chip-pin-bottom"></span>
-    <span class="chip-pin chip-pin-left"></span>
-  </div>
-  <div class="equipment process-arm">
-    <span class="arm-column"></span>
-    <span class="arm-beam"></span>
-    <span class="arm-head"></span>
-  </div>
-</div>
-<header class="site-header">
-  <nav class="nav shell" aria-label="주요 섹션">
-    <a class="brand" href="index.html">Semiconductor</a>
-    <div class="nav-links">
-      <a href="intro.html">입문</a>
-      <a href="process.html">8대 공정</a>
-      <a href="equipment.html">장비</a>
-      <a href="materials.html">재료/부품</a>
-      <a href="industry.html">산업/기업</a>
-      <a href="career.html">직무/취업</a>
-      <a href="interview.html" class="is-active">면접/시험</a>
-      <a href="packaging.html">첨단기술</a>
-      <a href="terms.html">용어/검색</a>
-    </div>
-  </nav>
-</header>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html">소프트웨어</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
     <main id="main-content">
-      <section class="section shell compact-top">
-        <div class="related-links card">
-          <p class="mini-label">Navigation</p>
-          <div class="related-chip-row">
-            <a href="index.html">메인으로 돌아가기</a>
+      <section class="section shell" id="interview-merged">
+        <div class="card merge-hero-card">
+          <p class="eyebrow">Merged Page</p>
+          <h2>면접/시험 대비 내용은 핵심 페이지 안으로 통합했습니다.</h2>
+          <p>공정 관련 질문은 <strong>공정 전체</strong> 페이지에서, 기업·직무 준비 내용은 <strong>기업/취업</strong> 페이지와 <strong>소프트웨어</strong> 페이지에서 바로 연결되도록 구조를 바꿨습니다.</p>
+          <div class="merge-actions">
+            <a class="button primary" href="process.html">공정 전체로 이동</a>
+            <a class="button secondary" href="career.html">기업/취업으로 이동</a>
+            <a class="button secondary" href="software.html">소프트웨어로 이동</a>
           </div>
         </div>
       </section>
-<section class="section shell" id="interview">
-        <div class="section-heading">
-          <p class="eyebrow">Interview & Test Prep</p>
-          <h2>면접/시험 대비</h2>
-          <p>빈출 질문과 개념 확인 퀴즈를 함께 넣어 즉시 복습할 수 있게 했습니다.</p>
-          
-        </div>
-
-        <div class="content-grid interview-grid">
-          <article class="card learning-card">
-            <h3>자주 나오는 질문</h3>
-            <div class="qa-list">
-              <div class="qa-item">
-              <p><strong>Q.</strong> PN junction에서 공핍층은 왜 형성되나요?</p>
-              <p><strong>A.</strong> 전자와 정공의 확산으로 접합부 근처 자유 운반자가 줄어들기 때문입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> Lithography에서 overlay가 중요한 이유는 무엇인가요?</p>
-              <p><strong>A.</strong> 이전 층과 현재 패턴이 정확히 맞아야 회로 연결 오류를 줄일 수 있기 때문입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> Etching에서 선택비란 무엇인가요?</p>
-              <p><strong>A.</strong> 목표 막과 다른 막 사이의 식각 속도 비율입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> Silicon이 대표적인 반도체 재료가 된 이유는 무엇인가요?</p>
-              <p><strong>A.</strong> 풍부한 자원성, 안정적인 산화막 형성, 성숙한 웨이퍼 제조 기술 덕분입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> N-type과 P-type의 차이는 무엇인가요?</p>
-              <p><strong>A.</strong> N-type은 전자가, P-type은 정공이 다수 운반자인 반도체입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> MOSFET에서 Gate의 역할은 무엇인가요?</p>
-              <p><strong>A.</strong> Gate 전압으로 채널 형성을 제어해 Source와 Drain 사이 전류를 켜고 끕니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> CVD와 PVD의 차이를 간단히 설명해보세요.</p>
-              <p><strong>A.</strong> CVD는 화학 반응으로 박막을 성장시키고, PVD는 물리적 전달로 막을 형성합니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> CMP 공정이 필요한 이유는 무엇인가요?</p>
-              <p><strong>A.</strong> 표면을 평탄하게 만들어 다음 공정의 정렬과 패턴 정밀도를 확보하기 위해서입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> Yield가 낮아지는 대표 원인은 무엇인가요?</p>
-              <p><strong>A.</strong> Particle, 공정 편차, 장비 이상, 설계/배선 문제 등 다양한 defect 요인이 원인이 됩니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> Foundry와 Fabless의 차이는 무엇인가요?</p>
-              <p><strong>A.</strong> Fabless는 설계를 중심으로 하고, Foundry는 외부 고객 설계를 받아 생산을 담당합니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> Equipment Engineer에게 vacuum과 RF 개념이 중요한 이유는?</p>
-              <p><strong>A.</strong> 식각과 증착 장비의 핵심 동작 환경과 플라즈마 형성 제어에 직접 연결되기 때문입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> WAT와 Final Test의 차이는 무엇인가요?</p>
-              <p><strong>A.</strong> WAT는 웨이퍼 단계 전기 특성 확인이고, Final Test는 패키지 이후 최종 제품 상태 검사입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> HBM이 주목받는 이유는 무엇인가요?</p>
-              <p><strong>A.</strong> AI와 고성능 컴퓨팅에서 필요한 대역폭을 높이기 위해 적층 메모리 구조가 중요해졌기 때문입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> EUV가 중요한 이유는 무엇인가요?</p>
-              <p><strong>A.</strong> 더 미세한 패턴을 구현해 첨단 공정의 집적도 향상에 직접 기여하기 때문입니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> 공정 엔지니어 면접에서 자주 보는 역량은 무엇인가요?</p>
-              <p><strong>A.</strong> 공정 흐름 이해, 문제 원인 분석, 수율 개선 관점, 데이터 해석 능력이 중요합니다.</p>
-              </div>
-              <div class="qa-item">
-              <p><strong>Q.</strong> OSAT 기업은 왜 중요한가요?</p>
-              <p><strong>A.</strong> 패키징과 테스트는 최종 제품 품질, 신뢰성, 성능 구현에 직접 연결되기 때문입니다.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card quiz-card">
-            <h3>Quick Quiz</h3>
-            <div class="quiz-item" data-answer="b">
-              <p class="quiz-question">1. N-type 반도체에서 다수 운반자는 무엇인가요?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">정공</button>
-                <button type="button" data-choice="b">전자</button>
-                <button type="button" data-choice="c">광자</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 전자입니다. N-type은 donor 도핑으로 전자가 많아집니다.</p>
-            </div>
-            <div class="quiz-item" data-answer="o">
-              <p class="quiz-question">2. CMP의 주된 목적은 표면 평탄화이다.</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="o">O</button>
-                <button type="button" data-choice="x">X</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 O입니다. CMP는 다음 공정 정밀도를 위해 평탄화를 수행합니다.</p>
-            </div>
-            <div class="quiz-item" data-answer="c">
-              <p class="quiz-question">3. EUV scanner와 가장 직접적으로 연결되는 공정은?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">CMP</button>
-                <button type="button" data-choice="b">Ion Implantation</button>
-                <button type="button" data-choice="c">Lithography</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 Lithography입니다. EUV scanner는 노광 장비입니다.</p>
-            </div>
-
-            <div class="quiz-item" data-answer="b">
-              <p class="quiz-question">4. Etching에서 선택비(selectivity)가 중요한 이유로 가장 적절한 것은?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">웨이퍼 두께를 늘리기 위해</button>
-                <button type="button" data-choice="b">목표 막만 잘 제거하고 다른 막 손상을 줄이기 위해</button>
-                <button type="button" data-choice="c">포토레지스트 감도를 높이기 위해</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 b입니다. 선택비는 원하는 막과 보호해야 하는 막의 식각 속도 비율과 직접 연결됩니다.</p>
-            </div>
-
-            <div class="quiz-item" data-answer="a">
-              <p class="quiz-question">5. Equipment Engineer와 가장 직접적으로 연결되는 키워드는?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">PM, chamber, calibration</button>
-                <button type="button" data-choice="b">자소서 문장력, 마케팅</button>
-                <button type="button" data-choice="c">회계 결산, 세무</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 a입니다. 장비 엔지니어는 장비 구조 이해와 정비, 안정화, 이상 원인 분석 역량이 중요합니다.</p>
-            </div>
-
-            <div class="quiz-item" data-answer="c">
-              <p class="quiz-question">6. Foundry 기업의 설명으로 가장 적절한 것은?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">패키징만 수행하는 기업</button>
-                <button type="button" data-choice="b">오직 장비만 공급하는 기업</button>
-                <button type="button" data-choice="c">외부 고객 설계를 받아 웨이퍼 생산을 담당하는 기업</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 c입니다. Foundry는 팹리스 등 외부 고객의 설계를 받아 생산을 수행합니다.</p>
-            </div>
-
-            <div class="quiz-item" data-answer="b">
-              <p class="quiz-question">7. HBM이 특히 많이 연결되는 응용 분야는?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">기계식 가공 장비</button>
-                <button type="button" data-choice="b">AI 및 고대역폭 데이터 처리</button>
-                <button type="button" data-choice="c">종이 인쇄 공정</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 b입니다. HBM은 대용량 데이터를 빠르게 처리해야 하는 AI와 고성능 컴퓨팅 환경에서 중요합니다.</p>
-            </div>
-
-            <div class="quiz-item" data-answer="a">
-              <p class="quiz-question">8. WAT의 목적에 가장 가까운 것은?</p>
-              <div class="quiz-options">
-                <button type="button" data-choice="a">웨이퍼 단계에서 전기적 파라미터를 측정해 공정 상태를 확인</button>
-                <button type="button" data-choice="b">패키지 외관만 검사</button>
-                <button type="button" data-choice="c">직무 면접 문항을 생성</button>
-              </div>
-              <p class="quiz-feedback" hidden>정답은 a입니다. WAT는 웨이퍼 단계에서 공정 상태를 전기적 특성으로 확인하는 중요한 테스트입니다.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="content-grid interview-grid extra-quiz-grid">
-          <article class="card learning-card">
-            <h3>공정 면접 체크포인트</h3>
-            <p>공정 순서 암기가 끝이 아니라 각 공정의 목적과 전후 공정 연결까지 설명할 수 있어야 합니다.</p>
-            <p>특히 Lithography, Etching, Deposition, CMP는 defect와 control point를 함께 말할 수 있으면 좋습니다.</p>
-          </article>
-          <article class="card learning-card">
-            <h3>직무 면접 체크포인트</h3>
-            <p>지원 직무의 역할, 필요한 지식, 현업에서 중요한 지표를 연결해서 말하는 연습이 필요합니다.</p>
-            <p>예를 들어 equipment 직무라면 vacuum, RF, PM, uptime, trouble shooting을 한 흐름으로 설명할 수 있어야 합니다.</p>
-          </article>
-        </div>
-      </section>
     </main>
-<footer class="site-footer shell">
-      <div class="footer-content card">
-        <div class="footer-copy">
-          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
-          <p class="footer-note">
-            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
-            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
-          </p>
-        </div>
-        <div class="footer-actions">
-          <a
-            class="button footer-button"
-            href="https://kimsihu0225.github.io/My-Cosmos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            이전 사이트 보기
-          </a>
-        </div>
-      </div>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>

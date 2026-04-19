@@ -1,176 +1,47 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>포토 공정 (Lithography)</title>
-    <meta name="description" content="포토 공정 상세 페이지" />
+    <title>리소그래피 페이지 통합 안내</title>
+    <meta name="description" content="리소그래피 페이지 통합 안내" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-<a class="skip-link" href="#main-content">본문 바로가기</a>
-<div class="background-glow background-glow-left"></div>
-<div class="background-glow background-glow-right"></div>
-<div class="equipment-layer" aria-hidden="true">
-  <div class="equipment wafer-rig">
-    <span class="wafer-ring wafer-ring-outer"></span>
-    <span class="wafer-ring wafer-ring-inner"></span>
-    <span class="wafer-grid"></span>
-  </div>
-  <div class="equipment chip-array">
-    <span class="chip-core"></span>
-    <span class="chip-pin chip-pin-top"></span>
-    <span class="chip-pin chip-pin-right"></span>
-    <span class="chip-pin chip-pin-bottom"></span>
-    <span class="chip-pin chip-pin-left"></span>
-  </div>
-  <div class="equipment process-arm">
-    <span class="arm-column"></span>
-    <span class="arm-beam"></span>
-    <span class="arm-head"></span>
-  </div>
-</div>
-<header class="site-header">
-  <nav class="nav shell" aria-label="주요 섹션">
-    <a class="brand" href="index.html">Semiconductor</a>
-    <div class="nav-links">
-      <a href="intro.html">입문</a>
-      <a href="process.html">8대 공정</a>
-      <a href="equipment.html">장비</a>
-      <a href="materials.html">재료/부품</a>
-      <a href="industry.html">산업/기업</a>
-      <a href="career.html">직무/취업</a>
-      <a href="interview.html">면접/시험</a>
-      <a href="packaging.html">첨단기술</a>
-      <a href="terms.html">용어/검색</a>
-    </div>
-  </nav>
-</header>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html">소프트웨어</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
     <main id="main-content">
-      <section class="section shell compact-top">
-        <div class="related-links card">
-          <p class="mini-label">Navigation</p>
-          <div class="related-chip-row">
-            <a href="index.html">메인으로 돌아가기</a>
+      <section class="section shell">
+        <div class="card merge-hero-card">
+          <p class="eyebrow">Merged Page</p>
+          <h2>리소그래피는 공정 전체 페이지 안으로 통합되었습니다.</h2>
+          <p>세부 공정을 따로 분리하기보다, 8대 공정 전체 흐름 안에서 함께 보는 편이 더 명확합니다.</p>
+          <div class="merge-actions">
+            <a class="button primary" href="process.html#proc-lithography">공정 페이지에서 리소그래피 보기</a>
+            <a class="button secondary" href="equipment.html">관련 장비 보기</a>
           </div>
         </div>
       </section>
-<section class="section shell" id="lithography-page">
-  <div class="section-heading">
-    <p class="eyebrow">Process Detail</p>
-    <h2>포토 공정 (Lithography)</h2>
-    <p>기존 사이트의 포토 공정 관련 내용을 한 페이지로 모았습니다.</p>
-  </div>
-  <div class="content-grid process-grid">
-<article class="card accordion-card searchable" data-search-category="process" data-search="oxidation oxidation furnace oxide sio2 thermal growth 산화 공정 산화막">
-            <button class="accordion-trigger" type="button" data-target="proc-oxidation">
-              <span>산화 (Oxidation)</span>
-              <span class="plus">+</span>
-            </button>
-            <div class="expand-panel" id="proc-oxidation" hidden>
-              <p><strong>목적:</strong> 절연막 형성과 표면 보호.</p>
-              <p><strong>원리:</strong> 실리콘 표면을 산소 또는 수증기와 반응시켜 SiO2를 성장시킵니다.</p>
-              <p><strong>주요 장비:</strong> Furnace, oxidation tube.</p>
-              <p><strong>주요 재료:</strong> O2, H2O, 실리콘 웨이퍼.</p>
-              <p><strong>대표 defect:</strong> 박막 두께 불균일, particle, pinhole.</p>
-              <p><strong>중요 포인트:</strong> 막질 균일성과 산화 온도 제어가 핵심입니다.</p>
-            </div>
-          </article>
-
-          <article class="card accordion-card searchable" data-search-category="process" data-search="lithography photo resist exposure develop overlay cd 포토 노광 현상">
-            <button class="accordion-trigger" type="button" data-target="proc-lithography">
-              <span>포토 (Lithography)</span>
-              <span class="plus">+</span>
-            </button>
-            <div class="process-mini-diagram">
-              <span>Coat</span>
-              <span>Expose</span>
-              <span>Develop</span>
-            </div>
-            <div class="expand-panel" id="proc-lithography" hidden>
-              <p><strong>목적:</strong> 회로 패턴을 웨이퍼 위에 전사합니다.</p>
-              <p><strong>원리:</strong> 포토레지스트 도포 후 노광과 현상을 통해 원하는 패턴만 남깁니다.</p>
-              <p><strong>주요 장비:</strong> Track, Scanner, Coater/Developer.</p>
-              <p><strong>주요 재료:</strong> Photoresist, developer, mask/reticle.</p>
-              <p><strong>대표 defect:</strong> misalignment, footing, scum, collapse.</p>
-              <p><strong>중요 포인트:</strong> CD, overlay, focus, dose 관리가 현업에서 매우 중요합니다.</p>
-              <div class="step-detail">
-                <strong>Step-by-step</strong>
-                <p>1. 포토레지스트 도포 → 2. Soft bake → 3. 노광 → 4. 현상 → 5. 후속 공정 연결</p>
-              </div>
-            </div>
-          </article>
-  </div>
-
-        <!-- content-boost-start -->
-        <div class="content-grid process-grid">
-          <article class="card learning-card text-heavy">
-            <h3>📌 핵심 정리</h3>
-            <ul>
-              <li>포토 공정 (Lithography)은 빛을 이용해 회로 패턴을 웨이퍼에 전사하는 과정입니다.</li>
-              <li>해상도 (Resolution)는 파장, 렌즈, 공정 조건, 포토레지스트 (Photoresist)에 의해 결정됩니다.</li>
-              <li>오버레이 (Overlay)는 이전 층과 새 패턴이 얼마나 정확히 맞는지를 나타냅니다.</li>
-              <li>선폭 (CD, Critical Dimension) 관리는 미세 공정에서 가장 중요한 품질 지표입니다.</li>
-            </ul>
-          </article>
-          <article class="card learning-card">
-            <h3>📌 쉽게 이해하기</h3>
-            <ul>
-              <li>사진을 인화하듯 빛으로 회로 모양을 찍어내는 공정입니다.</li>
-              <li>마스크 (Mask)는 회로 무늬가 들어 있는 초정밀 필름처럼 이해하면 쉽습니다.</li>
-              <li>초점과 노광량이 틀어지면 글자가 번지듯 패턴도 흐려집니다.</li>
-            </ul>
-          </article>
-          <article class="card learning-card searchable" data-search-category="equipment" data-search="euv scanner track lithography equipment">
-            <h3>🔧 핵심 장비</h3>
-            <ul>
-              <li><strong>노광 장비 (EUV Lithography System)</strong>: 회로 패턴을 빛으로 웨이퍼에 전사합니다.</li>
-              <li><strong>트랙 장비 (Coater/Developer Track)</strong>: 포토레지스트 도포와 현상을 담당합니다.</li>
-            </ul>
-          </article>
-          <article class="card learning-card searchable" data-search-category="equipment" data-search="future high na euv lithography scanner">
-            <h3>🚀 미래 장비 (10년 후)</h3>
-            <p><strong>고NA EUV 노광 장비 (High-NA EUV Lithography System)</strong></p>
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cleanroom%20-%20photolithography%20lab%20%289150584128%29.jpg" alt="포토리소그래피 클린룸 장비" loading="lazy" width="640" height="360" style="width:100%;max-height:260px;object-fit:cover;border-radius:18px;display:block;margin:12px 0;" />
-            <p>고NA EUV 노광 장비는 더 큰 개구수 (NA)를 활용해 더 작은 패턴을 안정적으로 전사하는 방향으로 발전합니다. 핵심은 단순히 더 작게 찍는 것이 아니라, 오버레이 (Overlay), 초점 (Focus), 결함 제어를 함께 안정화하는 것입니다. AI 기반 보정과 더 정밀한 레티클/스테이지 제어가 중요해집니다.</p>
-            <h3>⚡ 현재 장비와 차이점</h3>
-            <ul>
-              <li>미세 패턴 해상도가 향상되어 더 작은 선폭 구현에 유리합니다.</li>
-              <li>스테이지 정밀도와 진동 제어 요구가 더 높아집니다.</li>
-              <li>마스크 결함과 포커스 관리가 더 중요한 이슈가 됩니다.</li>
-              <li>노광 데이터와 계측 데이터의 실시간 보정 비중이 커집니다.</li>
-            </ul>
-            <p class="search-meta">이미지: Wikimedia Commons, Cleanroom - photolithography lab</p>
-          </article>
-        </div>
-        <!-- content-boost-end -->
-</section>
     </main>
-<footer class="site-footer shell">
-      <div class="footer-content card">
-        <div class="footer-copy">
-          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
-          <p class="footer-note">
-            학습용 요약 플랫폼으로 구성했으며, 반도체 기초 개념과 산업 구조를 빠르게 연결해 이해할 수 있도록 정리했습니다.
-            실제 기업/공정 세부 기준은 최신 공식 자료와 함께 교차 확인하는 학습을 권장합니다.
-          </p>
-        </div>
-        <div class="footer-actions">
-          <a
-            class="button footer-button"
-            href="https://kimsihu0225.github.io/My-Cosmos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            이전 사이트 보기
-          </a>
-        </div>
-      </div>
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
-

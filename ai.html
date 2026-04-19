@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI / 인공지능</title>
+    <meta
+      name="description"
+      content="AI의 기본 개념, 종류, 대표 사례, 반도체와의 연결을 정리한 페이지"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <div class="equipment-layer" aria-hidden="true">
+      <div class="equipment wafer-rig">
+        <span class="wafer-ring wafer-ring-outer"></span>
+        <span class="wafer-ring wafer-ring-inner"></span>
+        <span class="wafer-grid"></span>
+      </div>
+      <div class="equipment chip-array">
+        <span class="chip-core"></span>
+        <span class="chip-pin chip-pin-top"></span>
+        <span class="chip-pin chip-pin-right"></span>
+        <span class="chip-pin chip-pin-bottom"></span>
+        <span class="chip-pin chip-pin-left"></span>
+      </div>
+      <div class="equipment process-arm">
+        <span class="arm-column"></span>
+        <span class="arm-beam"></span>
+        <span class="arm-head"></span>
+      </div>
+    </div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html">소프트웨어</a>
+          <a href="ai.html" class="is-active">AI</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+            <a href="software.html">소프트웨어 페이지 보기</a>
+            <a href="career.html">기업/취업 페이지 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="ai-overview">
+        <div class="section-heading">
+          <p class="eyebrow">Artificial Intelligence</p>
+          <h2>AI / 인공지능</h2>
+          <p>
+            AI는 사람의 판단, 분류, 예측, 생성 같은 지적 작업을 기계가 수행하도록
+            만드는 기술입니다. 지금은 단순한 자동화를 넘어서 데이터 해석,
+            문서 작성, 이미지 분석, 대화형 서비스까지 넓게 확장되고 있습니다.
+          </p>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card text-heavy">
+            <h3>한 줄 요약</h3>
+            <p>
+              AI는 데이터를 바탕으로 패턴을 배우고, 그 결과를 이용해 분류,
+              추천, 예측, 생성, 판단을 수행하는 기술입니다.
+            </p>
+          </article>
+          <article class="card learning-card">
+            <h3>이 페이지에서 보는 것</h3>
+            <ul class="compact-list">
+              <li>AI의 기본 개념과 왜 중요한지</li>
+              <li>AI의 큰 종류와 차이</li>
+              <li>대표적인 AI 서비스와 모델 유형</li>
+              <li>반도체와 AI가 어떻게 연결되는지</li>
+              <li>AI를 사용할 때 꼭 알아야 하는 한계와 주의점</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card summary-strip">
+          <div>
+            <strong>입력</strong>
+            <p>텍스트, 이미지, 음성, 센서 데이터 같은 자료를 받습니다.</p>
+          </div>
+          <div>
+            <strong>학습</strong>
+            <p>데이터 패턴을 분석해 규칙이나 표현을 내부적으로 익힙니다.</p>
+          </div>
+          <div>
+            <strong>추론</strong>
+            <p>새로운 입력을 보고 분류, 예측, 생성 결과를 만듭니다.</p>
+          </div>
+          <div>
+            <strong>활용</strong>
+            <p>검색, 추천, 번역, 비전 검사, 챗봇, 자율 시스템에 적용됩니다.</p>
+          </div>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Why AI Matters</p>
+          <h2>왜 AI가 중요한가?</h2>
+          <p>
+            AI는 사람이 직접 모든 데이터를 읽고 판단하기 어려운 상황에서 특히
+            강력합니다. 데이터가 많아질수록 AI의 가치도 커집니다.
+          </p>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card highlight-box">
+            <h3>속도</h3>
+            <p>사람이 오래 걸리는 분류와 검색을 매우 빠르게 처리할 수 있습니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>규모</h3>
+            <p>대량의 이미지, 로그, 문서, 센서 데이터를 한 번에 다룰 수 있습니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>자동화</h3>
+            <p>반복적인 판단과 정리를 줄여 생산성과 품질 관리를 도와줍니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>새로운 생성</h3>
+            <p>기존 데이터를 분석하는 것을 넘어 텍스트, 이미지, 코드까지 생성합니다.</p>
+          </article>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">AI Types</p>
+          <h2>AI의 주요 종류</h2>
+          <p>
+            AI는 한 종류만 있는 것이 아니라 목적과 방식에 따라 여러 갈래로
+            나뉩니다. 큰 종류를 구분하면 뉴스나 기술 용어가 훨씬 잘 보입니다.
+          </p>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>AI 종류 한눈에 보기</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>무엇인지</th>
+                <th>대표 예시</th>
+                <th>핵심 포인트</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>머신러닝</td>
+                <td>데이터에서 규칙을 학습해 분류와 예측을 수행하는 AI</td>
+                <td>스팸 분류, 수요 예측, 이상 탐지</td>
+                <td>정형 데이터와 예측 문제에 많이 쓰입니다.</td>
+              </tr>
+              <tr>
+                <td>딥러닝</td>
+                <td>신경망을 깊게 쌓아 복잡한 패턴을 학습하는 방식</td>
+                <td>이미지 인식, 음성 인식, 자연어 처리</td>
+                <td>대규모 데이터와 높은 계산량이 필요한 경우가 많습니다.</td>
+              </tr>
+              <tr>
+                <td>생성형 AI</td>
+                <td>새로운 텍스트, 이미지, 음성, 코드 등을 만들어내는 AI</td>
+                <td>ChatGPT, Claude, Gemini, Midjourney 계열</td>
+                <td>지금 가장 대중적으로 주목받는 AI 영역입니다.</td>
+              </tr>
+              <tr>
+                <td>컴퓨터 비전</td>
+                <td>이미지와 영상을 이해하고 분석하는 AI</td>
+                <td>불량 검사, 얼굴 인식, 의료 영상 분석</td>
+                <td>반도체 검사와 제조 품질 관리에 특히 중요합니다.</td>
+              </tr>
+              <tr>
+                <td>자연어 처리</td>
+                <td>사람의 언어를 이해하고 생성하는 AI</td>
+                <td>번역, 요약, 챗봇, 문서 검색</td>
+                <td>문서 작업과 대화형 서비스에서 강합니다.</td>
+              </tr>
+              <tr>
+                <td>강화학습</td>
+                <td>보상과 실패를 통해 최적 행동을 학습하는 AI</td>
+                <td>게임 AI, 로봇 제어, 자율주행 일부</td>
+                <td>연속 의사결정 문제에 적합합니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card text-heavy">
+            <h3>생성형 AI는 무엇이 다른가?</h3>
+            <p>
+              기존 AI가 분류와 예측에 강했다면, 생성형 AI는 새로운 결과물을
+              만들어내는 데 강합니다. 글쓰기, 요약, 코드 작성, 그림 생성 같은
+              작업에서 큰 변화를 만들고 있습니다.
+            </p>
+          </article>
+          <article class="card learning-card text-heavy">
+            <h3>딥러닝과 생성형 AI의 관계</h3>
+            <p>
+              생성형 AI는 딥러닝 위에서 발전한 경우가 많습니다. 즉 생성형 AI는
+              딥러닝을 활용하는 큰 응용 영역 중 하나로 보면 이해하기 쉽습니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Key Terms</p>
+          <h2>AI를 이해할 때 꼭 알아야 하는 기본 용어</h2>
+          <p>많이 들리지만 헷갈리기 쉬운 용어를 먼저 잡아두면 전체 흐름이 정리됩니다.</p>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>핵심 용어 정리</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>용어</th>
+                <th>뜻</th>
+                <th>왜 중요한가</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>데이터</td>
+                <td>AI가 배우고 판단하는 출발 재료</td>
+                <td>데이터 품질이 낮으면 결과도 나빠집니다.</td>
+              </tr>
+              <tr>
+                <td>모델</td>
+                <td>학습된 규칙과 가중치를 담고 있는 AI의 핵심 구조</td>
+                <td>실제 판단과 생성은 모델이 수행합니다.</td>
+              </tr>
+              <tr>
+                <td>학습</td>
+                <td>데이터를 이용해 모델 내부 파라미터를 조정하는 과정</td>
+                <td>학습 품질이 곧 성능의 기반이 됩니다.</td>
+              </tr>
+              <tr>
+                <td>추론</td>
+                <td>학습된 모델이 새로운 입력에 대해 결과를 내는 과정</td>
+                <td>실제 서비스에서 사용자가 경험하는 단계입니다.</td>
+              </tr>
+              <tr>
+                <td>파라미터</td>
+                <td>모델이 가지고 있는 내부 수치와 가중치</td>
+                <td>모델 규모와 표현력 설명에 자주 등장합니다.</td>
+              </tr>
+              <tr>
+                <td>프롬프트</td>
+                <td>생성형 AI에 입력하는 지시문 또는 질문</td>
+                <td>같은 모델도 프롬프트에 따라 결과 차이가 큽니다.</td>
+              </tr>
+              <tr>
+                <td>할루시네이션</td>
+                <td>AI가 사실이 아닌 내용을 그럴듯하게 말하는 현상</td>
+                <td>AI 결과를 무조건 믿으면 안 되는 대표 이유입니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Representative AI</p>
+          <h2>대표적인 AI 예시</h2>
+          <p>서비스 이름 자체를 외우기보다 어떤 종류의 AI인지 연결해서 보는 것이 중요합니다.</p>
+        </div>
+
+        <div class="content-grid company-grid">
+          <article class="card learning-card">
+            <h3>대화형 생성 AI</h3>
+            <p>ChatGPT, Claude, Gemini처럼 텍스트 생성과 요약, 질의응답, 코드 보조에 강한 AI입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>이미지 생성 AI</h3>
+            <p>Midjourney, DALL·E 계열처럼 프롬프트를 바탕으로 이미지를 만들어내는 AI입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>코드 보조 AI</h3>
+            <p>Copilot 계열처럼 개발자의 코드 작성과 수정, 설명을 도와주는 AI입니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>비전 AI</h3>
+            <p>이미지 속 결함, 객체, 위치를 찾는 AI로 제조와 검사 현장에 특히 강합니다.</p>
+          </article>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">AI & Semiconductor</p>
+          <h2>AI는 반도체와 어떻게 연결될까?</h2>
+          <p>
+            AI는 반도체를 더 많이 필요로 하게 만들고, 반대로 반도체 산업 내부에서도
+            AI를 적극적으로 사용합니다. 즉 둘은 서로를 키우는 관계입니다.
+          </p>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>반도체 산업에서 AI가 쓰이는 대표 장면</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>영역</th>
+                <th>AI가 하는 일</th>
+                <th>왜 중요한가</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>검사 / 비전</td>
+                <td>wafer, 패키지, 본딩, 표면 이미지에서 결함을 자동 검출</td>
+                <td>미세 결함을 빠르게 찾고 수율 관리에 도움됩니다.</td>
+              </tr>
+              <tr>
+                <td>수율 분석</td>
+                <td>로그와 공정 데이터를 분석해 이상 원인을 찾고 예측</td>
+                <td>문제 원인 추적 시간이 줄고 공정 안정성이 올라갑니다.</td>
+              </tr>
+              <tr>
+                <td>예지보전</td>
+                <td>장비 센서 데이터로 고장 징후를 미리 탐지</td>
+                <td>예상치 못한 장비 정지를 줄일 수 있습니다.</td>
+              </tr>
+              <tr>
+                <td>공정 최적화</td>
+                <td>조건 변화에 따른 품질과 수율 변화를 예측</td>
+                <td>실험 횟수를 줄이고 최적 조건 탐색을 빠르게 합니다.</td>
+              </tr>
+              <tr>
+                <td>설계 자동화</td>
+                <td>EDA 흐름 보조, 문서 정리, 코드 보조, 검증 보조</td>
+                <td>개발 속도와 반복 생산성을 높이는 데 도움이 됩니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card text-heavy">
+            <h3>AI 반도체가 중요한 이유</h3>
+            <p>
+              AI가 커질수록 계산량이 급격히 늘어나기 때문에 GPU, NPU, HBM 같은
+              고성능 반도체 수요도 함께 커집니다. 그래서 AI 산업 성장과 반도체 산업
+              성장은 강하게 연결됩니다.
+            </p>
+          </article>
+          <article class="card learning-card text-heavy">
+            <h3>반도체 내부에서도 AI를 쓴다</h3>
+            <p>
+              반도체는 AI를 만드는 산업이기도 하지만, 동시에 AI를 활용하는 산업이기도
+              합니다. 검사, 분석, 자동화, 문서화, 개발 보조까지 여러 단계에서 이미
+              AI가 사용되고 있습니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Limits & Caution</p>
+          <h2>AI를 사용할 때 꼭 알아야 하는 한계</h2>
+          <p>AI는 강력하지만 완벽하지 않습니다. 잘 쓰려면 장점과 한계를 함께 봐야 합니다.</p>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card highlight-box">
+            <h3>사실 오류</h3>
+            <p>그럴듯하지만 틀린 답을 만들 수 있기 때문에 중요한 정보는 검증이 필요합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>편향</h3>
+            <p>학습 데이터에 편향이 있으면 결과도 왜곡될 수 있습니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>보안과 개인정보</h3>
+            <p>민감한 데이터와 기업 내부 자료는 입력 전에 반드시 보안 기준을 확인해야 합니다.</p>
+          </article>
+          <article class="card learning-card">
+            <h3>설명 가능성</h3>
+            <p>결과는 보여도 왜 그렇게 판단했는지 완전히 설명하기 어려운 경우가 있습니다.</p>
+          </article>
+        </div>
+
+        <div class="card highlight-box">
+          <h3>핵심 문장</h3>
+          <p>
+            AI는 단순한 유행 기술이 아니라 데이터가 많은 분야일수록 가치가 커지는
+            핵심 기술이며, 반도체 산업과도 생산과 수요 양쪽에서 강하게 연결됩니다.
+          </p>
+        </div>
+
+        <div class="card highlight-box">
+          <h3>핵심 3줄 요약</h3>
+          <ul class="compact-list">
+            <li>AI는 데이터를 학습해 분류, 예측, 생성, 판단을 수행하는 기술입니다.</li>
+            <li>생성형 AI, 비전 AI, 자연어 처리, 강화학습처럼 목적에 따라 여러 종류로 나뉩니다.</li>
+            <li>반도체 산업에서는 AI를 만들기 위한 칩 수요도 크고, 제조 내부에서도 검사와 수율 분석에 AI를 적극적으로 사용합니다.</li>
+          </ul>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="software.html">소프트웨어 페이지</a>
+            <a href="process.html">공정 페이지</a>
+            <a href="packaging.html">첨단패키징 페이지</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            AI의 기본 개념과 반도체 산업 연결을 한 번에 볼 수 있도록 정리했습니다.
+            실제 서비스와 세부 기술은 빠르게 변하므로 큰 구조를 먼저 이해하는 것이 중요합니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a class="button footer-button" href="https://kimsihu0225.github.io/My-Cosmos/" target="_blank" rel="noreferrer">
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

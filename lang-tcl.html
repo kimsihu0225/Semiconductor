@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tcl과 반도체</title>
+    <meta name="description" content="Tcl 기초와 반도체 자동화 활용을 정리한 페이지" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="software-pages">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html" class="is-active">소프트웨어</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Language Navigation</p>
+          <div class="related-chip-row">
+            <a href="software.html">소프트웨어 허브로 돌아가기</a>
+            <a href="lang-c.html">처음으로 돌아가기</a>
+          </div>
+        </div>
+      </section>
+      <section class="section shell">
+        <div class="section-heading">
+          <p class="eyebrow">Scripting Language</p>
+          <h2>Tcl</h2>
+          <p>Tcl은 반도체 설계 도구와 자동화 흐름에서 오래전부터 많이 쓰인 스크립트 언어입니다.</p>
+        </div>
+        <div class="card summary-strip">
+          <div><strong>특징</strong><p>간결한 스크립트와 도구 자동화에 강합니다.</p></div>
+          <div><strong>주요 직무</strong><p>EDA 자동화, 배치 실행, 검증 흐름 제어</p></div>
+          <div><strong>주요 툴</strong><p>PrimeTime, Innovus, Vivado 등</p></div>
+          <div><strong>학습 포인트</strong><p>set, list, expr, proc, 반복문이 핵심입니다.</p></div>
+        </div>
+        <div class="content-grid language-stat-grid">
+          <article class="card stat-card">
+            <h3>언어 스탯</h3>
+            <div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 8"></div><strong>8/10</strong></div>
+            <div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 5"></div><strong>5/10</strong></div>
+            <div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5/10</strong></div>
+            <p class="stat-note">학습 난이도는 점수가 높을수록 더 어렵다는 뜻입니다.</p>
+          </article>
+        </div>
+
+        <div class="curriculum-grid">
+          <article class="card curriculum-step"><span class="step-number">01</span><h3>문장 구조</h3><p>Tcl은 공백과 줄 단위로 명령을 해석하는 특징이 있습니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">02</span><h3>변수와 set</h3><p>`set`으로 값을 저장하고 읽는 기본 구조를 익힙니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">03</span><h3>문자열과 리스트</h3><p>Tcl에서는 리스트 처리 개념이 매우 중요합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">04</span><h3>expr</h3><p>계산과 비교를 수행하는 기본 명령입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">05</span><h3>if</h3><p>조건에 따라 다른 명령 흐름을 만듭니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">06</span><h3>for / foreach / while</h3><p>반복 실행과 자동 배치에 핵심입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">07</span><h3>proc</h3><p>재사용 가능한 사용자 정의 프로시저를 작성합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">08</span><h3>파일 처리</h3><p>로그와 리포트를 읽고 쓰는 기본을 익힙니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">09</span><h3>문자열 가공</h3><p>EDA 결과 로그를 파싱할 때 자주 씁니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">10</span><h3>도구 명령과 연결</h3><p>EDA 도구 안에서 제공하는 명령과 결합해 자동화를 만듭니다.</p></article>
+        </div>
+        <div class="card info-table-wrap">
+          <h3>Tcl에서 꼭 알아야 하는 개념</h3>
+          <table class="info-table">
+            <thead><tr><th>개념</th><th>설명</th><th>실무 연결</th></tr></thead>
+            <tbody>
+              <tr><td>set</td><td>변수 값을 저장하는 가장 기본 명령입니다.</td><td>도구 옵션과 경로 관리의 출발점입니다.</td></tr>
+              <tr><td>list</td><td>여러 값을 하나로 묶는 구조입니다.</td><td>셀 목록, 파일 목록, 타이밍 경로 처리에 자주 쓰입니다.</td></tr>
+              <tr><td>proc</td><td>재사용 가능한 명령 묶음을 만듭니다.</td><td>반복되는 자동화 흐름을 구조화할 수 있습니다.</td></tr>
+              <tr><td>foreach</td><td>목록을 순회하는 반복문입니다.</td><td>여러 블록이나 파일에 같은 작업을 적용할 때 유용합니다.</td></tr>
+              <tr><td>로그 파싱</td><td>텍스트를 읽고 필요한 줄만 추출합니다.</td><td>EDA 실행 결과를 자동 정리할 때 자주 필요합니다.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>Tcl의 장점과 반도체 외 대표 활용</h3>
+          <table class="info-table">
+            <thead><tr><th>항목</th><th>정리</th></tr></thead>
+            <tbody>
+              <tr><td>무엇에 특화되어 있나</td><td>도구 자동화, 반복 배치 작업, 텍스트 기반 흐름 제어에 특화되어 있습니다.</td></tr>
+              <tr><td>장점</td><td>짧은 스크립트로 반복 작업을 빠르게 자동화할 수 있습니다.</td></tr>
+              <tr><td>반도체 외 주요 활용</td><td>네트워크 장비 테스트, EDA 외 자동화 도구, 일부 CAD 환경, 테스트 스크립트, 운영 도구 자동화 등에 쓰입니다.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="content-grid support-grid">
+          <article class="card learning-card text-heavy">
+            <h3>반도체에서 어디에 쓰이는가</h3>
+            <p>Tcl은 EDA 툴 명령을 자동 실행하고, 합성·타이밍·배치배선 결과를 반복 처리하며, 대규모 설계 흐름을 배치 형태로 돌리는 데 쓰입니다.</p>
+          </article>
+          <article class="card learning-card text-heavy">
+            <h3>실무 예시</h3>
+            <p>여러 블록에 대해 타이밍 분석을 반복 실행하고, 결과 리포트를 폴더별로 저장하고, 특정 위반 항목만 추출하는 자동화 스크립트를 만드는 식입니다.</p>
+          </article>
+        </div>
+        <div class="card highlight-box">
+          <h3>핵심 3줄 요약</h3>
+          <ul class="compact-list">
+            <li>Tcl은 반도체 설계 자동화와 EDA 흐름 제어에서 매우 중요한 스크립트 언어입니다.</li>
+            <li>기초는 set, list, expr, if, foreach, proc 순으로 잡으면 좋습니다.</li>
+            <li>EDA 도구를 반복 가능하게 다루려면 Tcl은 거의 필수에 가깝습니다.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

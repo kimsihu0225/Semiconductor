@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반도체 소프트웨어</title>
+    <meta
+      name="description"
+      content="반도체 소프트웨어 직무, 프로그래밍 언어, 학습 순서를 정리한 페이지"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="software-pages">
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+    <div class="equipment-layer" aria-hidden="true">
+      <div class="equipment wafer-rig">
+        <span class="wafer-ring wafer-ring-outer"></span>
+        <span class="wafer-ring wafer-ring-inner"></span>
+        <span class="wafer-grid"></span>
+      </div>
+      <div class="equipment chip-array">
+        <span class="chip-core"></span>
+        <span class="chip-pin chip-pin-top"></span>
+        <span class="chip-pin chip-pin-right"></span>
+        <span class="chip-pin chip-pin-bottom"></span>
+        <span class="chip-pin chip-pin-left"></span>
+      </div>
+      <div class="equipment process-arm">
+        <span class="arm-column"></span>
+        <span class="arm-beam"></span>
+        <span class="arm-head"></span>
+      </div>
+    </div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="주요 섹션">
+        <a class="brand" href="index.html">Semiconductor</a>
+        <div class="nav-links">
+          <a href="intro.html">개요/산업</a>
+          <a href="process.html">공정</a>
+          <a href="equipment.html">장비</a>
+          <a href="materials.html">재료</a>
+          <a href="software.html" class="is-active">소프트웨어</a>
+          <a href="ai.html">AI</a>
+          <a href="career.html">기업/취업</a>
+          <a href="packaging.html">첨단패키징</a>
+          <a href="terms.html">용어/검색</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="section shell compact-top">
+        <div class="related-links card">
+          <p class="mini-label">Navigation</p>
+          <div class="related-chip-row">
+            <a href="index.html">메인으로 돌아가기</a>
+            <a href="ai.html">AI 페이지 보기</a>
+            <a href="career.html">기업 / 취업 정보 보기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="software">
+        <div class="section-heading">
+          <p class="eyebrow">Semiconductor Software</p>
+          <h2>반도체 소프트웨어</h2>
+          <p>
+            반도체는 하드웨어 산업처럼 보이지만 실제 현장에서는 장비 제어,
+            공정 자동화, 검사, 데이터 분석, 설계 자동화까지 소프트웨어가 깊게
+            들어갑니다.
+          </p>
+        </div>
+
+        <div class="content-grid support-grid">
+          <article class="card learning-card text-heavy">
+            <h3>핵심 요약</h3>
+            <p>
+              반도체 소프트웨어는 장비를 움직이고 데이터를 모으고 불량을 찾고
+              공정을 자동화하며 설계를 검증하는 역할을 합니다. 즉 생산성과 수율,
+              품질과 속도를 연결하는 실무 축입니다.
+            </p>
+          </article>
+          <article class="card learning-card">
+            <h3>이 페이지에서 보는 것</h3>
+            <ul class="compact-list">
+              <li>반도체 소프트웨어가 왜 중요한지</li>
+              <li>기업에서 어떤 직무로 연결되는지</li>
+              <li>주요 프로그래밍 언어와 개발환경</li>
+              <li>언어별 학습 페이지와 언어 비교 스탯</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card summary-strip">
+          <div>
+            <strong>장비 제어</strong>
+            <p>센서, 모터, 밸브, 스테이지를 안전하고 정밀하게 움직입니다.</p>
+          </div>
+          <div>
+            <strong>자동화</strong>
+            <p>MES, SECS/GEM, 레시피 관리로 공정 흐름을 안정화합니다.</p>
+          </div>
+          <div>
+            <strong>검사 / 분석</strong>
+            <p>비전, 로그, SPC, FDC로 결함을 빠르게 찾고 원인을 추적합니다.</p>
+          </div>
+          <div>
+            <strong>설계 자동화</strong>
+            <p>EDA 환경에서 반복 검증과 스크립트 자동화를 수행합니다.</p>
+          </div>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Software Roles</p>
+          <h2>반도체 기업에서 소프트웨어 직무가 하는 일</h2>
+          <p>
+            현장에서 실제로 어떤 문제를 다루는지 기준으로 보면 소프트웨어의 위치가
+            훨씬 선명하게 보입니다.
+          </p>
+        </div>
+
+        <div class="content-grid role-grid">
+          <article class="card learning-card role-card">
+            <h3>장비 제어 소프트웨어 <span>Control</span></h3>
+            <p><strong>무슨 업무인지:</strong> 모터, 밸브, 센서, 스테이지, 챔버를 제어하는 프로그램을 개발합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> 웨이퍼 이송, 온도·압력 제어, 장비 시퀀스 실행, 알람 처리에 쓰입니다.</p>
+            <p><strong>왜 중요한지:</strong> 장비 안정성과 생산 효율의 출발점이기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>공정 자동화 소프트웨어 <span>Automation</span></h3>
+            <p><strong>무슨 업무인지:</strong> 장비와 MES, EAP, 레시피 서버를 연결해 자동화 흐름을 구성합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> Lot 투입, 레시피 다운로드, 이력 기록, 장비 상태 전송에 쓰입니다.</p>
+            <p><strong>왜 중요한지:</strong> 사람 개입을 줄이고 공정 재현성과 생산성을 높여주기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>검사 / 비전 소프트웨어 <span>Vision</span></h3>
+            <p><strong>무슨 업무인지:</strong> 카메라와 이미지 처리 알고리즘으로 패턴, 위치, 결함을 판별합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> AOI, 본딩 정렬, 패키지 외관 검사, wafer map 분석에 쓰입니다.</p>
+            <p><strong>왜 중요한지:</strong> 미세 결함을 빠르게 검출해 품질과 수율을 지키기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>데이터 수집 / 분석 소프트웨어 <span>Data</span></h3>
+            <p><strong>무슨 업무인지:</strong> 로그, 센서 데이터, SPC/FDC 지표를 수집하고 분석합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> 이상 탐지, 예지보전, 수율 분석, 공정 조건 최적화에 쓰입니다.</p>
+            <p><strong>왜 중요한지:</strong> 문제를 눈으로 찾는 단계에서 데이터로 예측하는 단계로 바꾸기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>생산 / 설비 관리 시스템 <span>MES</span></h3>
+            <p><strong>무슨 업무인지:</strong> 생산 이력, 설비 상태, 작업 흐름, 자재 흐름을 관리하는 시스템을 구축합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> MES, ERP 연동, 대시보드, 유지보수 이력 관리에 쓰입니다.</p>
+            <p><strong>왜 중요한지:</strong> 공장을 하나의 연결된 시스템으로 운영하게 해주기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>테스트 / 검증 소프트웨어 <span>Test</span></h3>
+            <p><strong>무슨 업무인지:</strong> 전기적 동작 확인, 자동 측정, 테스트 시퀀스, 결과 분석을 담당합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> WAT, CP, FT, ATE 환경에서 많이 사용됩니다.</p>
+            <p><strong>왜 중요한지:</strong> 양품과 불량을 정확하게 구분해야 최종 품질과 출하 판단이 가능하기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>임베디드 / 펌웨어 <span>Firmware</span></h3>
+            <p><strong>무슨 업무인지:</strong> 장비 내부 보드와 제어기에 들어가는 저수준 코드를 작성합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> 통신, 모터 제어, 센서 처리, 장비 내부 로직에 연결됩니다.</p>
+            <p><strong>왜 중요한지:</strong> 장비 반응 속도와 안정성을 가장 아래 단계에서 결정하기 때문입니다.</p>
+          </article>
+          <article class="card learning-card role-card">
+            <h3>반도체 설계 자동화 <span>EDA</span></h3>
+            <p><strong>무슨 업무인지:</strong> RTL, 검증, 타이밍 분석, 배치배선, 스크립트 자동화를 수행합니다.</p>
+            <p><strong>어디에 쓰이는지:</strong> Fabless와 설계 조직, 검증 조직, EDA 운영 조직에서 사용됩니다.</p>
+            <p><strong>왜 중요한지:</strong> 복잡한 칩을 반복 가능하게 설계하고 검증해야 하기 때문입니다.</p>
+          </article>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>직무와 언어 연결표</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>직무</th>
+                <th>주요 언어</th>
+                <th>대표 개발환경</th>
+                <th>핵심 이유</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>장비 제어 / 펌웨어</td>
+                <td>C, C++, C#</td>
+                <td>Visual Studio, GCC, Keil, IAR</td>
+                <td>하드웨어와 가깝고 안정적인 제어가 필요합니다.</td>
+              </tr>
+              <tr>
+                <td>데이터 분석 / 자동화</td>
+                <td>Python, SQL</td>
+                <td>VS Code, PyCharm, Jupyter, DBeaver</td>
+                <td>로그 분석과 자동화 스크립트 작성이 쉽습니다.</td>
+              </tr>
+              <tr>
+                <td>생산 시스템</td>
+                <td>Java, SQL, C#</td>
+                <td>IntelliJ, Eclipse, .NET, DB 도구</td>
+                <td>기업 시스템과 데이터 연동이 중요합니다.</td>
+              </tr>
+              <tr>
+                <td>설계 / 검증 자동화</td>
+                <td>Verilog, SystemVerilog, Tcl, Python</td>
+                <td>Synopsys, Cadence, Siemens EDA</td>
+                <td>칩 설계와 검증 흐름을 반복 가능하게 만들 수 있습니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Programming Basics</p>
+          <h2>프로그래밍 기초는 이 순서로 잡으면 됩니다</h2>
+          <p>
+            언어가 달라도 기초 구조는 거의 같습니다. 교재에서 처음 배우는 핵심을
+            순서대로 정리하면 언어별 학습 속도가 훨씬 빨라집니다.
+          </p>
+        </div>
+
+        <div class="curriculum-grid">
+          <article class="card curriculum-step"><span class="step-number">01</span><h3>식별자와 키워드</h3><p>이름을 짓는 규칙과 예약어를 먼저 알아야 코드 구조를 읽을 수 있습니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">02</span><h3>자료형</h3><p>정수, 실수, 문자, 문자열, 논리형처럼 어떤 값을 다루는지 이해하는 단계입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">03</span><h3>변수와 상수</h3><p>값을 저장하고 다시 사용하는 기본 방법입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">04</span><h3>연산자와 표현식</h3><p>산술, 비교, 논리 연산을 통해 실제 계산과 조건 판단을 수행합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">05</span><h3>입력과 출력</h3><p>콘솔, 파일, 장치, 데이터베이스 등 바깥 세계와 연결하는 기본입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">06</span><h3>조건문</h3><p>if, switch, case처럼 상황에 따라 다른 동작을 선택하는 방법입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">07</span><h3>반복문</h3><p>for, while, foreach처럼 같은 작업을 여러 번 처리하는 핵심 구조입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">08</span><h3>함수와 프로시저</h3><p>큰 프로그램을 재사용 가능한 작은 단위로 나누는 단계입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">09</span><h3>배열, 문자열, 컬렉션</h3><p>여러 데이터를 한 번에 관리하는 법을 익혀야 실무 데이터 처리로 넘어갈 수 있습니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">10</span><h3>모듈, 클래스, 예외 처리</h3><p>언어별로 형태는 다르지만 구조화, 유지보수, 오류 대응의 기본입니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">11</span><h3>디버깅과 테스트</h3><p>코드를 짜는 것만큼 문제를 찾고 검증하는 능력이 중요합니다.</p></article>
+          <article class="card curriculum-step"><span class="step-number">12</span><h3>프로젝트 적용</h3><p>장비 제어, 로그 분석, 자동화 스크립트처럼 실제 예제로 연결해야 실력이 정리됩니다.</p></article>
+        </div>
+
+        <div class="card highlight-box">
+          <h3>언어를 배우는 기준</h3>
+          <p>
+            어떤 언어가 최고인지보다 내가 가려는 직무에서 어떤 언어가 많이 쓰이는지가
+            더 중요합니다. 장비 쪽은 C/C++/C#, 데이터는 Python/SQL, 시스템은 Java,
+            설계 자동화는 Verilog·SystemVerilog·Tcl이 대표적입니다.
+          </p>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Language Hub</p>
+          <h2>언어별 학습 페이지 바로가기</h2>
+          <p>
+            아래 버튼을 누르면 각 언어의 기초 문법, 꼭 알아야 하는 개념,
+            반도체 및 일반 활용처를 정리한 개별 페이지로 이동합니다.
+          </p>
+        </div>
+
+        <div class="language-hub-grid">
+          <a class="card language-link-card" href="lang-c.html"><span class="mini-label">Embedded / Firmware</span><h3>C</h3><p>자료형, 포인터, 함수, 메모리 구조를 중심으로 보는 언어</p></a>
+          <a class="card language-link-card" href="lang-cpp.html"><span class="mini-label">Performance / Vision</span><h3>C++</h3><p>객체지향, 클래스, STL, 고성능 처리 흐름을 정리한 페이지</p></a>
+          <a class="card language-link-card" href="lang-csharp.html"><span class="mini-label">UI / HMI</span><h3>C#</h3><p>윈도우 UI, 이벤트, 클래스, .NET 구조를 보기 좋은 언어</p></a>
+          <a class="card language-link-card" href="lang-python.html"><span class="mini-label">Data / Automation</span><h3>Python</h3><p>문법 기초, 자료구조, 함수, 자동화와 분석 흐름을 정리한 페이지</p></a>
+          <a class="card language-link-card" href="lang-java.html"><span class="mini-label">Enterprise / MES</span><h3>Java</h3><p>클래스, 객체, 예외 처리, 백엔드와 시스템 연동 중심</p></a>
+          <a class="card language-link-card" href="lang-matlab.html"><span class="mini-label">Analysis / R&amp;D</span><h3>MATLAB</h3><p>행렬, 스크립트, 함수, 시뮬레이션과 분석 기초</p></a>
+          <a class="card language-link-card" href="lang-sql.html"><span class="mini-label">Database / Report</span><h3>SQL</h3><p>테이블, 조회, 조건, 집계, 조인, 트랜잭션을 정리한 페이지</p></a>
+          <a class="card language-link-card" href="lang-verilog.html"><span class="mini-label">RTL / Verification</span><h3>Verilog / SystemVerilog</h3><p>모듈, 신호, always, testbench, 검증 관점을 정리한 페이지</p></a>
+          <a class="card language-link-card" href="lang-tcl.html"><span class="mini-label">EDA Scripting</span><h3>Tcl</h3><p>set, list, expr, proc, 반복문, 자동화 스크립트 중심</p></a>
+          <a class="card language-link-card" href="lang-jsts.html"><span class="mini-label">Web / Dashboard</span><h3>JavaScript / TypeScript</h3><p>웹 대시보드, 사내 관리 페이지, 데이터 시각화에 강한 언어</p></a>
+          <a class="card language-link-card" href="lang-bash.html"><span class="mini-label">Linux Automation</span><h3>Bash / Shell</h3><p>리눅스 자동화, 파일 처리, 배치 실행을 빠르게 묶는 스크립트</p></a>
+          <a class="card language-link-card" href="lang-go.html"><span class="mini-label">Backend / Infra</span><h3>Go</h3><p>간결한 문법과 안정적인 서버 개발에 강한 언어</p></a>
+          <a class="card language-link-card" href="lang-rust.html"><span class="mini-label">Systems / Safety</span><h3>Rust</h3><p>성능과 메모리 안정성을 같이 잡는 시스템 언어</p></a>
+          <a class="card language-link-card" href="lang-vhdl.html"><span class="mini-label">FPGA / HDL</span><h3>VHDL</h3><p>디지털 회로와 FPGA 설계에 쓰이는 대표 HDL</p></a>
+          <a class="card language-link-card" href="lang-perl.html"><span class="mini-label">Legacy Script</span><h3>Perl</h3><p>텍스트 처리와 오래된 자동화 환경에서 자주 보이는 스크립트</p></a>
+          <a class="card language-link-card" href="lang-labview.html"><span class="mini-label">Test / Measurement</span><h3>LabVIEW</h3><p>계측, 테스트, 장비 연동에 강한 그래픽 기반 개발 환경</p></a>
+          <a class="card language-link-card" href="lang-plc.html"><span class="mini-label">Factory Control</span><h3>PLC</h3><p>설비 자동화와 인터록 제어에 강한 산업용 제어 언어 계열</p></a>
+        </div>
+
+        <div class="section-heading section-actions">
+          <p class="eyebrow">Language Stats</p>
+          <h2>언어별 핵심 스탯 비교</h2>
+          <p>반도체 특화성, 범용성, 학습 난이도를 10점 기준으로 비교했습니다. 학습 난이도는 점수가 높을수록 더 어렵습니다.</p>
+        </div>
+
+        <div class="language-stats-grid">
+          <article class="card stat-card compact"><h3>C</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 9"></div><strong>9</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 7"></div><strong>7</strong></div></article>
+          <article class="card stat-card compact"><h3>C++</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 9"></div><strong>9</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div></article>
+          <article class="card stat-card compact"><h3>C#</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div></article>
+          <article class="card stat-card compact"><h3>Python</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 7"></div><strong>7</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 10"></div><strong>10</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 4"></div><strong>4</strong></div></article>
+          <article class="card stat-card compact"><h3>Java</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 9"></div><strong>9</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div></article>
+          <article class="card stat-card compact"><h3>MATLAB</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div></article>
+          <article class="card stat-card compact"><h3>SQL</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 10"></div><strong>10</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 3"></div><strong>3</strong></div></article>
+          <article class="card stat-card compact"><h3>Verilog</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 10"></div><strong>10</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 4"></div><strong>4</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 7"></div><strong>7</strong></div></article>
+          <article class="card stat-card compact"><h3>Tcl</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div></article>
+          <article class="card stat-card compact"><h3>JS / TS</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 4"></div><strong>4</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 10"></div><strong>10</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div></article>
+          <article class="card stat-card compact"><h3>Bash</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 7"></div><strong>7</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 4"></div><strong>4</strong></div></article>
+          <article class="card stat-card compact"><h3>Go</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div></article>
+          <article class="card stat-card compact"><h3>Rust</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div></article>
+          <article class="card stat-card compact"><h3>VHDL</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 9"></div><strong>9</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 3"></div><strong>3</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div></article>
+          <article class="card stat-card compact"><h3>Perl</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 4"></div><strong>4</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div></article>
+          <article class="card stat-card compact"><h3>LabVIEW</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 7"></div><strong>7</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div></article>
+          <article class="card stat-card compact"><h3>PLC</h3><div class="stat-line"><span>반도체 특화성</span><div class="slash-meter" style="--score: 8"></div><strong>8</strong></div><div class="stat-line"><span>범용성</span><div class="slash-meter" style="--score: 5"></div><strong>5</strong></div><div class="stat-line"><span>학습 난이도</span><div class="slash-meter" style="--score: 6"></div><strong>6</strong></div></article>
+        </div>
+
+        <div class="card info-table-wrap">
+          <h3>언어별 추천 진입 순서</h3>
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>관심 직무</th>
+                <th>먼저 볼 언어</th>
+                <th>다음 단계</th>
+                <th>이유</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>장비 제어 / 펌웨어</td><td>C</td><td>C++ 또는 C#</td><td>저수준 제어와 실제 장비 프로그램을 함께 보기 좋습니다.</td></tr>
+              <tr><td>데이터 분석 / 자동화</td><td>Python</td><td>SQL</td><td>스크립트와 로그 분석, DB 조회가 바로 연결됩니다.</td></tr>
+              <tr><td>생산 시스템 / MES</td><td>Java</td><td>SQL, C#</td><td>기업 시스템과 백엔드 구조를 이해하기 좋습니다.</td></tr>
+              <tr><td>설계 / 검증 자동화</td><td>Verilog / SystemVerilog</td><td>Tcl, Python</td><td>RTL 이해 뒤 자동화 스크립트와 검증 흐름으로 확장할 수 있습니다.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card highlight-box">
+          <h3>핵심 3줄 요약</h3>
+          <ul class="compact-list">
+            <li>반도체 소프트웨어는 장비 제어, 자동화, 검사, 분석, 설계 자동화를 연결하는 핵심 축입니다.</li>
+            <li>언어는 직무에 따라 선택해야 하며, 모든 언어의 기초는 자료형, 변수, 조건문, 반복문, 함수에서 시작합니다.</li>
+            <li>이 페이지 아래 언어 버튼을 따라가면 각 언어의 기초부터 반도체 활용과 범용 활용까지 함께 볼 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <div class="related-links card">
+          <p class="mini-label">Related Learning</p>
+          <div class="related-chip-row">
+            <a href="ai.html">AI 페이지 보기</a>
+            <a href="career.html">기업 / 취업 페이지 보기</a>
+            <a href="process.html">공정 페이지 보기</a>
+            <a href="terms.html">용어 / 검색 페이지 보기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <div class="footer-content card">
+        <div class="footer-copy">
+          <p class="footer-credit">한국폴리텍대학 반도체융합캠퍼스 반도체장비소프트웨어과 김시후</p>
+          <p class="footer-note">
+            반도체 소프트웨어 직무와 프로그래밍 언어를 실제 현장 관점으로 연결해
+            정리했습니다. 언어별 세부 학습은 개별 페이지에서 이어서 볼 수 있습니다.
+          </p>
+        </div>
+        <div class="footer-actions">
+          <a class="button footer-button" href="https://kimsihu0225.github.io/My-Cosmos/" target="_blank" rel="noreferrer">
+            이전 사이트 보기
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
